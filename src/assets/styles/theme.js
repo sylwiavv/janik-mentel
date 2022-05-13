@@ -1,7 +1,8 @@
 export const theme = {
   colors: {
-    backgroundColor: '#2d3d4b',
-    fontColor: '#f3f3ff',
+    backgroundColor: '#f5f5f5',
+    fontColor: '#292C31',
+    fontColorHover: '#37C6E6',
   },
 
   fontSize: {
@@ -9,7 +10,7 @@ export const theme = {
     xl: '24px',
     l: '18px',
     m: '14px',
-    s: '11px',
+    s: '12px',
   },
 
   fontWeight: {
@@ -39,5 +40,12 @@ export const theme = {
 
   height: {
     input: '56px',
+  },
+
+  mq: {
+    tablet: '@media (min-width: 768px)',
+    desktop: '@media (min-width: 1024px)',
+    bigDesktop: '@media (min-width: 1280px)',
+    huge: '@media(min-width: 1440px)',
   },
 };

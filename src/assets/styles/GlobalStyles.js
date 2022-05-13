@@ -14,12 +14,19 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1.6rem;
+    
+    background-color: #f5f5f5;
+  }
+  
+  main {
+    margin: 0 40px;
   }
   
   h1,h2,h3,h4,h5,h6 {
     font-family: "Montserrat", sans-serif;
-      font-weight: 500;
+    font-weight: 500;
     line-height: 1.2;
+    text-transform: uppercase;
   }
   
   p, li, a {
