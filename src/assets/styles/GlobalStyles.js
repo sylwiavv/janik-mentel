@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: "Montserrat", sans-serif;
   }
   
   html {
@@ -26,7 +27,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    text-transform: uppercase;
   }
   
   p, li, a {
@@ -34,4 +34,5 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.5;
   }
+  ////move
 `;

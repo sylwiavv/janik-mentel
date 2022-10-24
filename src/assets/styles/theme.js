@@ -3,6 +3,8 @@ export const theme = {
     backgroundColor: '#f5f5f5',
     fontColor: '#292C31',
     fontColorHover: '#37C6E6',
+
+    fontColorSecondary: '#95aff9',
   },
 
   fontSize: {

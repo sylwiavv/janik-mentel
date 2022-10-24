@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "janik-mentel",
-  "author": "Sylwia Waligóra",
+  "author": "Sylwia Mentel",
   "keywords": [
     "gatsby"
   ],
@@ -12,14 +12,18 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prettier:fix": "prettier --write \"src/**/*.js*(x)\"",
+    "lint": "eslint \"src/**/*.js*(x)\" --max-warnings=0"
   },
   "dependencies": {
+    "@formspree/react": "^2.4.0",
     "@sideway/address": "^5.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "gatsby": "^4.13.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.13.0",
     "gatsby-plugin-react-helmet": "^5.13.0",
     "gatsby-plugin-react-svg": "^3.1.0",
