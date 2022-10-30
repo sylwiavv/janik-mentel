@@ -17,7 +17,6 @@ export const Wrapper = styled.div`
 `;
 
 export const OutsideWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
   position: ${({ isOpen }) => (isOpen ? 'absolute' : 'static')};
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
 
@@ -108,7 +107,7 @@ export const StyledLink = styled(Link)`
     
     &:after {
       content: '';
-      background-color: ${({ theme }) => theme.colors.fontColorHover};
+      background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
       position: absolute;
       left: -1px;
       bottom: -4px;
@@ -124,6 +123,6 @@ export const StyledLink = styled(Link)`
   }
   
   &:hover {
-    color: ${({ theme }) => theme.colors.fontColorHover};
+    color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
   }
 `;

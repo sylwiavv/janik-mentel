@@ -3,36 +3,54 @@ import styled from 'styled-components';
 export const ContactFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  border-radius: 4px;
+  width: 100%;
+
+  ${({ theme }) => theme.mq.tablet} {
+    max-width: 50%;
+  }
   
+  h3 {
+    margin-bottom: 24px;
+  }
+
   button {
-    margin: 10px 0;
+    margin: 16px 0;
   }
-  
+
   label {
-    // font-family: ${({ theme }) => theme.font.family.montserrat};
+    font-size: 14px;
     font-weight: 500;
-    margin: 15px 0 0;
+    letter-spacing: .4px;
+    margin: 16px 0 0;
   }
-  
+
   input, textarea {
-    // font-family: ${({ theme }) => theme.font.family.montserrat};
-    margin: 5px 0;
+    border: 1px solid #e9e9e9cf;
+    border-radius: 4px;
+    margin: 8px 0;
     resize: none;
-    padding: 5px;
+    padding: 8px;
+    transition: border .4s;
+
+    &:hover,
+    &:focus-visible {
+      border-color: #414ce9;
+      outline: none;
+    }
   }
-  
+
   textarea {
     min-height: 200px;
   }
-  
+
   ${({ theme }) => theme.mq.desktop} {
-    max-width: 400px;
-    margin: 0 auto 100px;
-    
+    //max-width: 400px;
+    //margin: 0 auto 100px;
+
     h2 {
-      max-width: 300px;
-      margin: 30px auto;
+      //max-width: 300px;
+      margin: 32px auto;
     }
   }
 `;

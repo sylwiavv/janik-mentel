@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { ContactFormWrapper } from './ContactForm.styles';
+import { ButtonStyles } from '../Button/Button.styles';
 
 export const ContactForm = () => {
   const [state, handleSubmit] = useForm('moqrgkon');
-
   return (
     <ContactFormWrapper onSubmit={handleSubmit}>
+      <h3>Zapraszamy do kontantku</h3>
       <label htmlFor="name">Imię i nazwisko</label>
       <input type="name" name="name" id="name" placeholder="Imię i nazwisko" />
       <ValidationError
@@ -34,7 +35,7 @@ export const ContactForm = () => {
       {state.succeeded
         ? <p>Dziękujemy za wiadomość!</p>
         : null}
-      <button type="submit" disabled={state.submitting}>Wyślij</button>
+      <ButtonStyles type="submit" disabled={state.submitting}>Wyślij</ButtonStyles>
     </ContactFormWrapper>
   );
 };

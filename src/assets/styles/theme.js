@@ -1,10 +1,12 @@
 export const theme = {
   colors: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#f4f7fb',
     fontColor: '#292C31',
     fontColorHover: '#37C6E6',
 
     fontColorSecondary: '#95aff9',
+    fontColorSecondary_hover: '#0d5adb',
+    white: '#fff',
   },
 
   fontSize: {

@@ -15,12 +15,14 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1.6rem;
-    
-    background-color: #f5f5f5;
+    // background: ${({ theme }) => theme.backgroundColor};
+    background-color: #f4f7fb;
   }
   
   main {
-    margin: 0 40px;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 1240px;
   }
   
   h1,h2,h3,h4,h5,h6 {
