@@ -9,6 +9,10 @@ const gatsbyRequiredRules = path.join(
   'eslint-rules',
 );
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Janik Mentel Studio',
@@ -74,6 +78,13 @@ module.exports = {
         rule: {
           include: /assets\/icons-components/,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
