@@ -10,16 +10,21 @@ exports.createPages = async ({ graphql, actions }) => {
   const galeriaTemplate = path.resolve('src/templates/GaleriaTemplate.jsx');
   const result = await graphql(`
     query {
-       allContentfulBlog {
-            nodes {
-            title
+       allContentfulGaleria {
+         nodes {
+            galeriaTitle
             id
+            galeriaAsets {
+               file {
+                   url
+               }
             }
+         }
         }
     }
   `);
-  result.data.allContentfulBlog.nodes.forEach((node) => {
-    const slug = `/galeria/${slugify(node.title.toLowerCase())}`;
+  result.data.allContentfulGaleria.nodes.forEach((node) => {
+    const slug = `/galeria/${slugify(node.galeriaTitle.toLowerCase())}`;
     createPage({
       path: slug,
       component: galeriaTemplate,

@@ -5,9 +5,11 @@ import { getPageSlug } from '../helpers/getPageSlug';
 // eslint-disable-next-line react/prop-types
 const Galeria = ({ data: { posts: { nodes } } }) => (
   <>
+
+    {console.log(nodes)}
     {nodes.map((n) => (
-      <Link to={getPageSlug(n.title)} key={n.title}>
-        {n.title}
+      <Link to={getPageSlug(n.galeriaTitle)} key={n.galeriaTitle}>
+        {n.galeriaTitle}
       </Link>
     ))}
     <h1>Galeria Page</h1>
@@ -19,10 +21,16 @@ const Galeria = ({ data: { posts: { nodes } } }) => (
 
 export const query = graphql`
     query {
-        posts: allContentfulBlog {
-            nodes {
-            title
+        posts: allContentfulGaleria {
+         nodes {
+            galeriaTitle
+            id
+            galeriaAsets {
+               file {
+                   url
+               }
             }
+         }
         }
     }`;
 export default Galeria;
