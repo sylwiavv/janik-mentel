@@ -9,7 +9,7 @@ import { Box } from '../Boxes/Boxes.styles';
 const navigation = [
   {
     name: 'Home',
-    href: '/home',
+    href: '/',
   },
   {
     name: 'Oferta',
@@ -32,6 +32,8 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
+  // console.log((location.pathname).substring(1));
+
   return (
     <OutsideWrapper isOpen={isOpen}>
       <Wrapper isMobile isOpen={!isOpen}>
@@ -48,18 +50,22 @@ const Navigation = () => {
       </Wrapper>
       <StyledNavigation isOpen={isOpen}>
         <Box isGap>
-          {
+          <>
+            {
             navigation.map(({ name, href }) => (
               <StyledLink
                 key={name}
                 onClick={toggleNavigation}
-                className={location.pathname.includes(href) ? ' active' : null}
+                className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
+                || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
                 to={href}
               >
                 {name}
               </StyledLink>
+
             ))
           }
+          </>
         </Box>
 
       </StyledNavigation>
