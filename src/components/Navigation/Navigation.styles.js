@@ -20,13 +20,15 @@ export const OutsideWrapper = styled.div`
   position: ${({ isOpen }) => (isOpen ? 'absolute' : 'static')};
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
 
-  margin: ${({ theme }) => theme.indents.m} 0;
+  // margin: ${({ theme }) => theme.indents.m} 0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   top: 0;
   left: 0;
+  
+  background-color: ${({ theme }) => theme.colors.backgroundColor};
 
   ${({ theme }) => theme.mq.tablet} {
     position: static;

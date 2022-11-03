@@ -4,6 +4,26 @@ import { LogoWrapper, StyledLogo } from '../Logo/Logo';
 import {
   OutsideWrapper, Wrapper, StyledNavigation, StyledIconClose, StyledIconHamburger, StyledLink,
 } from './Navigation.styles';
+import { Box } from '../Boxes/Boxes.styles';
+
+const navigation = [
+  {
+    name: 'Home',
+    href: '/home',
+  },
+  {
+    name: 'Oferta',
+    href: '/oferta',
+  },
+  {
+    name: 'Galeria',
+    href: '/galeria',
+  },
+  {
+    name: 'Kontakt',
+    href: '/kontakt',
+  },
+];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,14 +47,22 @@ const Navigation = () => {
         </LogoWrapper>
       </Wrapper>
       <StyledNavigation isOpen={isOpen}>
-        <ul>
-          <li><StyledLink onClick={toggleNavigation} activeClassName="active" to="/home">home</StyledLink></li>
-          <li><StyledLink onClick={toggleNavigation} activeClassName="active" to="/oferta">oferta</StyledLink></li>
-          <li><StyledLink onClick={toggleNavigation} activeClassName="active" to="/galeria">galeria</StyledLink></li>
-          <li><StyledLink onClick={toggleNavigation} activeClassName="active" to="/kontakt">kontakt</StyledLink></li>
-        </ul>
-      </StyledNavigation>
+        <Box isGap>
+          {
+            navigation.map(({ name, href }) => (
+              <StyledLink
+                key={name}
+                onClick={toggleNavigation}
+                className={location.pathname.includes(href) ? ' active' : null}
+                to={href}
+              >
+                {name}
+              </StyledLink>
+            ))
+          }
+        </Box>
 
+      </StyledNavigation>
     </OutsideWrapper>
   );
 };

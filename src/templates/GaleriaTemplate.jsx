@@ -3,19 +3,20 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Box } from '../components/Boxes/Boxes.styles';
 
-const GaleriaTemplate = ({ data: { post: { galeriaTitle, galeriaAsets } } }) => (
-  <>
-    <h1>{galeriaTitle}</h1>
-    {console.log(galeriaAsets.length)}
-    <Box isGap>
-      {galeriaAsets.map(({ url }) => (
-        <img src={url} />
-      ))}
-    </Box>
+const GaleriaTemplate = ({ data: { post: { galeriaTitle, galeriaAsets } } }) =>
+// TODO CHANGE A KEY VALUE
 
-  </>
-);
+  (
+    <>
+      <h1>{galeriaTitle}</h1>
+      <Box isGap>
+        {galeriaAsets.map(({ url }, i) => (
+          <img key={i} src={url} alt="" />
+        ))}
+      </Box>
 
+    </>
+  );
 export const query = graphql`
     query($id: String) {
       post: contentfulGaleria(id: {eq: $id}) {
