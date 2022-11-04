@@ -27,8 +27,11 @@ export const OutsideWrapper = styled.div`
   flex-direction: column;
   top: 0;
   left: 0;
+  padding: 24px;
   
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
+  background-color: transparent;
+  background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
+
 
   ${({ theme }) => theme.mq.tablet} {
     position: static;
@@ -98,11 +101,16 @@ export const StyledNavigation = styled.nav`
 `;
 
 export const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.fontColor};
-  font-size: ${({ theme }) => theme.fontSize.m};
+  // color: ${({ theme }) => theme.colors.fontColor};
+  color: #fff;
+  font-size: ${({ theme }) => theme.fontSize.l};
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
+  
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
   
   &.active {
     font-weight: bold;
@@ -120,6 +128,7 @@ export const StyledLink = styled(Link)`
 
     &:hover {
       color: ${({ theme }) => theme.colors.fontColor};
+      color: #fff;
       cursor: pointer;
     }
   }

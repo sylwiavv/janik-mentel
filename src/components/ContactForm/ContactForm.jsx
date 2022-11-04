@@ -7,7 +7,7 @@ export const ContactForm = () => {
   const [state, handleSubmit] = useForm('moqrgkon');
   return (
     <ContactFormWrapper onSubmit={handleSubmit}>
-      <h3>Zapraszamy do kontantku</h3>
+      <h3>Formularz kontaktowy</h3>
       <label htmlFor="name">Imię i nazwisko</label>
       <input type="name" name="name" id="name" placeholder="Imię i nazwisko" />
       <ValidationError

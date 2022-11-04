@@ -4,7 +4,7 @@ export const Box = styled.div`
   display: flex;
     // width: ${({ isSmall }) => (isSmall ? '60px' : '200px')};
   flex-direction: column;
-  margin-bottom: 24px;
+  margin-bottom: ${({ noMarginBottom }) => (noMarginBottom ? '0' : '24px')};
   grid-gap: ${({ isGap }) => (isGap ? '24px' : '')};
   align-items: ${({ isCenter }) => (isCenter ? 'center' : '')};
 
@@ -15,9 +15,14 @@ export const Box = styled.div`
   span {
     margin-right: 4px;
   }
+  
+  img {
+    height: 200px;
+    width: auto;
+  }
 
   a {
-    color: ${({ theme }) => theme.colors.fontColor};
+    // color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
     
     &:hover {
