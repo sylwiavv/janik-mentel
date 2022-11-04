@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 `;
 
 export const OutsideWrapper = styled.div`
-  position: ${({ isOpen }) => (isOpen ? 'absolute' : 'static')};
+  position: ${({ isOpen }) => (isOpen ? 'absolute' : 'fixed')};
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
 
   // margin: ${({ theme }) => theme.indents.m} 0;

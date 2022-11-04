@@ -32,8 +32,6 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
-  // console.log((location.pathname).substring(1));
-
   return (
     <OutsideWrapper isOpen={isOpen}>
       <Wrapper isMobile isOpen={!isOpen}>
@@ -49,13 +47,13 @@ const Navigation = () => {
         </LogoWrapper>
       </Wrapper>
       <StyledNavigation isOpen={isOpen}>
-        <Box isGap>
+        <Box isGap noMarginBottom>
           <>
             {
             navigation.map(({ name, href }) => (
               <StyledLink
                 key={name}
-                onClick={toggleNavigation}
+                onClick={() => toggleNavigation}
                 className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
                 || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
                 to={href}
