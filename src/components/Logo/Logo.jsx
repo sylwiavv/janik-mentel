@@ -12,16 +12,20 @@ export const StyledLogo = styled(({ isSmall, ...props }) => <Logo {...props} />)
 export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
+  height: auto;
   width: ${({ isSmall }) => (isSmall ? '120px' : '200px')};
+  width: ${({ isOpen }) => (isOpen ? '120px' : '250px')};
   position: relative;
   z-index: 10;
   //position: absolute;
   //top: 24px;
   //
+  // background-color: ${({ isOpen }) => (isOpen ? '#ff6d2a' : '#2d46c5')};
 
   ${({ theme }) => theme.mq.mobile} {
     //position: absolute;
-    width: 80px;
+    //width: 80px;
+
   }
   
   ${({ theme }) => theme.mq.desktop} {

@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 `;
 
 export const OutsideWrapper = styled.div`
-  position: ${({ isOpen }) => (isOpen ? 'absolute' : 'fixed')};
+  position: ${({ isOpen }) => (isOpen ? 'fixed' : 'absolute')};
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
 
   // margin: ${({ theme }) => theme.indents.m} 0;
@@ -29,7 +29,6 @@ export const OutsideWrapper = styled.div`
   left: 0;
   padding: 24px;
   
-  background-color: transparent;
   background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
 
 

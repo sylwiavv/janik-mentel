@@ -30,12 +30,17 @@ const Navigation = () => {
 
   const toggleNavigation = () => {
     setIsOpen(!isOpen);
+    document.body.classList.remove('not-scroll');
+
+    if (!isOpen) {
+      document.body.classList.add('not-scroll');
+    }
   };
 
   return (
     <OutsideWrapper isOpen={isOpen}>
       <Wrapper isMobile isOpen={!isOpen}>
-        <LogoWrapper isSmall>
+        <LogoWrapper isSmall isOpen>
           <StyledLogo />
         </LogoWrapper>
         <StyledIconHamburger onClick={toggleNavigation} />

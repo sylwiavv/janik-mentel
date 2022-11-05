@@ -15,12 +15,15 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-size: 1.6rem;
-    // background: ${({ theme }) => theme.backgroundColor};
     background-color: #f4f7fb;
+    
+    &.not-scroll {
+      overflow: hidden;
+    }
   }
   
   main {
-    padding: 0 40px;
+    padding: 0 24px;
     margin: 0 auto;
     max-width: 1240px;
   }
