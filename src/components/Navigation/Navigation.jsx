@@ -6,7 +6,7 @@ import {
 } from './Navigation.styles';
 import { Box } from '../Boxes/Boxes.styles';
 
-const navigation = [
+export const navigation = [
   {
     name: 'Home',
     href: '/',
