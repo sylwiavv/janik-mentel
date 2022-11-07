@@ -8,23 +8,31 @@ export const Box = styled.div`
   grid-gap: ${({ isGap }) => (isGap ? '24px' : '')};
   align-items: ${({ isCenter }) => (isCenter ? 'center' : '')};
 
+  .text-box {
+    flex-direction: row;
+  }
+
   p {
     margin: 0;
   }
-  
+
+  h3 {
+    font-weight: bold;
+  }
+
   span {
     margin-right: 4px;
   }
-  
+
   img {
     height: 200px;
     width: auto;
   }
 
   a {
-    // color: ${({ theme }) => theme.colors.fontColor};
+      // color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
-    
+
     &:hover {
       color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
     }

@@ -28,11 +28,11 @@ const IndexPage = () => (
           <PhoneIcon />
         </IconBox>
         <h3>Zadzwoń do nas</h3>
-        <Box isCenter>
+        <Box isCenter className="text-box">
           <span>tel.</span>
           <a href="tel:(33) 86 36 100">(33) 86 36 100</a>
         </Box>
-        <Box isCenter>
+        <Box isCenter className="text-box">
           <span>tel.kom.</span>
           <a href="tel:503 022 377">503 022 377</a>
         </Box>
@@ -42,7 +42,7 @@ const IndexPage = () => (
           <MailIcon />
         </IconBox>
         <h3>Napisz do nas</h3>
-        <Box isCenter>
+        <Box isCenter className="text-box">
           <span>mail: </span>
           <a href="mailto:amentel@op.pl">amentel@op.pl</a>
         </Box>
@@ -54,7 +54,6 @@ const IndexPage = () => (
       </IconBox>
       <ContactForm />
     </BoxWithIcon>
-    <Link to="/home">Go home</Link>
   </>
 );
 

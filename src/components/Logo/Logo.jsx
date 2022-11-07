@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import Logo from 'assets/icons-components/logo_janik-mentel.svg';
 
 export const StyledLogo = styled(({ isSmall, ...props }) => <Logo {...props} />)`
-  // width: ${({ isSmall }) => (isSmall ? '60px' : '200px')};
+  width: ${({ isSmall }) => (isSmall ? '150px' : '100%')};
   // height: ${({ isSmall }) => (isSmall ? '60px' : '200px')};
-  width: 100%;
   height: auto;
 `;
 

@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0 24px;
     margin: 0 auto;
     max-width: 1240px;
+    margin-bottom: 64px;
   }
   
   h1,h2,h3,h4,h5,h6 {
