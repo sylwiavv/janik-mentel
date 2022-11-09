@@ -18,6 +18,7 @@ export const FooterWrapper = styled.footer`
 
   a {
     &:hover {
+      color: #fff;
       filter: brightness(100);
     }
   }

@@ -8,10 +8,14 @@ const Galeria = ({ data: { posts: { nodes } } }) => (
   <>
     <StyledHeading>Galeria</StyledHeading>
     <StyledTitle>Galeria</StyledTitle>
+    {/* eslint-disable-next-line jsx-a11y/alt-text */}
     {nodes.map((n) => (
-      <Link to={getPageSlug(n.galeriaTitle)} key={n.galeriaTitle}>
-        {n.galeriaTitle}
-      </Link>
+      <div key={n.galeriaTitle} className="box-with-image">
+        <img src={nodes[0].galeriaAsets[0].file.url} alt="" />
+        <Link to={getPageSlug(n.galeriaTitle)} key={n.galeriaTitle}>
+          {n.galeriaTitle}
+        </Link>
+      </div>
     ))}
     <Link to="/home">Go home</Link>
   </>

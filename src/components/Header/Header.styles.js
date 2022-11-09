@@ -9,6 +9,8 @@ export const Header = styled.div`
   min-height: 100vh;
   position: relative;
   width: 100%;
+  // set it also for mobile
+  margin-bottom: 64px;
 
   &:before {
     content: '';
