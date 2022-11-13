@@ -13,29 +13,31 @@ export const Header = () => {
     setIndex(selectedIndex);
   };
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0805.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0883.jpg"
-          alt="Second slide"
-        />
+    <ImageContainer>
+      <Carousel activeIndex={index} onSelect={handleSelect} fade className="w-100">
+        <Carousel.Item>
+          <img
+            src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0805.jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0883.jpg"
+            alt="Second slide"
+          />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </ImageContainer>
   );
   // <ImageContainer>
   //   {/* <img src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/J-D-1006.jpg" alt="" /> */}
