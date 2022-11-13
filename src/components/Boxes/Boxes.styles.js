@@ -6,6 +6,10 @@ export const Box = styled.div`
   flex-direction: column;
   margin-bottom: ${({ noMarginBottom }) => (noMarginBottom ? '0' : '24px')};
   grid-gap: ${({ isGap }) => (isGap ? '24px' : '')};
+  //change
+  grid-gap: ${(props) => (props.gap ? props.gap : '')};
+  justify-content: ${({ spaceBetween }) => (spaceBetween ? 'space-between' : '')};
+
   align-items: ${({ isCenter }) => (isCenter ? 'center' : '')};
   height: ${({ height }) => height};
 
@@ -35,30 +39,28 @@ export const Box = styled.div`
       // color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
 
-    &:hover {
-      color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
-    }
+    // &:hover {
+      //   color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+    // }
   }
 
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: ${({ isColumn }) => (isColumn ? 'column' : 'row')};
   }
-  
+
   .box-with-image {
     padding: 16px;
     position: relative;
     height: 522px;
-    
+
     &:after {
       content: '';
       background-color: rgb(158 158 158 / 15%);
 
-      //background-color: #FF905D;
       position: absolute;
       width: 266px;
       top: 0;
       left: 0;
-      //width: 100%;
       height: 100%;
     }
   }
@@ -75,23 +77,22 @@ export const Box = styled.div`
     padding-top: 48px;
     background-color: #FF905D;
   }
-  
+
   .box-image {
     display: flex;
     justify-content: space-between;
     width: 100%;
     grid-gap: 24px;
   }
-  
+
   &.out {
-    //background-color: #FF905D;
     padding: 64px;
     position: relative;
 
-    ${({ theme }) => theme.mq.mobile} { 
+    ${({ theme }) => theme.mq.mobile} {
       padding: 32px;
     }
-    
+
     &:after {
       content: '';
       position: absolute;
@@ -104,25 +105,73 @@ export const Box = styled.div`
       width: 266px;
     }
   }
-  
+
   &.text-about {
     padding: 16px 40px;
+
     ${({ theme }) => theme.mq.mobile} {
       padding: 0;
     }
-    
   }
-  
+
   .box-image {
     display: flex;
     grid-gap: 24px;
   }
-  
-  //
-  //.box-with-image,
-  //.box-with-text {
-  //  width: 50%;
-  //}
+
+  //to gallery
+  .box-with-images {
+    position: relative;
+
+    &:after {
+      //content: '';
+      //background-color: #e3e5e7;
+      //position: absolute;
+      //top: 16px;
+      //left: 16px;
+      //width: 100%;
+      //height: 100%;
+    }
+  }
+
+  &.test {
+    //background-color: #ebeff2;
+    //padding: 40px 0;
+    //position: relative;
+    //
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  top: 0;
+    //  height: 100%;
+    //  width: 1200%;
+    //  left: -100%;
+    //  background-color: #ebeff2;
+    //  z-index: -1;
+    //}
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+
+  }
+
+  .galeria-tytul {
+    padding: 8px;
+    position: relative;
+    margin-left: auto;
+
+
+    //&:after {
+    //  content: '';
+    //  border: 8px solid #111e36;
+    //  position: absolute;
+    //  top: 0%;
+    //  width: 120%;
+    //  height: 100%;
+    //  z-index: 3;
+    //}
+  }
+}
 `;
 
 export const BoxWithIcon = styled.div`

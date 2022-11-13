@@ -16,7 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.6rem;
     background-color: #f4f7fb;
-    
+    overflow-x: hidden;
+
     &.not-scroll {
       overflow: hidden;
     }

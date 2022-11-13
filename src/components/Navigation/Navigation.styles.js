@@ -28,12 +28,13 @@ export const OutsideWrapper = styled.div`
   top: 0;
   left: 0;
   padding: 24px;
+  z-index: 1;
   
   background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
 
 
   ${({ theme }) => theme.mq.tablet} {
-    position: static;
+    //position: static;
     display: flex;
     flex-direction: row;
     height: auto;
@@ -100,20 +101,22 @@ export const StyledNavigation = styled.nav`
 `;
 
 export const StyledLink = styled(Link)`
-  // color: ${({ theme }) => theme.colors.fontColor};
-  color: #fff;
+    // color: ${({ theme }) => theme.colors.fontColor};
+  color: rgba(227, 220, 220, 0.91);
   font-size: ${({ theme }) => theme.fontSize.l};
+  font-weight: bold;
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
-  
+
   &:not(:last-child) {
     margin-right: 8px;
   }
-  
+
   &.active {
     font-weight: bold;
-    
+    color: #fff;
+
     &:after {
       content: '';
       background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
@@ -131,8 +134,9 @@ export const StyledLink = styled(Link)`
       cursor: pointer;
     }
   }
-  
+
   &:hover {
     color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+    color: #fff;
   }
 `;

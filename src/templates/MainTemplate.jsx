@@ -4,17 +4,14 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../assets/styles/GlobalStyles';
 import { theme } from '../assets/styles/theme';
 import 'assets/styles/normalize.css';
-import Navigation from '../components/Navigation/Navigation';
 import { Footer } from '../components/Footer/Footer';
-import { Header } from '../components/Header/Header.styles';
+import { Header } from '../components/Header/Header';
 
 export const MainTemplate = ({ children }) => (
   <>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <Header>
-        <Navigation />
-      </Header>
+      <Header />
       <main>
         {children}
       </main>
