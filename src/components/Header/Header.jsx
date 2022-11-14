@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import { ImageContainer } from './Header.styles';
+import { CarouselContainer } from './Header.styles';
 import Navigation from '../Navigation/Navigation';
 
 export const Header = () => {
@@ -13,7 +13,8 @@ export const Header = () => {
     setIndex(selectedIndex);
   };
   return (
-    <ImageContainer>
+    <CarouselContainer>
+      <Navigation />
       <Carousel activeIndex={index} onSelect={handleSelect} fade className="w-100">
         <Carousel.Item>
           <img
@@ -30,14 +31,13 @@ export const Header = () => {
             src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0883.jpg"
             alt="Second slide"
           />
-
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </ImageContainer>
+    </CarouselContainer>
   );
   // <ImageContainer>
   //   {/* <img src="https://www.janik-mentel.pl/wp-content/uploads/2018/05/J-D-1006.jpg" alt="" /> */}

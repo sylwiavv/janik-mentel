@@ -28,7 +28,7 @@ export const OutsideWrapper = styled.div`
   top: 0;
   left: 0;
   padding: 24px;
-  z-index: 1;
+  z-index: 10;
   
   background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
 
