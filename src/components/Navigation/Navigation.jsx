@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { LogoWrapper, StyledLogo } from '../Logo/Logo';
 import {
   OutsideWrapper, Wrapper, StyledNavigation, StyledIconClose, StyledIconHamburger, StyledLink,
 } from './Navigation.styles';
 import { Box } from '../Boxes/Boxes.styles';
+import { NavigationContext } from '../../providers/NavigationProvider';
 
 export const navigation = [
   {
@@ -26,16 +27,7 @@ export const navigation = [
 ];
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavigation = () => {
-    setIsOpen(!isOpen);
-    document.body.classList.remove('not-scroll');
-
-    if (!isOpen) {
-      document.body.classList.add('not-scroll');
-    }
-  };
+  const { isOpen, setIsOpen, toggleNavigation } = useContext(NavigationContext);
 
   return (
     <OutsideWrapper isOpen={isOpen}>
@@ -55,19 +47,19 @@ const Navigation = () => {
         <Box isGap noMarginBottom>
           <>
             {
-            navigation.map(({ name, href }) => (
-              <StyledLink
-                key={name}
-                onClick={() => toggleNavigation}
-                className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
-                || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
-                to={href}
-              >
-                {name}
-              </StyledLink>
+                navigation.map(({ name, href }) => (
+                  <StyledLink
+                    key={name}
+                    onClick={() => setIsOpen(false)}
+                    className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
+                        || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
+                    to={href}
+                  >
+                    {name}
+                  </StyledLink>
 
-            ))
-          }
+                ))
+              }
           </>
         </Box>
 

@@ -27,8 +27,8 @@ export const CarouselContainer = styled.div`
 
   ${({ theme }) => theme.mq.mobile} {
     border-width: 24px;
-    height: 60vh;
-
+    border: ${({ isOpen }) => (isOpen ? 'none' : '')};
+    height: ${({ isOpen }) => (isOpen ? '100vh' : '80vh')};
   }
   
   .carousel {

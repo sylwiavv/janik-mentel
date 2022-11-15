@@ -6,16 +6,19 @@ import { theme } from '../assets/styles/theme';
 import 'assets/styles/normalize.css';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
+import NavigationProvider, { NavigationContext } from '../providers/NavigationProvider';
 
 export const MainTemplate = ({ children }) => (
   <>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <Header />
-      <main>
-        {children}
-      </main>
-      <Footer />
+      <NavigationProvider value={NavigationContext}>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </NavigationProvider>
     </ThemeProvider>
   </>
 );

@@ -17,11 +17,6 @@ export const Wrapper = styled.div`
 `;
 
 export const OutsideWrapper = styled.div`
-  position: ${({ isOpen }) => (isOpen ? 'fixed' : 'absolute')};
-  height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
-
-  // margin: ${({ theme }) => theme.indents.m} 0;
-  width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -29,15 +24,18 @@ export const OutsideWrapper = styled.div`
   left: 0;
   padding: 24px;
   z-index: 10;
-  
-  background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
+  width: 100%;
 
+  position: ${({ isOpen }) => (isOpen ? 'fixed' : 'absolute')};
+  height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
+  background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
+  transition: ${({ isOpen }) => (isOpen ? 'background-color, .4s' : 'none')};
 
   ${({ theme }) => theme.mq.tablet} {
-    //position: static;
     display: flex;
     flex-direction: row;
     height: auto;
+    background-color: transparent;
   }
 `;
 
@@ -45,10 +43,14 @@ export const StyledIconClose = styled(IconClose)`
   display: block;
   margin-left: auto;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 32px;
+  right: 28px;
   height: 16px;
   width: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
   
   ${({ theme }) => theme.mq.tablet} {
     display: none;
@@ -58,6 +60,10 @@ export const StyledIconClose = styled(IconClose)`
 export const StyledIconHamburger = styled(IconHamburger)`
   height: 24px;
   width: 24px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   ${({ theme }) => theme.mq.tablet} {
     display: none;
@@ -108,24 +114,34 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
+  transition: background-color, .4s;
 
   &:not(:last-child) {
     margin-right: 8px;
   }
 
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    padding: 2px 4px;
+    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, ${({ theme }) => theme.colors.fontColorSecondary_hover} 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    width: 0%;
+  }
+
   &.active {
     font-weight: bold;
     color: #fff;
+    width: max-content;
 
     &:after {
-      content: '';
-      background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
-      position: absolute;
-      left: -1px;
-      bottom: -4px;
       padding: 2px 4px;
+      width: 100%;
       height: 1px;
-      width: 104%;
+      background-position: left;
     }
 
     &:hover {
