@@ -19,6 +19,7 @@
   "dependencies": {
     "@formspree/react": "^2.4.0",
     "@sideway/address": "^5.0.0",
+    "@tjjjwxzq/simple-react-lightbox": "^3.6.9-0",
     "bootstrap": "^5.2.2",
     "dotenv": "^16.0.3",
     "eslint-config-airbnb": "^19.0.4",
@@ -41,6 +42,7 @@
     "react-bootstrap-carousel": "^4.1.1",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "simple-react-lightbox": "^3.6.9-0",
     "slugify": "^1.6.5",
     "styled-components": "^5.3.5",
     "uuid": "^8.3.2"

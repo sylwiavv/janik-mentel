@@ -4,30 +4,41 @@ import { getPageSlug } from '../helpers/getPageSlug';
 import { StyledHeading, StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { HeroImage } from '../assets/styles/pages/homepage.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
-import { GaleryContainer } from '../assets/styles/pages/galeria.styles';
+import { GaleryContainer, PatternContainer } from '../assets/styles/pages/galeria.styles';
+import ArrowRightIcon from '../components/icons/ArrowRightIcon';
 
 // eslint-disable-next-line react/prop-types
-const Galeria = ({ data: { posts: { nodes } } }) => (
+const Galeria = ({ data: { posts: { nodes } }, data }) => (
   <>
     <StyledHeading>Galeria</StyledHeading>
-    <StyledTitle>Galeria</StyledTitle>
+    <Box isColumn>
+      <StyledTitle>Galeria</StyledTitle>
+      <p>Zapraszamy do obejrzenia zdjęć z sesji zdjęciowych wykonanych przez nasze studio.</p>
+    </Box>
     <GaleryContainer>
       {nodes.map((n) => (
-        <Box key={n.galeriaTitle} gap="32px" spaceBetween className="test">
-          <Box isColumn className="galeria-tytul">
+        <Box className="page-link" key={n.galeriaTitle} gap="32px" spaceBetween>
+          <HeroImage className="pattern" imageSource={data.homepage.publicURL} />
+          <Box isColumn className="page-link__txt" noMarginBottom>
             <h3>{n.galeriaTitle}</h3>
-            <Link to={getPageSlug(n.galeriaTitle)} key={n.galeriaTitle}>
-              Zobacz więcej
-            </Link>
+            <Box gap="8px" className="page-link__link" isCenter noMarginBottom>
+              <Link to={getPageSlug(n.galeriaTitle)} key={n.galeriaTitle}>
+                Zobacz więcej
+              </Link>
+              <ArrowRightIcon height="24px" />
+            </Box>
+
           </Box>
-          <Box isGap noMarginBottom className="box-with-images image-container">
-            <HeroImage className="image-abs" imageSource={n.galeriaAsets[0].file.url} height="350px" width="800px" />
+          <Box className="page-link__img" isGap noMarginBottom>
+            <div className="page-link__img-inner">
+              <img src={n.galeriaAsets[0].file.url} alt="" />
+              <img src={n.galeriaAsets[0].file.url} alt="" />
+            </div>
+            {/* <HeroImage className="image-abs" imageSource={n.galeriaAsets[0].file.url} height="350px" width="800px" /> */}
           </Box>
         </Box>
       ))}
     </GaleryContainer>
-
-    <Link to="/home">Go home</Link>
   </>
 );
 
@@ -43,6 +54,12 @@ export const query = graphql`
                }
             }
          }
+        },
+           homepage: file(relativePath: {regex: "/homepage\/icon_pattern.svg/"}) {
+            publicURL
         }
-    }`;
+    }
+
+    `;
+
 export default Galeria;

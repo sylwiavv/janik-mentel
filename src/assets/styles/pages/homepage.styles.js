@@ -12,6 +12,16 @@ export const HeroImage = styled.div`
 
   height: ${(props) => (props.height ? props.height : '383px')};
   width: ${(props) => (props.width ? props.width : '250px')};
+  
+  &.pattern {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 29%;
+    z-index: 0;
+    opacity: .02;
+    left: 0;
+  }
   //
   // ${({ theme }) => theme.mq.tablet} {
   //   width: 70%;

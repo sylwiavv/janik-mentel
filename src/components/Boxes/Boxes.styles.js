@@ -12,7 +12,10 @@ export const Box = styled.div`
 
   align-items: ${({ isCenter }) => (isCenter ? 'center' : '')};
   height: ${({ height }) => height};
-
+  
+  &:hover {
+    cursor: ${(props) => (props.isButton ? props.isButton : '')};
+  }
 
   .text-box {
     flex-direction: row;
@@ -36,7 +39,7 @@ export const Box = styled.div`
   }
 
   a {
-      // color: ${({ theme }) => theme.colors.fontColor};
+      color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
 
     // &:hover {
@@ -117,59 +120,6 @@ export const Box = styled.div`
   .box-image {
     display: flex;
     grid-gap: 24px;
-  }
-
-  //to gallery
-  .box-with-images {
-    position: relative;
-
-    &:after {
-      //content: '';
-      //background-color: #e3e5e7;
-      //position: absolute;
-      //top: 16px;
-      //left: 16px;
-      //width: 100%;
-      //height: 100%;
-    }
-  }
-
-  &.test {
-    //background-color: #ebeff2;
-    //padding: 40px 0;
-    //position: relative;
-    //
-    //&:after {
-    //  content: '';
-    //  position: absolute;
-    //  top: 0;
-    //  height: 100%;
-    //  width: 1200%;
-    //  left: -100%;
-    //  background-color: #ebeff2;
-    //  z-index: -1;
-    //}
-    align-items: center;
-    z-index: 1;
-    overflow: hidden;
-
-  }
-
-  .galeria-tytul {
-    padding: 8px;
-    position: relative;
-    margin-left: auto;
-
-
-    //&:after {
-    //  content: '';
-    //  border: 8px solid #111e36;
-    //  position: absolute;
-    //  top: 0%;
-    //  width: 120%;
-    //  height: 100%;
-    //  z-index: 3;
-    //}
   }
 }
 `;

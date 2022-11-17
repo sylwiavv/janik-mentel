@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
     backgroundColor: '#f4f7fb',
-    fontColor: '#292C31',
+    fontColor: '#414148',
     fontColorHover: '#37C6E6',
 
     fontColorSecondary: '#95aff9',
