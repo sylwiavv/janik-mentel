@@ -1,17 +1,19 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import './WspGallery.css';
 import ArrowRightIcon from '../icons/ArrowRightIcon';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 import CloseIcon from '../icons/CloseIcon';
+import { FullScreenImage, GalleryWrapper, SliderWrapper } from './ex.styles';
 
 const WSPGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
+  console.log(openModal);
 
+  // Open Modal
   const handleOpenModal = (index) => {
     setSlideNumber(index);
     setOpenModal(true);
-    toggleBodyScroll();
+    document.body.classList.add('not-scroll');
   };
 
   const handleKeyDown = useCallback((event) => {
@@ -20,6 +22,7 @@ const WSPGallery = ({ galleryImages }) => {
     if (event.key === 'ArrowLeft') { prevSlide(); }
   }, [slideNumber]);
 
+  // Keydown
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown, false);
 
@@ -28,19 +31,10 @@ const WSPGallery = ({ galleryImages }) => {
     };
   }, [slideNumber]);
 
-  // TODO make it more reusal
-  const toggleBodyScroll = () => {
-    setOpenModal(!openModal);
-    document.body.classList.remove('not-scroll');
-
-    if (!openModal) {
-      document.body.classList.add('not-scroll');
-    }
-  };
-
   // Close Modal
   const handleCloseModal = () => {
     setOpenModal(false);
+    document.body.classList.remove('not-scroll');
   };
 
   // Previous Image
@@ -59,17 +53,16 @@ const WSPGallery = ({ galleryImages }) => {
 
   return (
     <div>
-
       {openModal
                 && (
-                <div className="sliderWrap">
+                <SliderWrapper>
                   <CloseIcon className="btnClose" onClick={handleCloseModal} />
                   <ArrowLeftIcon height="40px" className="btnPrev" onClick={prevSlide} />
                   <ArrowRightIcon height="40px" className="btnNext" onClick={nextSlide} />
-                  <div className="fullScreenImage">
+                  <FullScreenImage>
                     <img src={galleryImages[slideNumber]} alt="" />
-                  </div>
-                </div>
+                  </FullScreenImage>
+                </SliderWrapper>
                 )}
 
       {/* <br />
@@ -78,7 +71,7 @@ const WSPGallery = ({ galleryImages }) => {
       Total Slides: {galleryImages.length}
       <br /><br /> */}
 
-      <div className="galleryWrap">
+      <GalleryWrapper>
         {
                     galleryImages && galleryImages.map((slide, index) => (
                       <div
@@ -90,7 +83,7 @@ const WSPGallery = ({ galleryImages }) => {
                       </div>
                     ))
                 }
-      </div>
+      </GalleryWrapper>
 
     </div>
   );
