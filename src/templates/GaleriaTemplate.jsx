@@ -27,19 +27,17 @@ const galleryImages = [
     img: 'https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
 ];
-const GaleriaTemplate = ({ data: { post: { galeriaTitle, galeriaAsets } } }) => (
-  <div>
-    <GoBack />
-    <Box isGap>
-      {galeriaAsets.map(({ url }, i) => (
-        <img key={i} src={url} alt="" />
-      ))}
-    </Box>
-    <WSPGallery
-      galleryImages={galleryImages}
-    />
-  </div>
-);
+const GaleriaTemplate = ({ data: { post: { galeriaAsets } } }) => {
+  const galleryImageSlides = galeriaAsets.map((slide) => slide.url);
+  return (
+    <div>
+      <GoBack />
+      <WSPGallery
+        galleryImages={galleryImageSlides}
+      />
+    </div>
+  );
+};
 
 // TODO CHANGE A KEY VALUE
 

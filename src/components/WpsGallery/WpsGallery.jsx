@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import './WspGallery.css';
 import ArrowRightIcon from '../icons/ArrowRightIcon';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
-import { StyledIconClose } from '../Navigation/Navigation.styles';
 import CloseIcon from '../icons/CloseIcon';
 
 const WSPGallery = ({ galleryImages }) => {
@@ -68,7 +67,7 @@ const WSPGallery = ({ galleryImages }) => {
                   <ArrowLeftIcon height="40px" className="btnPrev" onClick={prevSlide} />
                   <ArrowRightIcon height="40px" className="btnNext" onClick={nextSlide} />
                   <div className="fullScreenImage">
-                    <img src={galleryImages[slideNumber].img} alt="" />
+                    <img src={galleryImages[slideNumber]} alt="" />
                   </div>
                 </div>
                 )}
@@ -87,7 +86,7 @@ const WSPGallery = ({ galleryImages }) => {
                         key={index}
                         onClick={() => handleOpenModal(index)}
                       >
-                        <img src={slide.img} alt="" />
+                        <img src={slide} alt="" />
                       </div>
                     ))
                 }
