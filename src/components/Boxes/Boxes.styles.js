@@ -2,17 +2,19 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
   display: flex;
-    // width: ${({ isSmall }) => (isSmall ? '60px' : '200px')};
-  flex-direction: column;
   margin-bottom: ${({ noMarginBottom }) => (noMarginBottom ? '0' : '24px')};
   grid-gap: ${({ isGap }) => (isGap ? '24px' : '')};
   //change
   grid-gap: ${(props) => (props.gap ? props.gap : '')};
   justify-content: ${({ spaceBetween }) => (spaceBetween ? 'space-between' : '')};
 
-  align-items: ${({ isCenter }) => (isCenter ? 'center' : '')};
+  align-items: ${(props) => (props.alignItems ? props.alignItems : 'start')};
+  justify-content: ${({ isStart }) => (isStart ? 'start' : '')};
   height: ${({ height }) => height};
-  
+
+  flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : 'column')};
+
+
   &:hover {
     cursor: ${(props) => (props.isButton ? props.isButton : '')};
   }
@@ -41,10 +43,6 @@ export const Box = styled.div`
   a {
       color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
-
-    // &:hover {
-      //   color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
-    // }
   }
 
   ${({ theme }) => theme.mq.tablet} {

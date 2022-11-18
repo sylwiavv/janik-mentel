@@ -5,7 +5,7 @@ import { Box } from '../Boxes/Boxes.styles';
 
 export default function GoBack() {
   return (
-    <Box isButton="pointer" gap="16px" isCenter onClick={() => navigate(-1)}>
+    <Box isButton="pointer" gap="16px" alignItems="center" flexDirection="row" isStart onClick={() => navigate(-1)}>
       <ArrowLeftIcon height="24px" />
       <span>Wróć</span>
     </Box>

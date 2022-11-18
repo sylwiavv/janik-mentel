@@ -5,6 +5,10 @@ export const GaleryContainer = styled.div`
   padding: 64px 0;
   padding-right: 120px;
 
+  ${({ theme }) => theme.mq.mobile} {
+    padding-right: 0
+  }
+
   &:before {
     content: "";
     height: 100%;
@@ -13,8 +17,12 @@ export const GaleryContainer = styled.div`
     left: -60%;
     width: 100%;
     background: #34476c0f;
-    border-top-right-radius: 32px;
-    border-bottom-right-radius: 32px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    ${({ theme }) => theme.mq.mobile} {
+      width: 132%;
+    }
   }
 
   a {
@@ -29,13 +37,37 @@ export const GaleryContainer = styled.div`
     position: relative;
     z-index: 1;
 
+    ${({ theme }) => theme.mq.tablet} {
+      padding-right: 72px;
+    }
+
+    ${({ theme }) => theme.mq.mobile} {
+      border-radius: 4px;
+      padding: 16px;
+      background-color: #ffffffba;
+      margin-top: auto;
+      min-height: unset;
+      max-width: 90%;
+      width: max-content;
+    }
+
     h3 {
+      margin-top: 0;
       letter-spacing: .8px;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
 
     .page-link__link {
+      word-break: keep-all;
+      display: flex;
+      align-items: start;
+      flex-direction: row;
+      
+      svg {
+        height: 24px;
+      }
+      
       a {
         color: #252525;
         font-weight: 500;
@@ -55,16 +87,25 @@ export const GaleryContainer = styled.div`
   .page-link {
     position: relative;
     z-index: 1;
-    padding: 60px 0;
+    padding: 56px 0 56px 32px;
     overflow: hidden;
     margin-bottom: 72px;
-    border:24px solid white;
+    border: 24px solid white;
     background-color: white;
-    padding-left: 32px;
-    border-radius: 40px;
+    border-radius: 4px;
     transition: background-color, .2s;
     box-shadow: 4px 7px 13px -11px rgba(66, 68, 90, 1);
-
+    
+    ${({ theme }) => theme.mq.tablet} {
+      //height: 400px;
+    }
+    
+    ${({ theme }) => theme.mq.mobile} {
+      border: none;
+      margin-bottom: 32px;
+      padding: 48px 0 24px 24px;
+      height: 400px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -90,6 +131,10 @@ export const GaleryContainer = styled.div`
     top: 0;
     left: 260px;
     right: 0;
+    
+    ${({ theme }) => theme.mq.mobile} {
+      left: 0;
+    }
   }
 
   .page-link__img-inner {
@@ -98,8 +143,18 @@ export const GaleryContainer = styled.div`
     left: 92px;
     height: 100%;
 
+    ${({ theme }) => theme.mq.tablet} {
+      left: 0;
+      width: 100%;
+    }
+
+    ${({ theme }) => theme.mq.mobile} {
+      left: 0;
+      width: 100%;
+    }
+
     img {
-      border-radius: 40px;
+      border-radius: 4px;
       width: 100%;
       object-fit: cover;
       height: 100%;

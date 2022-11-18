@@ -2,12 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 import ArrowRightIcon from '../icons/ArrowRightIcon';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 import CloseIcon from '../icons/CloseIcon';
-import { FullScreenImage, GalleryWrapper, SliderWrapper } from './ex.styles';
+import { FullScreenImage, GalleryWrapper, SliderWrapper } from './WpsGallery.styles';
 
 const WSPGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  console.log(openModal);
 
   // Open Modal
   const handleOpenModal = (index) => {
@@ -73,16 +72,16 @@ const WSPGallery = ({ galleryImages }) => {
 
       <GalleryWrapper>
         {
-                    galleryImages && galleryImages.map((slide, index) => (
-                      <div
-                        className="single"
-                        key={index}
-                        onClick={() => handleOpenModal(index)}
-                      >
-                        <img src={slide} alt="" />
-                      </div>
-                    ))
-                }
+            galleryImages && galleryImages.map((slide, index) => (
+              <div
+                className="single"
+                key={index}
+                onClick={() => handleOpenModal(index)}
+              >
+                <img src={slide} alt="" />
+              </div>
+            ))
+        }
       </GalleryWrapper>
 
     </div>
