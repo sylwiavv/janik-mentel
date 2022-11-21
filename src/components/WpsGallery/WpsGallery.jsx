@@ -3,6 +3,8 @@ import ArrowRightIcon from '../icons/ArrowRightIcon';
 import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 import CloseIcon from '../icons/CloseIcon';
 import { FullScreenImage, GalleryWrapper, SliderWrapper } from './WpsGallery.styles';
+import ArrowShortLeft from '../icons/ArrowShortLeft';
+import ArrowShortRight from '../icons/ArrowShortRight';
 
 const WSPGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -51,24 +53,22 @@ const WSPGallery = ({ galleryImages }) => {
   };
 
   return (
-    <div>
-      {openModal
-                && (
-                <SliderWrapper>
-                  <CloseIcon className="btnClose" onClick={handleCloseModal} />
-                  <ArrowLeftIcon height="40px" className="btnPrev" onClick={prevSlide} />
-                  <ArrowRightIcon height="40px" className="btnNext" onClick={nextSlide} />
-                  <FullScreenImage>
-                    <img src={galleryImages[slideNumber]} alt="" />
-                  </FullScreenImage>
-                </SliderWrapper>
-                )}
+    <>
+      {openModal && (
+        <SliderWrapper>
+          <CloseIcon className="btnClose" onClick={handleCloseModal} />
+          <ArrowShortLeft height="40px" color="pink" className="btnPrev" onClick={prevSlide} />
+          <ArrowShortRight height="40px" className="btnNext" onClick={nextSlide} />
+          <FullScreenImage>
+            <img src={galleryImages[slideNumber]} alt="" />
+          </FullScreenImage>
+        </SliderWrapper>
+      )}
 
-      {/* <br />
-      Current slide number:  {slideNumber}
-      <br />
-      Total Slides: {galleryImages.length}
-      <br /><br /> */}
+      {/* /!* <br /> */}
+      {/* <br /> */}
+      {/* Total Slides: {galleryImages.length} */}
+      {/* <br /><br /> *!/ */}
 
       <GalleryWrapper>
         {
@@ -83,8 +83,7 @@ const WSPGallery = ({ galleryImages }) => {
             ))
         }
       </GalleryWrapper>
-
-    </div>
+    </>
   );
 };
 

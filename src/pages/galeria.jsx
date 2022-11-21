@@ -15,7 +15,7 @@ const Galeria = ({ data: { posts: { nodes } }, data }) => (
       <StyledTitle>Galeria</StyledTitle>
       <p>Zapraszamy do obejrzenia zdjęć z sesji zdjęciowych wykonanych przez nasze studio.</p>
     </Box>
-    <GalleryContainer>
+    <GalleryContainer paddingRight="270px">
       {nodes.map((n) => (
         <a href={getPageSlug(n.galeriaTitle)}>
           <Box className="page-link" key={n.galeriaTitle} gap="32px" spaceBetween>

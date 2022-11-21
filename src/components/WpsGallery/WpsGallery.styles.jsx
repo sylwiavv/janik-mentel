@@ -1,27 +1,21 @@
 import styled from 'styled-components';
 
 export const GalleryWrapper = styled.div`
-  //display: flex;
-  //flex-wrap: wrap;
-  //gap: 10px;
-  //align-items: center;
-  //justify-content: center;
-  //max-width: 620px;
   margin: 0 auto;
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 260px;
+  grid-auto-rows: 400px;
   grid-auto-flow: row dense;
   overflow: hidden;
       
   ${({ theme }) => theme.mq.mobile} {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 280px;
   }
       
   .single {
     cursor: pointer;
-    //box-shadow: 4px 7px 13px -11px rgb(66 68 90);
     background-color: #34476c0f;
     transition: background-color, .4s;
 
@@ -71,7 +65,7 @@ export const SliderWrapper = styled.div`
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0 0 0 / 67%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,28 +73,46 @@ export const SliderWrapper = styled.div`
   height: 100%;
 
   .btnClose {
-    top: 40px;
-    right: 40px;
+    top: 32px;
+    right: 60px;
+
+    ${({ theme }) => theme.mq.mobile} {
+      right: 24px;
+    }
   }
 
   .btnPrev {
     top: 50%;
     transform: translateY(-50%);
-    left: 40px;
+    left: 60px;
+
+    ${({ theme }) => theme.mq.mobile} {
+      left: 24px;
+    }
   }
 
   .btnNext {
     top: 50%;
     transform: translateY(-50%);
-    right: 40px;
+    right: 60px;
+
+    ${({ theme }) => theme.mq.mobile} {
+      right: 24px;
+    }
+  }
+  
+  svg {
+    path {
+      fill: white;
+    }
   }
 
   .btnClose, .btnPrev, .btnNext {
     position: fixed;
     cursor: pointer;
-    opacity: 0.6;
-    color: #fff;
+    opacity: .7;
     z-index: 9999;
+    transition: opacity, .4s;
 
     &:hover {
       opacity: 1;
