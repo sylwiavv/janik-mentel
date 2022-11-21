@@ -13,16 +13,17 @@ export const GalleryWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 260px;
   grid-auto-flow: row dense;
-      overflow: hidden;
-
-
-      ${({ theme }) => theme.mq.mobile} {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      }
+  overflow: hidden;
+      
+  ${({ theme }) => theme.mq.mobile} {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+      
   .single {
     cursor: pointer;
     //box-shadow: 4px 7px 13px -11px rgb(66 68 90);
-        background-color: #ff6d2a;
+    background-color: #34476c0f;
+    transition: background-color, .4s;
 
     &:nth-child(3n) {
       grid-row-end: span 2;

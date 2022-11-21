@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-export const GaleryContainer = styled.div`
+export const GalleryContainer = styled.div`
   position: relative;
-  padding: 64px 0;
-  padding-right: 120px;
+  padding: 64px 120px 64px 0;
 
   ${({ theme }) => theme.mq.mobile} {
     padding-right: 0
@@ -19,12 +18,13 @@ export const GaleryContainer = styled.div`
     background: #34476c0f;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    z-index: -1;
 
     ${({ theme }) => theme.mq.mobile} {
       width: 132%;
     }
   }
-
+  
   a {
     color: #1a1a1a;
     text-decoration: none;
@@ -161,7 +161,4 @@ export const GaleryContainer = styled.div`
       position: relative;
     }
   }
-`;
-export const PatternContainer = styled.div`
-
 `;

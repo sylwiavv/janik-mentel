@@ -6,6 +6,8 @@ import { Box } from '../components/Boxes/Boxes.styles';
 import GoBack from '../components/GoBack/GoBack';
 import WpsGallery from '../components/WpsGallery/WpsGallery';
 import WSPGallery from '../components/WpsGallery/WpsGallery';
+import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
+import { GalleryContainer } from '../assets/styles/pages/galeria.styles';
 
 const galleryImages = [
   {
@@ -27,15 +29,21 @@ const galleryImages = [
     img: 'https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
 ];
-const GaleriaTemplate = ({ data: { post: { galeriaAsets } } }) => {
+const GaleriaTemplate = ({ data: { post: { galeriaAsets, galeriaTitle } } }) => {
   const galleryImageSlides = galeriaAsets.map((slide) => slide.url);
   return (
-    <div>
+    <>
       <GoBack />
-      <WSPGallery
-        galleryImages={galleryImageSlides}
-      />
-    </div>
+      <Box isColumn marginBottom="64px">
+        <StyledTitle>{galeriaTitle}</StyledTitle>
+        <p>Zapraszamy do obejrzenia wybranych zdjęć z tej wyjątkowej sesji zdjęciowej.</p>
+      </Box>
+      <GalleryContainer>
+        <WSPGallery
+          galleryImages={galleryImageSlides}
+        />
+      </GalleryContainer>
+    </>
   );
 };
 
