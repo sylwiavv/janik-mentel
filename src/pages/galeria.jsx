@@ -11,7 +11,7 @@ import ArrowRightIcon from '../components/icons/ArrowRightIcon';
 const Galeria = ({ data: { posts: { nodes } }, data }) => (
   <>
     <StyledHeading>Galeria</StyledHeading>
-    <Box isColumn>
+    <Box isColumn marginBottom="64px">
       <StyledTitle>Galeria</StyledTitle>
       <p>Zapraszamy do obejrzenia zdjęć z sesji zdjęciowych wykonanych przez nasze studio.</p>
     </Box>

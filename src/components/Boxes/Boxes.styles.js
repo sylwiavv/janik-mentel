@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Box = styled.div`
   display: flex;
   margin-bottom: ${({ noMarginBottom }) => (noMarginBottom ? '0' : '24px')};
+  margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '')};
   grid-gap: ${({ isGap }) => (isGap ? '24px' : '')};
   //change
   grid-gap: ${(props) => (props.gap ? props.gap : '')};
@@ -41,7 +42,7 @@ export const Box = styled.div`
   }
 
   a {
-      color: ${({ theme }) => theme.colors.fontColor};
+    color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
   }
 

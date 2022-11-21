@@ -1,21 +1,61 @@
 import styled from 'styled-components';
 
 export const GalleryWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  max-width: 620px;
+  //display: flex;
+  //flex-wrap: wrap;
+  //gap: 10px;
+  //align-items: center;
+  //justify-content: center;
+  //max-width: 620px;
   margin: 0 auto;
-  
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 260px;
+  grid-auto-flow: row dense;
+      overflow: hidden;
+
+
+      ${({ theme }) => theme.mq.mobile} {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
   .single {
-    width: 500px;
     cursor: pointer;
+    //box-shadow: 4px 7px 13px -11px rgb(66 68 90);
+        background-color: #ff6d2a;
+
+    &:nth-child(3n) {
+      grid-row-end: span 2;
+    }
+
+    &:nth-child(5n) {
+      grid-row-end: auto;
+    }
+
+    &:nth-child(6n) {
+      grid-row-end: auto;
+    }
+
+    &:nth-child(7n) {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+
+      ${({ theme }) => theme.mq.mobile} {
+        grid-column-end: unset;
+      }
+    }
+        
+    &:last-child {
+      grid-column-end: auto;
+      grid-row-end: auto;
+    }
 
     img {
       max-width: 100%;
-      
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+
       &:hover {
         transform: scale(1.02);
       }
