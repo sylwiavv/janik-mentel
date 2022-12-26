@@ -108,7 +108,7 @@ export const StyledNavigation = styled.nav`
 
 export const StyledLink = styled(Link)`
     // color: ${({ theme }) => theme.colors.fontColor};
-  color: rgba(227, 220, 220, 0.91);
+  color: rgba(227, 220, 220, 0.91); !important;
   font-size: ${({ theme }) => theme.fontSize.l};
   font-weight: bold;
   text-decoration: none;

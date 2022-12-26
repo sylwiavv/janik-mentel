@@ -62,7 +62,6 @@ const Navigation = () => {
               }
           </>
         </Box>
-
       </StyledNavigation>
     </OutsideWrapper>
   );

@@ -4,7 +4,7 @@ import { getPageSlug } from '../helpers/getPageSlug';
 import { StyledHeading, StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { HeroImage } from '../assets/styles/pages/homepage.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
-import { GalleryContainer, PatternContainer } from '../assets/styles/pages/galeria.styles';
+import { GalleryContainer } from '../assets/styles/pages/galeria.styles';
 import ArrowRightIcon from '../components/icons/ArrowRightIcon';
 
 // eslint-disable-next-line react/prop-types
@@ -15,7 +15,7 @@ const Galeria = ({ data: { posts: { nodes } }, data }) => (
       <StyledTitle>Galeria</StyledTitle>
       <p>Zapraszamy do obejrzenia zdjęć z sesji zdjęciowych wykonanych przez nasze studio.</p>
     </Box>
-    <GalleryContainer paddingRight="270px">
+    <GalleryContainer paddingRight="260px">
       {nodes.map((n) => (
         <a href={getPageSlug(n.galeriaTitle)}>
           <Box className="page-link" key={n.galeriaTitle} gap="32px" spaceBetween>

@@ -23,9 +23,9 @@ export const Footer = () => (
       </Box>
       <Box isColumn noMarginBottom className="links-wrapper">
         <h3>Nawigacja</h3>
-        <StyledLink to={navigation[1].href}>{navigation[1].name}</StyledLink>
-        <StyledLink to={navigation[2].href}>{navigation[2].name}</StyledLink>
-        <StyledLink to={navigation[3].href}>{navigation[3].name}</StyledLink>
+        {navigation.map(({ href, name }) => (
+          <StyledLink key={name} to={href}>{name}</StyledLink>
+        ))}
       </Box>
     </Box>
 

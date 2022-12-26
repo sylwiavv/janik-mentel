@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import { StyledHeading, StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box, BoxWithIcon, IconBox } from '../components/Boxes/Boxes.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';

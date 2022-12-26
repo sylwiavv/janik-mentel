@@ -1,8 +1,14 @@
 export const theme = {
   colors: {
     backgroundColor: '#f4f7fb',
-    fontColor: '#414148',
-    fontColorHover: '#37C6E6',
+    fontColor: '#222128',
+    fontColorHover: '#333239',
+    fontColorHoverDarker: '#000906',
+    // fontColorHoverDarker: '#242323',
+    // fontColorHoverDarker: '#454545',
+    // fontColorHoverDarker: '#d4d4d4',
+    // fontColorHoverDarker: '#222',
+    // fontColorHoverDarker: '#eee',
 
     fontColorSecondary: '#95aff9',
     fontColorSecondary_hover: '#0d5adb',

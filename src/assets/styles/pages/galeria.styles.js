@@ -27,9 +27,8 @@ export const GalleryContainer = styled.div`
   }
   
     a {
-      color: #1a1a1a;
+      color: ${({ theme }) => theme.colors.fontColor};
       text-decoration: none;
-    }
    }
 
   // PAGE LINK

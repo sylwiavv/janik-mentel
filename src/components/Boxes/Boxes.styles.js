@@ -42,7 +42,7 @@ export const Box = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.fontColor};
+    // color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
   }
 

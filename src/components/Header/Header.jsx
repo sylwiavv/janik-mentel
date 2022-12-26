@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useContext, useState } from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/styles/carousel.css';
 import { CarouselContainer } from './Header.styles';
 import Navigation from '../Navigation/Navigation';

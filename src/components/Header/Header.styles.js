@@ -1,25 +1,10 @@
 import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
-  //overflow: hidden;
-  //background: url("https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0809.jpg");
-  //background: url("https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0885.jpg");
-  ////background: url("https://www.janik-mentel.pl/wp-content/uploads/2018/05/J-D-1006.jpg");
-  ////
-  ////background: url("https://www.janik-mentel.pl/wp-content/uploads/2018/05/A-Sz-0802.jpg");
-  //
-  //background-repeat: no-repeat;
-  //background-position: top;
-  //background-size: cover;
-  //background-attachment: fixed;
-  //height: auto;
-  //min-height: 100vh;
-  //filter: brightness(93%) contrast(116%) grayscale(23%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(123%) sepia(18%);
-  //mix-blend-mode: none;
   background: #ffffff;
   margin-bottom: 64px;
   position: relative;
-  filter: brightness(93%) contrast(116%) grayscale(23%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(123%) sepia(18%);
+  //filter: brightness(93%) contrast(116%) grayscale(23%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(123%) sepia(18%);
   mix-blend-mode: unset;
   border: 32px solid #f7fcff;
   display: flex;
@@ -30,7 +15,7 @@ export const CarouselContainer = styled.div`
     border: ${({ isOpen }) => (isOpen ? 'none' : '')};
     height: ${({ isOpen }) => (isOpen ? '100vh' : '80vh')};
   }
-  
+
   .carousel {
     &-inner {
       height: 100%;
@@ -62,7 +47,7 @@ export const CarouselContainer = styled.div`
       opacity: .7;
     }
   }
-  
+
   &:after {
     content: '';
     position: absolute;
