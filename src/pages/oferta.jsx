@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import { StyledHeading, StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
+import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage';
 
 const Home = () => (
   <>
@@ -9,30 +9,76 @@ const Home = () => (
     <StyledTitle>Oferta</StyledTitle>
     <p>Zapoznaj się naszą ofertą</p>
     <Box isColumn>
-      <p>Oferujemy usługi w zakresie fotografowania i wideofilmowania:</p>
-      <ul>
-        <li>zdjęcia do dokumentów (paszport, dowód osobisty, wiza)</li>
-      </ul>
-      <p>Fotografia ślubna:</p>
-      <ul>
-        <li>reportaż (przygotowania, ceremonia, wesele)</li>
-        <li> sesja plenerowa lub studyjna</li>
-      </ul>
-      <ul>
-        <li>sesje dziecięce i rodzinne</li>
-        <li>reportaże okolicznościowe (chrzest, komunia itp.)</li>
-        <li>pakiety zdjęć szkolnych i studniówkowych</li>
-        <li>druk na płótnie (duże formaty)</li>
-        <li>przegrywanie kaset VHS na płyty DVD</li>
-        <li> spersonalizowane gadżety (kubki z nadrukowaną własną fotografią itp.)</li>
-        <li>odnawianie starych, znisczonych fotografii</li>
-      </ul>
       <p>
-        Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia oprawiamy w tradycyjne albumy lub eleganckie fotoksiążki.
+        Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia oprawiamy w tradycyjne albumy lub
+        eleganckie fotoksiążki.
         Oferujemy również usługi wideo.
       </p>
     </Box>
-    <Link to="/">Go home</Link>
+    <WrapperGrid>
+      <Box isColumn>
+        <h2>Fotografia ślubna</h2>
+        <ul>
+          <li>Reportaż (przygotowania, ceremonia, wesele)</li>
+          <li>Sesja plenerowa lub studyjna</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Zdjęcia do dokumentów</h2>
+        <p>Wykonujemy zdjęcia do:</p>
+        <ul>
+          <li>paszportów</li>
+          <li>dowodów osobistych</li>
+          <li>wiz</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Sesje dziecięce i rodzinne</h2>
+        <ul>
+          <li>zdjęcia świąteczne w studio</li>
+          <li>sesje w plenerze</li>
+          <li>zdjęcia z Mikołajem w przedszkolu</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Fotografia okolicznościowa</h2>
+        <ul>
+          <li>Chrzest święty</li>
+          <li>Komunia święta</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Zdjęć szkolne</h2>
+        <ul>
+          <li>Tablo</li>
+          <li>Studniówkowe</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Druki zdjęć</h2>
+        <ul>
+          <li>Druk na płótnie (duże formaty)</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Przegrywanie kaset VHS na płyty DVD</h2>
+        <ul>
+          <li>lorem ipsum</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Spersonalizowane gadżety</h2>
+        <ul>
+          <li>lorem ipsum</li>
+        </ul>
+      </Box>
+      <Box isColumn>
+        <h2>Odnawianie starych, znisczonych fotografii</h2>
+        <ul>
+          <li>lorem ipsum</li>
+        </ul>
+      </Box>
+    </WrapperGrid>
   </>
 );
 
