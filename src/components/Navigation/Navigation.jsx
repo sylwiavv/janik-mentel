@@ -1,8 +1,14 @@
 import * as React from 'react';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
+import Link from 'gatsby-link';
 import { LogoWrapper, StyledLogo } from '../Logo/Logo';
 import {
-  OutsideWrapper, Wrapper, StyledNavigation, StyledIconClose, StyledIconHamburger, StyledLink,
+  OutsideWrapper,
+  StyledIconClose,
+  StyledIconHamburger,
+  StyledLink,
+  StyledNavigation,
+  Wrapper,
 } from './Navigation.styles';
 import { Box } from '../Boxes/Boxes.styles';
 import { NavigationContext } from '../../providers/NavigationProvider';
@@ -33,7 +39,9 @@ const Navigation = () => {
     <OutsideWrapper isOpen={isOpen}>
       <Wrapper isMobile isOpen={!isOpen}>
         <LogoWrapper isSmall isOpen>
-          <StyledLogo />
+          <Link to="/">
+            <StyledLogo />
+          </Link>
         </LogoWrapper>
         <StyledIconHamburger onClick={toggleNavigation} />
       </Wrapper>
@@ -47,19 +55,19 @@ const Navigation = () => {
         <Box isGap noMarginBottom>
           <>
             {
-                navigation.map(({ name, href }) => (
-                  <StyledLink
-                    key={name}
-                    onClick={() => setIsOpen(false)}
-                    className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
-                        || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
-                    to={href}
-                  >
-                    {name}
-                  </StyledLink>
+                            navigation.map(({ name, href }) => (
+                              <StyledLink
+                                key={name}
+                                onClick={() => setIsOpen(false)}
+                                className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
+                                    || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
+                                to={href}
+                              >
+                                {name}
+                              </StyledLink>
 
-                ))
-              }
+                            ))
+                        }
           </>
         </Box>
       </StyledNavigation>

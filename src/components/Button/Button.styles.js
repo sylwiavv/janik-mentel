@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ButtonStyles = styled.div`
   display: flex;
   border: 2px solid ${({ theme }) => theme.colors.fontColorSecondary_hover};
-  // background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+    // background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
   color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
   font-weight: 600;
   letter-spacing: .4px;
@@ -14,6 +14,12 @@ export const ButtonStyles = styled.div`
   position: relative;
   z-index: 1;
 
+  a {
+    color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+    font-weight: 600;
+    letter-spacing: .4px;
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -21,8 +27,8 @@ export const ButtonStyles = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${({ theme }) => theme.colors.white};
-    border-radius: 10rem;
+    background-color: transparent;
+    //border-radius: 10rem;
     z-index: -2;
   }
 
@@ -42,28 +48,13 @@ export const ButtonStyles = styled.div`
     color: #fff;
     cursor: pointer;
 
+    a {
+      color: #fff;
+    }
+
     &:before {
       width: 100%;
     }
   }
-  
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   background-color: transparent;
-  //   transition: background-color, .8s;
-  //   height: 100%;
-  //   width: 0%;
-  // }
-  //
-  // &:hover {
-  //   cursor: pointer;
-  //  
-  //   &:after {
-  //     background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
-  //     width: 100%;
-  //   }
-  }
+}
 `;

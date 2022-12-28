@@ -1,22 +1,35 @@
 import styled from 'styled-components';
 
-export const BoxWIthImage = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+export const BoxWIthImageStyles = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, auto);
   position: relative;
-  padding: 56px 0;
+  padding: 32px 0;
   margin-bottom: 64px;
+  width: 100%;
+
+  ${({ theme }) => theme.mq.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 32px 0;
+    grid-template-rows: unset;
+  }
+
+  grid-gap: 32px;
+
 
   &:after {
     content: '';
     background-color: #eaecf3;
     position: absolute;
     top: 0;
-    left: 80px;
+    right: -24px;
     width: 80%;
     height: 100%;
     z-index: -1;
+
+    ${({ theme }) => theme.mq.tablet} {
+      left: 0;
+    }
   }
 
   h2 {
@@ -24,14 +37,26 @@ export const BoxWIthImage = styled.div`
   }
 
   .box-wrapper {
-    flex: 0 0 16%;
-    max-width: 50%;
+    grid-column: 1;
+    grid-row: 1/1;
+
+    ${({ theme }) => theme.mq.tablet} {
+      grid-column: 2;
+    }
   }
 
   .text-box {
     padding: 0 32px;
     flex-direction: column;
     margin: auto;
+    grid-column: 1;
+    grid-row: 2/2;
+
+
+    ${({ theme }) => theme.mq.tablet} {
+      grid-row: 1;
+      padding: 0 40px;
+    }
   }
 
   .text-wrapper {
@@ -61,7 +86,7 @@ export const WrapperGrid = styled.div`
 
   ${({ theme }) => theme.mq.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 32px;
-    padding: 32px 0;
+    grid-gap: 48px;
+    padding: 48px 0;
   }
 `;

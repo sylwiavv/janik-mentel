@@ -4,11 +4,11 @@ import { Link } from 'gatsby';
 // markup
 const NotFoundPage = () => (
   <main>
-    <title>Not found</title>
-    <h1>Page not found</h1>
+    <title>Strona nieznaleziona</title>
+    <h1>Strona nieznaleziona</h1>
     <p>
-      <Link to="/">Go home</Link>
-      .
+      Niestety nie znaleziono takiej strony
+      <Link to="/">Przejdź do strony głównej</Link>
     </p>
   </main>
 );

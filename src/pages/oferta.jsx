@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { StyledHeading, StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
-import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage';
+import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage.styles';
 
 const Home = () => (
   <>
     <StyledHeading>Oferta</StyledHeading>
     <StyledTitle>Oferta</StyledTitle>
-    <p>Zapoznaj się naszą ofertą</p>
     <Box isColumn>
       <p>
         Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia oprawiamy w tradycyjne albumy lub
