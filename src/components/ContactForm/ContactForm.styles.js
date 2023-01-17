@@ -3,19 +3,29 @@ import styled from 'styled-components';
 export const ContactFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
   width: 100%;
+  padding-right: 56px;
+
+  ${({ theme }) => theme.mq.mobile} {
+    padding: 0 24px;
+  }
+
+  h2 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
 
   ${({ theme }) => theme.mq.tablet} {
-    max-width: 50%;
-  }
-  
-  h3 {
-    margin-bottom: 24px;
+    //max-width: 50%;
   }
 
   button {
     margin: 16px 0;
+    min-width: 200px;
   }
 
   label {
@@ -41,16 +51,6 @@ export const ContactFormWrapper = styled.form`
   }
 
   textarea {
-    min-height: 200px;
-  }
-
-  ${({ theme }) => theme.mq.desktop} {
-    //max-width: 400px;
-    //margin: 0 auto 100px;
-
-    h2 {
-      //max-width: 300px;
-      margin: 32px auto;
-    }
+    min-height: 160px;
   }
 `;

@@ -4,7 +4,6 @@ export const CarouselContainer = styled.div`
   background: #ffffff;
   margin-bottom: 64px;
   position: relative;
-  //filter: brightness(93%) contrast(116%) grayscale(23%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(123%) sepia(18%);
   mix-blend-mode: unset;
   border: 32px solid #f7fcff;
   display: flex;

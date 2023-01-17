@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => (
         </div>
       </BoxWIthImageStyles>
     </Box>
-    <Box>Zapraszamy do kontaktu</Box>
+    <Box><h2>Zapraszamy do kontaktu</h2></Box>
   </>
 
 );

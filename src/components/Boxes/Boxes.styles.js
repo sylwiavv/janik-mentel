@@ -14,6 +14,7 @@ export const Box = styled.div`
   height: ${({ height }) => height};
 
   flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : 'column')};
+  width: 100%;
 
 
   &:hover {
@@ -32,6 +33,12 @@ export const Box = styled.div`
     font-weight: bold;
   }
 
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
   span {
     margin-right: 4px;
   }
@@ -42,7 +49,7 @@ export const Box = styled.div`
   }
 
   a {
-    // color: ${({ theme }) => theme.colors.fontColor};
+      // color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
   }
 
@@ -67,19 +74,6 @@ export const Box = styled.div`
     }
   }
 
-  .box-with-image {
-    width: 30%;
-    background-color: gold;
-  }
-
-  .box-with-text {
-    display: flex;
-    flex: 1;
-    width: 60%;
-    padding-top: 48px;
-    background-color: #FF905D;
-  }
-
   .box-image {
     display: flex;
     justify-content: space-between;
@@ -101,7 +95,6 @@ export const Box = styled.div`
       background: #34476c0f;
       top: 0;
       left: 0;
-      width: 352px;
       height: 100%;
       z-index: 1;
       width: 266px;
@@ -123,13 +116,15 @@ export const Box = styled.div`
 }
 `;
 
-export const BoxWithIcon = styled.div`
+export const BoxWithIcon = styled(Box)`
   display: flex;
-  flex-direction: column;
+  //align-items: center;
+  grid-gap: 24px;
+  //flex-direction: column;
   flex: 1;
   border-radius: 4px;
-  background-color: #ffffff;
-  padding: 24px;
+  //background-color: #ffffff;
+  margin: 16px 8px 0 8px;
 
   h3 {
     font-weight: 500;
@@ -145,12 +140,16 @@ export const IconBox = styled.div`
   display: flex;
   height: 40px;
   margin-right: auto;
-  background-color: #f7f9fa;;
   border-radius: 20%;
   padding: 8px;
   width: 40px;
-  margin-bottom: 40px;
-  
+  //margin-bottom: 40px;
+
+  ${({ theme }) => theme.mq.tablet} {
+    margin-bottom: 40px;
+  }
+
+
   svg {
     height: auto;
   }

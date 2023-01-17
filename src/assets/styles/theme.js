@@ -13,6 +13,7 @@ export const theme = {
     fontColorSecondary: '#95aff9',
     fontColorSecondary_hover: '#0d5adb',
     white: '#fff',
+    contactIconStrokeColor: '#51758f',
   },
 
   fontSize: {

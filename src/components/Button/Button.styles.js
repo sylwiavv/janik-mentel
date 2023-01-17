@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const ButtonStyles = styled.div`
+export const ButtonStyles = styled.button`
   display: flex;
+  justify-content: center;
   border: 2px solid ${({ theme }) => theme.colors.fontColorSecondary_hover};
-    // background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+  background-color: transparent;
   color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
   font-weight: 600;
   letter-spacing: .4px;

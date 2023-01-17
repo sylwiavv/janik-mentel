@@ -1,58 +1,121 @@
 import * as React from 'react';
-import { StyledHeading, StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
+import styled from 'styled-components';
+import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box, BoxWithIcon, IconBox } from '../components/Boxes/Boxes.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';
-import PhoneIcon from '../components/icons/PhoneIcon';
 import MailIcon from '../components/icons/MailIcon';
 import LocalizationIcon from '../components/icons/LocalizationIcon';
+import PhoneIcon from '../components/icons/PhoneIcon';
+
+export const DarkBox = styled(Box)`
+  box-shadow: 0px 0px 20px rgb(76 85 102 / 4%), 0px 40px 40px -32px rgb(76 85 102 / 32%);
+  background-color: #00263a;
+  border-radius: 4px;
+  color: #fff;
+  padding: 72px 48px;
+  position: relative;
+  z-index: 2;
+
+  ${({ theme }) => theme.mq.mobile} {
+    padding: 64px 24px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: ${({ theme }) => theme.colors.white};
+  }
+`;
+
+export const FormBox = styled(Box)`
+  border-radius: 4px;
+`;
+
+export const ContactBoxInside = styled(Box)`
+`;
+
+export const ContactBoxOutside = styled(Box)`
+  background-color: #ffffff;
+  padding: 40px 0;
+
+  position: relative;
+  margin: 84px 0;
+
+  ${({ theme }) => theme.mq.tablet} {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: ${({ theme }) => theme.colors.backgroundColor};
+      height: 100%;
+      width: 15%;
+      z-index: 1;
+    }
+  }
+
+`;
 
 const IndexPage = () => (
   <>
-    <StyledHeading>Contat us</StyledHeading>
-    <StyledTitle>Get in touch!</StyledTitle>
-    <p>Contact us for more details</p>
-    <Box isGap>
-      <BoxWithIcon>
-        <IconBox><LocalizationIcon /></IconBox>
-        <h3>Odwiedź nas</h3>
-        <p>Jeleśnia, ul. Jana Kazimierza 213</p>
-        <ul>
-          <span>Zakład czynny:</span>
-          <li>poniedziałek – piątek 9 – 16</li>
-          <li>sobota 9 – 12</li>
-        </ul>
-      </BoxWithIcon>
-      <BoxWithIcon>
-        <IconBox>
-          <PhoneIcon />
-        </IconBox>
-        <h3>Zadzwoń do nas</h3>
-        <Box isCenter className="text-box">
-          <span>tel.</span>
-          <a href="tel:(33) 86 36 100">(33) 86 36 100</a>
-        </Box>
-        <Box isCenter className="text-box">
-          <span>tel.kom.</span>
-          <a href="tel:503 022 377">503 022 377</a>
-        </Box>
-      </BoxWithIcon>
-      <BoxWithIcon>
-        <IconBox>
-          <MailIcon />
-        </IconBox>
-        <h3>Napisz do nas</h3>
-        <Box isCenter className="text-box">
-          <span>mail: </span>
-          <a href="mailto:amentel@op.pl">amentel@op.pl</a>
-        </Box>
-      </BoxWithIcon>
+    <Box isColumn marginBottom="56px">
+      <StyledTitle>Kontakt</StyledTitle>
+      <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
     </Box>
-    <BoxWithIcon>
-      <IconBox>
-        <MailIcon />
-      </IconBox>
-      <ContactForm />
-    </BoxWithIcon>
+    <ContactBoxOutside alignItems="center" marginBottom="64px">
+      <ContactBoxInside gap="64px" alignItems="center">
+        <DarkBox isColumn noMarginBottom>
+          <h2>Skontaktuj się z nami</h2>
+          <BoxWithIcon>
+            <IconBox>
+              <MailIcon />
+            </IconBox>
+            <Box isColumn>
+              <h3>Napisz do nas</h3>
+              <Box alignItems="center" className="text-box">
+                <span>mail: </span>
+                <a href="mailto:amentel@op.pl">amentel@op.pl</a>
+              </Box>
+            </Box>
+          </BoxWithIcon>
+          <BoxWithIcon>
+            <IconBox>
+              <PhoneIcon />
+            </IconBox>
+            <Box isColumn>
+              <h3>Zadzwoń do nas</h3>
+              <Box alignItems="center" className="text-box">
+                <span>tel.</span>
+                <a href="tel:(33) 86 36 100">(33) 86 36 100</a>
+              </Box>
+              <Box alignItems="center" className="text-box">
+                <span>tel.kom.</span>
+                <a href="tel:503 022 377">503 022 377</a>
+              </Box>
+            </Box>
+          </BoxWithIcon>
+          <BoxWithIcon>
+            <IconBox><LocalizationIcon /></IconBox>
+            <Box isColumn>
+              <h3>Odwiedź nas</h3>
+              <p>Jeleśnia, ul. Jana Kazimierza 213</p>
+              <ul>
+                <span>Zakład czynny:</span>
+                <li>poniedziałek – piątek 9 – 16</li>
+                <li>sobota 9 – 12</li>
+              </ul>
+            </Box>
+          </BoxWithIcon>
+        </DarkBox>
+        <FormBox isColumn noMarginBottom>
+          <ContactForm />
+        </FormBox>
+      </ContactBoxInside>
+
+    </ContactBoxOutside>
+    <Box isColumn>
+      <h2>Znajdź nas na Google Maps</h2>
+      <Box>Mapa</Box>
+    </Box>
   </>
 );
 
