@@ -16,7 +16,6 @@ export const BoxWIthImageStyles = styled.div`
 
   grid-gap: 32px;
 
-
   &:after {
     content: '';
     background-color: #eaecf3;
@@ -26,6 +25,8 @@ export const BoxWIthImageStyles = styled.div`
     width: 80%;
     height: 100%;
     z-index: -1;
+    opacity: 1;
+    transition: opacity, .6s;
 
     ${({ theme }) => theme.mq.tablet} {
       left: 0;

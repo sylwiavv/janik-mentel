@@ -14,7 +14,8 @@ export const Box = styled.div`
   height: ${({ height }) => height};
 
   flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : 'column')};
-  width: 100%;
+  opacity: 1;
+  transition: opacity, .10s;
 
 
   &:hover {
@@ -87,6 +88,7 @@ export const Box = styled.div`
 
     ${({ theme }) => theme.mq.mobile} {
       padding: 32px;
+      margin-bottom: 72px;
     }
 
     &:after {
@@ -113,7 +115,11 @@ export const Box = styled.div`
     display: flex;
     grid-gap: 24px;
   }
-}
+
+
+  .no-opacity {
+    opacity: 0;
+  }
 `;
 
 export const BoxWithIcon = styled(Box)`
@@ -124,7 +130,7 @@ export const BoxWithIcon = styled(Box)`
   flex: 1;
   border-radius: 4px;
   //background-color: #ffffff;
-  margin: 16px 8px 0 8px;
+  margin-top: 0;
 
   h3 {
     font-weight: 500;

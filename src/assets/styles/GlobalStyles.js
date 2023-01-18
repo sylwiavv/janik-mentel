@@ -7,11 +7,11 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     font-family: "Montserrat", sans-serif;
   }
-  
+
   html {
     font-size: 62.5%;
   }
-  
+
   body {
     margin: 0;
     font-size: 1.6rem;
@@ -22,20 +22,20 @@ export const GlobalStyle = createGlobalStyle`
       overflow: hidden;
     }
   }
-  
+
   main {
     padding: 0 24px;
     margin: 0 auto;
     max-width: 1240px;
     margin-bottom: 64px;
   }
-  
-  h1,h2,h3,h4,h5,h6 {
+
+  h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     line-height: 1.2;
   }
-  
+
   p, li, a {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;

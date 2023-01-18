@@ -1,6 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import ArrowRightIcon from '../icons/ArrowRightIcon';
-import ArrowLeftIcon from '../icons/ArrowLeftIcon';
 import CloseIcon from '../icons/CloseIcon';
 import { FullScreenImage, GalleryWrapper, SliderWrapper } from './WpsGallery.styles';
 import ArrowShortLeft from '../icons/ArrowShortLeft';
@@ -18,9 +16,15 @@ const WSPGallery = ({ galleryImages }) => {
   };
 
   const handleKeyDown = useCallback((event) => {
-    if (event.key === 'Escape') { handleCloseModal(); }
-    if (event.key === 'ArrowRight') { nextSlide(); }
-    if (event.key === 'ArrowLeft') { prevSlide(); }
+    if (event.key === 'Escape') {
+      handleCloseModal();
+    }
+    if (event.key === 'ArrowRight') {
+      nextSlide();
+    }
+    if (event.key === 'ArrowLeft') {
+      prevSlide();
+    }
   }, [slideNumber]);
 
   // Keydown
@@ -71,17 +75,15 @@ const WSPGallery = ({ galleryImages }) => {
       {/* <br /><br /> *!/ */}
 
       <GalleryWrapper>
-        {
-            galleryImages && galleryImages.map((slide, index) => (
-              <div
-                className="single"
-                key={index}
-                onClick={() => handleOpenModal(index)}
-              >
-                <img src={slide} alt="" />
-              </div>
-            ))
-        }
+        {galleryImages && galleryImages.map((slide, index) => (
+          <div
+            className="single"
+            key={index}
+            onClick={() => handleOpenModal(index)}
+          >
+            <img src={slide} alt="" />
+          </div>
+        ))}
       </GalleryWrapper>
     </>
   );

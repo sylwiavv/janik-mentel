@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box, BoxWithIcon, IconBox } from '../components/Boxes/Boxes.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';
@@ -37,8 +39,15 @@ export const ContactBoxOutside = styled(Box)`
   background-color: #ffffff;
   padding: 40px 0;
 
+
   position: relative;
-  margin: 84px 0;
+  //margin: 84px 0;
+
+  ${({ theme }) => theme.mq.tablet} {
+    height: ${({ isFullHeight }) => (isFullHeight ? '100vh' : 'auto')};
+    align-items: ${({ isFullHeight }) => (isFullHeight ? 'center' : '')};
+    display: ${({ isFullHeight }) => (isFullHeight ? 'flex' : 'block')};
+  }
 
   ${({ theme }) => theme.mq.tablet} {
     &:after {
@@ -57,18 +66,23 @@ export const ContactBoxOutside = styled(Box)`
 
 const IndexPage = () => (
   <>
-    <Box isColumn marginBottom="56px">
-      <StyledTitle>Kontakt</StyledTitle>
-      <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
-    </Box>
+    <Fade bottom>
+      <Box isColumn marginBottom="56px">
+        <StyledTitle>Kontakt</StyledTitle>
+        <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
+      </Box>
+    </Fade>
+
     <ContactBoxOutside alignItems="center" marginBottom="64px">
       <ContactBoxInside gap="64px" alignItems="center">
         <DarkBox isColumn noMarginBottom>
           <h2>Skontaktuj się z nami</h2>
           <BoxWithIcon>
-            <IconBox>
-              <MailIcon />
-            </IconBox>
+            <Zoom>
+              <IconBox>
+                <MailIcon />
+              </IconBox>
+            </Zoom>
             <Box isColumn>
               <h3>Napisz do nas</h3>
               <Box alignItems="center" className="text-box">
@@ -78,9 +92,11 @@ const IndexPage = () => (
             </Box>
           </BoxWithIcon>
           <BoxWithIcon>
-            <IconBox>
-              <PhoneIcon />
-            </IconBox>
+            <Zoom>
+              <IconBox>
+                <PhoneIcon />
+              </IconBox>
+            </Zoom>
             <Box isColumn>
               <h3>Zadzwoń do nas</h3>
               <Box alignItems="center" className="text-box">
@@ -94,7 +110,9 @@ const IndexPage = () => (
             </Box>
           </BoxWithIcon>
           <BoxWithIcon>
-            <IconBox><LocalizationIcon /></IconBox>
+            <Zoom>
+              <IconBox><LocalizationIcon /></IconBox>
+            </Zoom>
             <Box isColumn>
               <h3>Odwiedź nas</h3>
               <p>Jeleśnia, ul. Jana Kazimierza 213</p>
