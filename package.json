@@ -17,6 +17,7 @@
     "lint": "eslint \"src/**/*.js*(x)\" --max-warnings=0"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
     "@formspree/react": "^2.4.0",
     "@sideway/address": "^5.0.0",
     "@tjjjwxzq/simple-react-lightbox": "^3.6.9-0",
@@ -39,6 +40,7 @@
     "gatsby-transformer-sharp": "^4.13.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
+    "react-awesome-reveal": "^4.1.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",

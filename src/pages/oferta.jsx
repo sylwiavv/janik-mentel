@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Fade from 'react-reveal/Fade';
+import { AttentionSeeker, Fade } from 'react-awesome-reveal';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
 import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage.styles';
@@ -17,8 +17,10 @@ const Home = () => (
         </p>
       </Box>
     </Fade>
-    <Fade bottom>
-      <WrapperGrid>
+    <AttentionSeeker flash><h1>puldddse</h1></AttentionSeeker>
+    <WrapperGrid>
+      <Fade cascade damping={0.1}>
+
         <Box isColumn>
           <h2>Fotografia ślubna</h2>
           <ul>
@@ -27,6 +29,7 @@ const Home = () => (
           </ul>
         </Box>
         <Box isColumn>
+
           <h2>Zdjęcia do dokumentów</h2>
           <p>Wykonujemy zdjęcia do:</p>
           <ul>
@@ -35,14 +38,14 @@ const Home = () => (
             <li>wiz</li>
           </ul>
         </Box>
-        <Box isColumn>
+        <ox isColumn>
           <h2>Sesje dziecięce i rodzinne</h2>
           <ul>
             <li>zdjęcia świąteczne w studio</li>
             <li>sesje w plenerze</li>
             <li>zdjęcia z Mikołajem w przedszkolu</li>
           </ul>
-        </Box>
+        </ox>
         <Box isColumn>
           <h2>Fotografia okolicznościowa</h2>
           <ul>
@@ -81,8 +84,8 @@ const Home = () => (
             <li>lorem ipsum</li>
           </ul>
         </Box>
-      </WrapperGrid>
-    </Fade>
+      </Fade>
+    </WrapperGrid>
   </>
 );
 

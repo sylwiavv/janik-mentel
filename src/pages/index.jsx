@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
@@ -24,12 +24,10 @@ const IndexPage = ({ data }) => (
           className="box-image"
           noMarginBottom
         >
-          <Fade left>
+          <Fade>
             <Box className="imaggee" noMarginBottom>
               <HeroImage className="image-abs" imageSource={data.homepage.publicURL} />
             </Box>
-          </Fade>
-          <Fade right>
             <Box className="text-about" isColumn noMarginBottom>
               <StyledTitle>O nas</StyledTitle>
               <p>

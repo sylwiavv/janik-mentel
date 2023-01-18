@@ -6,12 +6,12 @@ export const FooterWrapper = styled.footer`
   padding: 40px;
   position: relative;
   overflow: hidden;
-  
+
   h3 {
     margin-top: 0;
     margin-bottom: 24px;
   }
-  
+
   p, a {
     filter: brightness(0.85);
   }
@@ -22,7 +22,7 @@ export const FooterWrapper = styled.footer`
       filter: brightness(100);
     }
   }
-  
+
   .container {
     display: grid;
     grid-gap: 48px;
@@ -35,7 +35,7 @@ export const FooterWrapper = styled.footer`
       grid-template-columns: repeat(2, auto);
     }
   }
-  
+
   .footer-logo {
     position: absolute;
     opacity: .09;
@@ -50,23 +50,23 @@ export const FooterWrapper = styled.footer`
       width: 280px;
     }
   }
-  
+
   .links-wrapper {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     grid-gap: 0 32px;
     margin-bottom: auto;
-    
+
     h3 {
       grid-row: 1;
     }
-    
+
     a {
       grid-column: 1;
-      
+
       margin-bottom: 16px;
-      
+
       &:last-child {
         grid-column: 2;
         grid-row: 2;

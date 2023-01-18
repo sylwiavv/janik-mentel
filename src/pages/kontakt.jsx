@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
+import { Fade, Zoom } from 'react-awesome-reveal';
+
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box, BoxWithIcon, IconBox } from '../components/Boxes/Boxes.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';
@@ -65,14 +65,11 @@ export const ContactBoxOutside = styled(Box)`
 `;
 
 const IndexPage = () => (
-  <>
-    <Fade bottom>
-      <Box isColumn marginBottom="56px">
-        <StyledTitle>Kontakt</StyledTitle>
-        <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
-      </Box>
-    </Fade>
-
+  <Fade>
+    <Box isColumn marginBottom="56px">
+      <StyledTitle>Kontakt</StyledTitle>
+      <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
+    </Box>
     <ContactBoxOutside alignItems="center" marginBottom="64px">
       <ContactBoxInside gap="64px" alignItems="center">
         <DarkBox isColumn noMarginBottom>
@@ -134,7 +131,7 @@ const IndexPage = () => (
       <h2>Znajdź nas na Google Maps</h2>
       <Box>Mapa</Box>
     </Box>
-  </>
+  </Fade>
 );
 
 export default IndexPage;
