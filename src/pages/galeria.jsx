@@ -17,15 +17,15 @@ const Galeria = ({ data: { posts: { nodes } }, data }) => (
     </Box>
     <GalleryContainer paddingRight="260px">
       {nodes.map((n) => (
-        <a href={getPageSlug(n.galeriaTitle)}>
+        <Link key={n.id} to={getPageSlug(n.galeriaTitle)}>
           <Box className="page-link" key={n.galeriaTitle} gap="32px" spaceBetween>
             <HeroImage className="pattern" imageSource={data.homepage.publicURL} />
             <Box isColumn className="page-link__txt" noMarginBottom>
               <h3>{n.galeriaTitle}</h3>
               <Box gap="8px" className="page-link__link" isCenter noMarginBottom>
-                <Link to={getPageSlug(n.galeriaTitle)} key={n.galeriaTitle}>
-                  Zobacz więcej
-                </Link>
+                <span>
+                  Zobacz więcej (add hover)
+                </span>
                 <ArrowRightIcon height="24px" />
               </Box>
 
@@ -37,7 +37,7 @@ const Galeria = ({ data: { posts: { nodes } }, data }) => (
               {/* <HeroImage className="image-abs" imageSource={n.galeriaAsets[0].file.url} height="350px" width="800px" /> */}
             </Box>
           </Box>
-        </a>
+        </Link>
       ))}
     </GalleryContainer>
   </>

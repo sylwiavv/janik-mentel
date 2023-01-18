@@ -54,20 +54,18 @@ const Navigation = () => {
       <StyledNavigation isOpen={isOpen}>
         <Box isGap noMarginBottom>
           <>
-            {
-                            navigation.map(({ name, href }) => (
-                              <StyledLink
-                                key={name}
-                                onClick={() => setIsOpen(false)}
-                                className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
-                                    || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
-                                to={href}
-                              >
-                                {name}
-                              </StyledLink>
+            {navigation.map(({ name, href }) => (
+              <StyledLink
+                key={name}
+                onClick={() => setIsOpen(false)}
+                className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
+                                || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
+                to={href}
+              >
+                {name}
+              </StyledLink>
 
-                            ))
-                        }
+            ))}
           </>
         </Box>
       </StyledNavigation>

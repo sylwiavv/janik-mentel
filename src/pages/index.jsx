@@ -10,7 +10,7 @@ import { ButtonStyles } from '../components/Button/Button.styles';
 
 export const Container = styled.div`
   ${({ theme }) => theme.mq.tablet} {
-    height: ${({ isFullHeight }) => (isFullHeight ? '100vh' : 'auto')};
+    min-height: ${({ isFullHeight }) => (isFullHeight ? '100vh' : 'auto')};
     align-items: ${({ isFullHeight }) => (isFullHeight ? 'center' : '')};
     display: ${({ isFullHeight }) => (isFullHeight ? 'flex' : 'block')};
   }

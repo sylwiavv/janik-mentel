@@ -17,6 +17,9 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     background-color: #f4f7fb;
     overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 
     &.not-scroll {
       overflow: hidden;
@@ -28,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     max-width: 1240px;
     margin-bottom: 64px;
+    flex-grow: 1;
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -14,7 +14,7 @@ const GaleriaTemplate = ({ data: { post: { galeriaAsets, galeriaTitle } } }) => 
 
   useEffect(() => {
     const [elements] = wrapper.current.children;
-    console.log(elements);
+    // console.log(elements);
   }, []);
 
   return (
