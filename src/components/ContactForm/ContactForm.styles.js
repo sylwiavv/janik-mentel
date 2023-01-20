@@ -48,9 +48,17 @@ export const ContactFormWrapper = styled.form`
       border-color: #414ce9;
       outline: none;
     }
+
+    &.error-input {
+      border: 1px solid red
+    }
   }
 
   textarea {
     min-height: 160px;
   }
+`;
+
+export const ErrorMessageWrapper = styled.span`
+  color: red;
 `;

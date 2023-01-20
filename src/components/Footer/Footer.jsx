@@ -28,6 +28,5 @@ export const Footer = () => (
         ))}
       </Box>
     </Box>
-
   </FooterWrapper>
 );

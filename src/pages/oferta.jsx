@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AttentionSeeker, Fade } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
 import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage.styles';
@@ -17,10 +17,8 @@ const Home = () => (
         </p>
       </Box>
     </Fade>
-    <AttentionSeeker flash><h1>puldddse</h1></AttentionSeeker>
     <WrapperGrid>
       <Fade cascade damping={0.1}>
-
         <Box isColumn>
           <h2>Fotografia ślubna</h2>
           <ul>
@@ -38,14 +36,14 @@ const Home = () => (
             <li>wiz</li>
           </ul>
         </Box>
-        <ox isColumn>
+        <Box isColumn>
           <h2>Sesje dziecięce i rodzinne</h2>
           <ul>
             <li>zdjęcia świąteczne w studio</li>
             <li>sesje w plenerze</li>
             <li>zdjęcia z Mikołajem w przedszkolu</li>
           </ul>
-        </ox>
+        </Box>
         <Box isColumn>
           <h2>Fotografia okolicznościowa</h2>
           <ul>

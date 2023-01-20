@@ -14,7 +14,7 @@ export const DarkBox = styled(Box)`
   background-color: #00263a;
   border-radius: 4px;
   color: #fff;
-  padding: 72px 48px;
+  padding: 72px 40px;
   position: relative;
   z-index: 2;
 
@@ -77,20 +77,6 @@ const IndexPage = () => (
           <BoxWithIcon>
             <Zoom>
               <IconBox>
-                <MailIcon />
-              </IconBox>
-            </Zoom>
-            <Box isColumn>
-              <h3>Napisz do nas</h3>
-              <Box alignItems="center" className="text-box">
-                <span>mail: </span>
-                <a href="mailto:amentel@op.pl">amentel@op.pl</a>
-              </Box>
-            </Box>
-          </BoxWithIcon>
-          <BoxWithIcon>
-            <Zoom>
-              <IconBox>
                 <PhoneIcon />
               </IconBox>
             </Zoom>
@@ -108,24 +94,43 @@ const IndexPage = () => (
           </BoxWithIcon>
           <BoxWithIcon>
             <Zoom>
+              <IconBox>
+                <MailIcon />
+              </IconBox>
+            </Zoom>
+            <Box isColumn>
+              <h3>Napisz do nas</h3>
+              <Box alignItems="center" className="text-box">
+                <span>mail: </span>
+                <a href="mailto:amentel@op.pl">amentel@op.pl</a>
+              </Box>
+            </Box>
+          </BoxWithIcon>
+
+          <BoxWithIcon>
+            <Zoom>
               <IconBox><LocalizationIcon /></IconBox>
             </Zoom>
             <Box isColumn>
               <h3>Odwiedź nas</h3>
-              <p>Jeleśnia, ul. Jana Kazimierza 213</p>
-              <ul>
-                <span>Zakład czynny:</span>
-                <li>poniedziałek – piątek 9 – 16</li>
-                <li>sobota 9 – 12</li>
-              </ul>
+              <p>Jeleśnia, ul. Jana Kazimierza&nbsp;213</p>
             </Box>
           </BoxWithIcon>
+          <Box style={{ marginTop: 'auto', paddingTop: '24px' }} noMarginBottom isColumn>
+            <span style={{ display: 'block', marginBottom: '8px' }}>Zakład czynny:</span>
+            <ul>
+              <li>
+                poniedziałek
+                <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
+              </li>
+              <li>sobota 9&nbsp;–&nbsp;12</li>
+            </ul>
+          </Box>
         </DarkBox>
         <FormBox isColumn noMarginBottom>
           <ContactForm />
         </FormBox>
       </ContactBoxInside>
-
     </ContactBoxOutside>
     <Box isColumn>
       <h2>Znajdź nas na Google Maps</h2>
