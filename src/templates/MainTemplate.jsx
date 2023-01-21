@@ -6,7 +6,7 @@ import { theme } from '../assets/styles/theme';
 import 'assets/styles/normalize.css';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
-import NavigationProvider, { NavigationContext } from '../providers/NavigationProvider';
+import { NavigationContext, NavigationProvider } from '../providers/NavigationProvider';
 
 export const MainTemplate = ({ children }) => (
   <>

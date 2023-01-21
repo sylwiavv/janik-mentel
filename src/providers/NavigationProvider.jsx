@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
 export const NavigationContext = React.createContext({
-  toggleNavigation: () => {},
-  setIsOpen: () => {},
+  toggleNavigation: () => {
+  },
+  setIsOpen: () => {
+  },
   isOpen: '',
 });
 
-const NavigationProvider = ({ children }) => {
+export const NavigationProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavigation = () => {
@@ -18,17 +20,15 @@ const NavigationProvider = ({ children }) => {
     }
   };
 
+  const value = React.useMemo(() => ({
+    isOpen, setIsOpen, toggleNavigation,
+  }), [isOpen]);
+
   return (
     <NavigationContext.Provider
-      value={{
-        toggleNavigation,
-        isOpen,
-        setIsOpen,
-      }}
+      value={value}
     >
       {children}
     </NavigationContext.Provider>
   );
 };
-
-export default NavigationProvider;

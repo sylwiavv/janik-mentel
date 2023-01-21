@@ -3,7 +3,7 @@ import { ContactFormWrapper, ErrorMessageWrapper } from './ContactForm.styles';
 import { ButtonStyles } from '../Button/Button.styles';
 import { EmptyFieldMsg, ValidEmailMsg } from './ContactFormValidationMessages';
 import { useCustomForm } from '../../hook/useCustomForm';
-import ContactFormSuccessComponent from './ContactFormSuccesComponent';
+import { ContactFormSuccessComponent } from './ContactFormSuccesComponent';
 
 export const initialState = {
   name: '',
