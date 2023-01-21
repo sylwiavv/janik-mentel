@@ -88,13 +88,6 @@ module.exports = {
       },
     },
     {
-      resolve: '@ccalamos/gatsby-source-googlemaps-static',
-      options: {
-        key: 'AIzaSyDzL_8yovRyqnN_QZdS15Ahwi1JlmnchRo',
-        center: 'New York, NY',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-smoothscroll',
     },
   ],
