@@ -1,13 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Fade, Zoom } from 'react-awesome-reveal';
-
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box, BoxWithIcon, IconBox } from '../components/Boxes/Boxes.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import MailIcon from '../components/icons/MailIcon';
 import LocalizationIcon from '../components/icons/LocalizationIcon';
 import PhoneIcon from '../components/icons/PhoneIcon';
+import MapGoogle from '../components/MapGoogle/MapGoogle';
 
 export const DarkBox = styled(Box)`
   box-shadow: 0px 0px 20px rgb(76 85 102 / 4%), 0px 40px 40px -32px rgb(76 85 102 / 32%);
@@ -38,10 +38,7 @@ export const ContactBoxInside = styled(Box)`
 export const ContactBoxOutside = styled(Box)`
   background-color: #ffffff;
   padding: 40px 0;
-
-
   position: relative;
-  //margin: 84px 0;
 
   ${({ theme }) => theme.mq.tablet} {
     height: ${({ isFullHeight }) => (isFullHeight ? '100vh' : 'auto')};
@@ -61,7 +58,6 @@ export const ContactBoxOutside = styled(Box)`
       z-index: 1;
     }
   }
-
 `;
 
 const IndexPage = () => (
@@ -134,7 +130,7 @@ const IndexPage = () => (
     </ContactBoxOutside>
     <Box isColumn>
       <h2>Znajdź nas na Google Maps</h2>
-      <Box>Mapa</Box>
+      <MapGoogle />
     </Box>
   </Fade>
 );
