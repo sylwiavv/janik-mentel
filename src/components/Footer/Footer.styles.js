@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  color: #fff;
-  background-color: #00273a;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primaryBgColorDark};
   padding: 40px;
   position: relative;
   overflow: hidden;
@@ -18,7 +18,7 @@ export const FooterWrapper = styled.footer`
 
   a {
     &:hover {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.white};
       filter: brightness(100);
     }
   }

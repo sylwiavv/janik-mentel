@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContactFormWrapper, ErrorMessageWrapper } from './ContactForm.styles';
-import { ButtonStyles } from '../Button/Button.styles';
+import { ButtonStyled } from '../Button/ButtonStyled';
 import { EmptyFieldMsg, ValidEmailMsg } from './ContactFormValidationMessages';
 import { useCustomForm } from '../../hook/useCustomForm';
 import { ContactFormSuccessComponent } from './ContactFormSuccesComponent';
@@ -113,7 +113,7 @@ export const ContactForm = () => {
               onBlur={handleInputBlur}
             />
             <ErrorMessageWrapper>{errorsState.message}</ErrorMessageWrapper>
-            <ButtonStyles type="submit" disabled={state.submitting}>Wyślij</ButtonStyles>
+            <ButtonStyled type="submit" disabled={state.submitting}>Wyślij</ButtonStyled>
           </ContactFormWrapper>
         )}
     </>

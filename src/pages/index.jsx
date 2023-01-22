@@ -6,7 +6,7 @@ import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading
 import { Box } from '../components/Boxes/Boxes.styles';
 import { HeroImage } from '../assets/styles/pages/homepage.styles';
 import { BoxWIthImageStyles } from '../components/BoxWIthImage/BoxWIthImage.styles';
-import { ButtonStyles } from '../components/Button/Button.styles';
+import { ButtonStyled } from '../components/Button/ButtonStyled';
 
 export const Container = styled.div`
   ${({ theme }) => theme.mq.tablet} {
@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => (
           <Box isColumn className="text-box">
             <StyledTitle>Oferta</StyledTitle>
             <p>Zapraszamy do zapoznania się z naszą ofertą.</p>
-            <ButtonStyles><Link to="/oferta">Zobacz więcej</Link></ButtonStyles>
+            <ButtonStyled><Link to="/oferta">Zobacz więcej</Link></ButtonStyled>
           </Box>
           <div className="box-wrapper">
             <div className="box-image"></div>

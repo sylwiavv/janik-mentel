@@ -64,7 +64,7 @@ const WSPGallery = ({ galleryImages }) => {
           <ArrowShortLeft height="40px" color="pink" className="btnPrev" onClick={prevSlide} />
           <ArrowShortRight height="40px" className="btnNext" onClick={nextSlide} />
           <FullScreenImage>
-            <img src={galleryImages[slideNumber]} alt="" />
+            <img src={galleryImages[slideNumber]} alt="" loading="lazy" />
           </FullScreenImage>
         </SliderWrapper>
       )}

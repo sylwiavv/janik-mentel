@@ -11,9 +11,10 @@ import MapGoogle from '../components/MapGoogle/MapGoogle';
 
 export const DarkBox = styled(Box)`
   box-shadow: 0px 0px 20px rgb(76 85 102 / 4%), 0px 40px 40px -32px rgb(76 85 102 / 32%);
-  background-color: #00263a;
+  background-color: ${({ theme }) => theme.colors.primaryBgColorDark};
   border-radius: 4px;
   color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   padding: 72px 40px;
   position: relative;
   z-index: 2;

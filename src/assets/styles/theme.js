@@ -14,6 +14,8 @@ export const theme = {
     fontColorSecondary_hover: '#0d5adb',
     white: '#fff',
     contactIconStrokeColor: '#51758f',
+    primaryBgColorDark: '#00263a',
+    footerDarkColor: '#00263a',
   },
 
   fontSize: {

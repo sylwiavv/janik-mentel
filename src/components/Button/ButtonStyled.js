@@ -1,19 +1,25 @@
 import styled from 'styled-components';
 
-export const ButtonStyles = styled.button`
+export const ButtonStyled = styled.button`
   display: flex;
   justify-content: center;
-  border: 2px solid ${({ theme }) => theme.colors.fontColorSecondary_hover};
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primaryBgColorDark};
+  border: 2px solid ${({ theme }) => theme.colors.primaryBgColorDark};
+  border-radius: ${({ isCircle }) => (isCircle ? '50%' : '4px')};
+
   font-weight: 600;
-  letter-spacing: .4px;
-  padding: 8px 16px;
-  border-radius: 4px;
+  letter-spacing: .8px;
+  padding: ${({ isCircle }) => (isCircle ? '8px' : '16px')};
   max-width: max-content;
   margin-top: 32px;
   position: relative;
+  overflow: hidden;
   z-index: 1;
+
+  svg {
+    fill: ${({ theme }) => theme.colors.white};
+  }
 
   a {
     color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
@@ -29,7 +35,6 @@ export const ButtonStyles = styled.button`
     width: 100%;
     height: 100%;
     background-color: transparent;
-    //border-radius: 10rem;
     z-index: -2;
   }
 
@@ -39,18 +44,22 @@ export const ButtonStyles = styled.button`
     bottom: 0;
     left: 0;
     height: 100%;
-    background-color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
+    background-color: ${({ theme }) => theme.colors.white};
     transition: all .6s;
     z-index: -1;
     width: 0%;
   }
 
   &:hover {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.primaryBgColorDark};
     cursor: pointer;
 
+    svg {
+      fill: ${({ theme }) => theme.colors.primaryBgColorDark};
+    }
+
     a {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.primaryBgColorDark};
     }
 
     &:before {
