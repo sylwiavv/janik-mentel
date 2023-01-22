@@ -17,6 +17,9 @@ export const FooterWrapper = styled.footer`
   }
 
   a {
+    text-transform: capitalize;
+    letter-spacing: .8px;
+
     &:hover {
       color: ${({ theme }) => theme.colors.white};
       filter: brightness(100);

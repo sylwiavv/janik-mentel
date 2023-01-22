@@ -27,7 +27,6 @@ const Home = () => (
           </ul>
         </Box>
         <Box isColumn>
-
           <h2>Zdjęcia do dokumentów</h2>
           <p>Wykonujemy zdjęcia do:</p>
           <ul>

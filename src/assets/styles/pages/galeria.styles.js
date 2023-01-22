@@ -25,11 +25,11 @@ export const GalleryContainer = styled.div`
       width: 132%;
     }
   }
-  
-    a {
-      color: ${({ theme }) => theme.colors.fontColor};
-      text-decoration: none;
-   }
+
+  a {
+    color: ${({ theme }) => theme.colors.fontColor};
+    text-decoration: none;
+  }
 
   // PAGE LINK
   .page-link {
@@ -43,7 +43,7 @@ export const GalleryContainer = styled.div`
     border-radius: 4px;
     transition: background-color, .2s;
     box-shadow: 4px 7px 13px -11px rgba(66, 68, 90, 1);
-    
+
     ${({ theme }) => theme.mq.mobile} {
       border: none;
       margin-bottom: 32px;
@@ -51,11 +51,17 @@ export const GalleryContainer = styled.div`
       height: 400px;
     }
 
+    .page-link__link {
+      span {
+        color: ${({ theme }) => theme.colors.fontColorHover};
+      }
+    }
+
     &:hover {
       cursor: pointer;
       background-color: #f5f7fb;
       border-color: #f5f7fb;
-      
+
       svg {
         margin-left: 8px;
       }
@@ -67,7 +73,7 @@ export const GalleryContainer = styled.div`
         }
       }
     }
-    
+
     // TEXT
     &__txt {
       width: 50%;
@@ -97,7 +103,7 @@ export const GalleryContainer = styled.div`
         margin-bottom: 8px;
       }
     }
-    
+
     // LINK
     &__link {
       word-break: keep-all;
@@ -123,7 +129,7 @@ export const GalleryContainer = styled.div`
         transition: margin-left, .4s;
       }
     }
-    
+
     // IMG
     &__img {
       height: 100%;
@@ -136,7 +142,7 @@ export const GalleryContainer = styled.div`
         left: 0;
       }
     }
-    
+
     // IMG INNER
     &__img-inner {
       position: relative;

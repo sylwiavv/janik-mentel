@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => (
           <Box isColumn className="text-box">
             <StyledTitle>Oferta</StyledTitle>
             <p>Zapraszamy do zapoznania się z naszą ofertą.</p>
-            <ButtonStyled><Link to="/oferta">Zobacz więcej</Link></ButtonStyled>
+            <Link to="/oferta"><ButtonStyled>Zobacz więcej</ButtonStyled></Link>
           </Box>
           <div className="box-wrapper">
             <div className="box-image"></div>
@@ -68,9 +68,6 @@ const IndexPage = ({ data }) => (
         </BoxWIthImageStyles>
       </Box>
     </Fade>
-    {/* <Container isFullHeight> */}
-    {/*  <Box><h2>Zapraszamy do kontaktu</h2></Box> */}
-    {/* </Container> */}
   </>
 );
 

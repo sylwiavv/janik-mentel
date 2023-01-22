@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ButtonStyled = styled.button`
   display: flex;
   justify-content: center;
+  align-items: center;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.primaryBgColorDark};
   border: 2px solid ${({ theme }) => theme.colors.primaryBgColorDark};

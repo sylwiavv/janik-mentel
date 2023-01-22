@@ -15,21 +15,22 @@ export const GoBackWrapper = styled.div`
     position: relative;
     transition: left, .4s;
     left: 0;
-    
+
     path {
       transition: fill, .4s;
     }
   }
-  
+
   &:hover {
     cursor: pointer;
-    color: green;
-    
+    color: ${({ theme }) => theme.colors.fontColorHover};
+
+
     svg {
       left: -8px;
-      
+
       path {
-        fill: green;
+        fill: ${({ theme }) => theme.colors.fontColorHover};
       }
     }
   }

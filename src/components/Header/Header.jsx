@@ -24,10 +24,6 @@ export const Header = () => {
             src="https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             alt="First slide"
           />
-          {/* <Carousel.Caption> */}
-          {/*  <h3>First slide label</h3> */}
-          {/*  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-          {/* </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img

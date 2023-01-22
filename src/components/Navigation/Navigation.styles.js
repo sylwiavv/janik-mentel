@@ -28,7 +28,7 @@ export const OutsideWrapper = styled.div`
 
   position: ${({ isOpen }) => (isOpen ? 'fixed' : 'absolute')};
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
-  background-color: ${({ isOpen }) => (isOpen ? '#111e36' : 'transparent')};
+  background-color: ${({ isOpen, theme }) => (isOpen ? theme.colors.primaryBgColorDark : 'transparent')};
   transition: ${({ isOpen }) => (isOpen ? 'background-color, .4s' : 'none')};
 
   ${({ theme }) => theme.mq.tablet} {
@@ -51,7 +51,7 @@ export const StyledIconClose = styled(IconClose)`
   &:hover {
     cursor: pointer;
   }
-  
+
   ${({ theme }) => theme.mq.tablet} {
     display: none;
   }
@@ -89,7 +89,7 @@ export const StyledNavigation = styled.nav`
     ${({ theme }) => theme.mq.tablet} {
       flex-direction: row;
     }
-    
+
     li {
       &:not(:last-child) {
         margin-bottom: ${({ theme }) => theme.indents.s};
@@ -97,7 +97,7 @@ export const StyledNavigation = styled.nav`
 
       ${({ theme }) => theme.mq.tablet} {
         flex-direction: row;
-        
+
         &:not(:first-child) {
           margin-left: ${({ theme }) => theme.indents.l};
         }
@@ -105,14 +105,16 @@ export const StyledNavigation = styled.nav`
     }
   }
 `;
-
+// #2294d7
 export const StyledLink = styled(Link)`
     // color: ${({ theme }) => theme.colors.fontColor};
-  color: rgba(227, 220, 220, 0.91); !important;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  font-weight: bold;
+  color: ${({ theme }) => theme.colors.white};
+!important;
+  font-size: 16px;
+  //font-weight: bold;
+  letter-spacing: .6px;
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   position: relative;
   transition: background-color, .4s;
 
@@ -126,7 +128,7 @@ export const StyledLink = styled(Link)`
     left: 0;
     bottom: -4px;
     padding: 2px 4px;
-    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, ${({ theme }) => theme.colors.fontColorSecondary_hover} 50%) right;
+    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, ${({ theme }) => theme.colors.white} 50%) right;
     background-size: 200%;
     transition: .4s ease-out;
     width: 0%;
@@ -134,7 +136,7 @@ export const StyledLink = styled(Link)`
 
   &.active {
     font-weight: bold;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
     width: max-content;
 
     &:after {
@@ -145,14 +147,12 @@ export const StyledLink = styled(Link)`
     }
 
     &:hover {
-      color: ${({ theme }) => theme.colors.fontColor};
-      color: #fff;
+      color: ${({ theme }) => theme.colors.white};
       cursor: pointer;
     }
   }
 
   &:hover {
-    color: ${({ theme }) => theme.colors.fontColorSecondary_hover};
-    color: #fff;
+    color: ${({ theme }) => theme.colors.whiteHover};
   }
 `;
