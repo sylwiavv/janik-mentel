@@ -1,39 +1,17 @@
 import * as React from 'react';
 import { useContext } from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { LogoWrapper, StyledLogo } from '../Logo/Logo';
+
 import {
-  OutsideWrapper,
-  StyledIconClose,
-  StyledIconHamburger,
-  StyledLink,
-  StyledNavigation,
-  Wrapper,
+  OutsideWrapper, StyledIconClose, StyledIconHamburger, StyledNavigation, Wrapper,
 } from './Navigation.styles';
 import { Box } from '../Boxes/Boxes.styles';
 import { NavigationContext } from '../../providers/NavigationProvider';
+import { NavigationLinks } from '../NavigationLinks/NavigationLinks';
 
-export const navigation = [
-  {
-    name: 'Home',
-    href: '/',
-  },
-  {
-    name: 'Oferta',
-    href: '/oferta',
-  },
-  {
-    name: 'Galeria',
-    href: '/galeria',
-  },
-  {
-    name: 'Kontakt',
-    href: '/kontakt',
-  },
-];
-
-const Navigation = () => {
-  const { isOpen, setIsOpen, toggleNavigation } = useContext(NavigationContext);
+export const Navigation = () => {
+  const { isOpen, toggleNavigation } = useContext(NavigationContext);
 
   return (
     <OutsideWrapper isOpen={isOpen}>
@@ -53,24 +31,9 @@ const Navigation = () => {
       </Wrapper>
       <StyledNavigation isOpen={isOpen}>
         <Box isGap noMarginBottom>
-          <>
-            {navigation.map(({ name, href }) => (
-              <StyledLink
-                key={name}
-                onClick={() => setIsOpen(false)}
-                className={((location.pathname.substring(1)).includes(href.substring(1)) && name !== 'Home')
-                                || (location.pathname.length === 1 && name === 'Home') ? ' active' : null}
-                to={href}
-              >
-                {name}
-              </StyledLink>
-
-            ))}
-          </>
+          <NavigationLinks header />
         </Box>
       </StyledNavigation>
     </OutsideWrapper>
   );
 };
-
-export default Navigation;

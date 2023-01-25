@@ -2,8 +2,7 @@ import * as React from 'react';
 import { FooterWrapper } from './Footer.styles';
 import { StyledLogo } from '../Logo/Logo';
 import { Box } from '../Boxes/Boxes.styles';
-import { StyledLink } from '../Navigation/Navigation.styles';
-import { navigation } from '../Navigation/Navigation';
+import { NavigationLinks } from '../NavigationLinks/NavigationLinks';
 
 export const Footer = () => (
   <FooterWrapper>
@@ -13,7 +12,6 @@ export const Footer = () => (
         <Box isColumn noMarginBottom>
           <h3>Janik - Mentel</h3>
           <p>Bernadetta Mentel</p>
-          <p>Andrzej Mentel</p>
         </Box>
         <Box isColumn noMarginBottom>
           <p>Jeleśnia, ul. Jana Kazimierza 213</p>
@@ -23,9 +21,7 @@ export const Footer = () => (
       </Box>
       <Box isColumn noMarginBottom className="links-wrapper">
         <h3>Nawigacja</h3>
-        {navigation.map(({ href, name }) => (
-          <StyledLink key={name} to={href}>{name}</StyledLink>
-        ))}
+        <NavigationLinks />
       </Box>
     </Box>
   </FooterWrapper>

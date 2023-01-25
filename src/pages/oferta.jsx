@@ -4,22 +4,20 @@ import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading
 import { Box } from '../components/Boxes/Boxes.styles';
 import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage.styles';
 
-const Home = () => (
+const oferta = () => (
   <>
-    <Fade>
+    <Box id="oferta" isColumn marginBottom="48px">
       <StyledTitle>Oferta</StyledTitle>
-      <Box isColumn>
-        <p>
-          Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia oprawiamy w tradycyjne albumy
-          lub
-          eleganckie fotoksiążki.
-          Oferujemy również usługi wideo.
-        </p>
-      </Box>
-    </Fade>
+      <p>
+        Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia oprawiamy w tradycyjne albumy
+        lub
+        eleganckie fotoksiążki.
+        Oferujemy również usługi wideo.
+      </p>
+    </Box>
     <WrapperGrid>
       <Fade cascade damping={0.1}>
-        <Box isColumn>
+        <Box isColumn className="red">
           <h2>Fotografia ślubna</h2>
           <ul>
             <li>Reportaż (przygotowania, ceremonia, wesele)</li>
@@ -64,7 +62,7 @@ const Home = () => (
           </ul>
         </Box>
         <Box isColumn>
-          <h2>Przegrywanie kaset VHS na płyty DVD</h2>
+          <h2>Przegrywanie kaset VHS na pendrive</h2>
           <ul>
             <li>lorem ipsum</li>
           </ul>
@@ -72,13 +70,14 @@ const Home = () => (
         <Box isColumn>
           <h2>Spersonalizowane gadżety</h2>
           <ul>
-            <li>lorem ipsum</li>
+            <li>kubki</li>
+            <li>kalendarze</li>
           </ul>
         </Box>
         <Box isColumn>
           <h2>Odnawianie starych, znisczonych fotografii</h2>
           <ul>
-            <li>lorem ipsum</li>
+            <li>reprodukcja</li>
           </ul>
         </Box>
       </Fade>
@@ -86,4 +85,4 @@ const Home = () => (
   </>
 );
 
-export default Home;
+export default oferta;

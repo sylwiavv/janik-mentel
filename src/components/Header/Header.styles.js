@@ -2,17 +2,15 @@ import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
   background: #ffffff;
-  margin-bottom: 64px;
   position: relative;
   mix-blend-mode: unset;
-  border: 32px solid #f7fcff;
   display: flex;
   height: 100vh;
+  margin-bottom: 124px;
 
   ${({ theme }) => theme.mq.mobile} {
-    border-width: 0;
-    border: ${({ isOpen }) => (isOpen ? 'none' : '')};
     height: ${({ isOpen }) => (isOpen ? '100vh' : '80vh')};
+    margin-bottom: 72px;
   }
 
   .carousel {
@@ -54,10 +52,7 @@ export const CarouselContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    mix-blend-mode: none;
-    //background: #240909;
-    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    opacity: 0.4;
+    background: rgba(1, 1, 3, 0.48);
     z-index: 2;
   }
 `;

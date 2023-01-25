@@ -2,7 +2,7 @@ import React from 'react';
 import { ContactFormWrapper, ErrorMessageWrapper } from './ContactForm.styles';
 import { ButtonStyled } from '../Button/ButtonStyled';
 import { EmptyFieldMsg, ValidEmailMsg } from './ContactFormValidationMessages';
-import { useCustomForm } from '../../hook/useCustomForm';
+import { useCustomForm } from '../../hooks/useCustomForm';
 import { ContactFormSuccessComponent } from './ContactFormSuccesComponent';
 
 export const initialState = {

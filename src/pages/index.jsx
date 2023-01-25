@@ -1,30 +1,22 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
-import styled from 'styled-components';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
 import { HeroImage } from '../assets/styles/pages/homepage.styles';
 import { BoxWIthImageStyles } from '../components/BoxWIthImage/BoxWIthImage.styles';
 import { ButtonStyled } from '../components/Button/ButtonStyled';
-
-export const Container = styled.div`
-  ${({ theme }) => theme.mq.tablet} {
-    min-height: ${({ isFullHeight }) => (isFullHeight ? '100vh' : 'auto')};
-    align-items: ${({ isFullHeight }) => (isFullHeight ? 'center' : '')};
-    display: ${({ isFullHeight }) => (isFullHeight ? 'flex' : 'block')};
-  }
-`;
+import { SectionWrapper } from '../components/Conteiner/Conteriner';
 
 const IndexPage = ({ data }) => (
   <>
-    <Container isFullHeight>
-      <Box className="out">
-        <Box
-          className="box-image"
-          noMarginBottom
-        >
-          <Fade>
+    <SectionWrapper isFullHeight>
+      <Fade>
+        <Box className="out">
+          <Box
+            className="box-image"
+            noMarginBottom
+          >
             <Box className="imaggee" noMarginBottom>
               <HeroImage className="image-abs" imageSource={data.homepage.publicURL} />
             </Box>
@@ -50,24 +42,23 @@ const IndexPage = ({ data }) => (
                 zdjęć i filmów przekonało się wielu klientów.
               </p>
             </Box>
-          </Fade>
-        </Box>
-      </Box>
-    </Container>
-    <Fade bottom>
-      <Box isColumn>
-        <BoxWIthImageStyles>
-          <Box isColumn className="text-box">
-            <StyledTitle>Oferta</StyledTitle>
-            <p>Zapraszamy do zapoznania się z naszą ofertą.</p>
-            <Link to="/oferta"><ButtonStyled>Zobacz więcej</ButtonStyled></Link>
           </Box>
-          <div className="box-wrapper">
-            <div className="box-image"></div>
-          </div>
-        </BoxWIthImageStyles>
-      </Box>
-    </Fade>
+        </Box>
+      </Fade>
+    </SectionWrapper>
+    <Box isColumn>
+      <BoxWIthImageStyles>
+        <Box isColumn className="text-box">
+          <StyledTitle>Oferta</StyledTitle>
+          <p>Zapraszamy do zapoznania się z naszą ofertą.</p>
+          <Link to="/oferta/#oferta"><ButtonStyled>Zobacz więcej</ButtonStyled></Link>
+        </Box>
+        <div className="box-wrapper">
+          <div className="box-image first"></div>
+          <div className="box-image second"></div>
+        </div>
+      </BoxWIthImageStyles>
+    </Box>
   </>
 );
 

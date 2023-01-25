@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const BoxOnHome = styled.div`
-    background-color: #ff6d2a;
-`;
+// export const BoxOnHome = styled.div`
+//     background-color: #ff6d2a;
+// `;
 
 export const HeroImage = styled.div`
   background-image: url("${({ imageSource }) => imageSource}");
@@ -12,7 +12,7 @@ export const HeroImage = styled.div`
 
   height: ${(props) => (props.height ? props.height : '383px')};
   width: ${(props) => (props.width ? props.width : '250px')};
-  
+
   &.pattern {
     height: 300px;
     width: 300px;
@@ -22,12 +22,13 @@ export const HeroImage = styled.div`
     opacity: .02;
     left: 0;
   }
+
   //
-  // ${({ theme }) => theme.mq.tablet} {
+    // ${({ theme }) => theme.mq.tablet} {
   //   width: 70%;
   // }
   //
-  // ${({ theme }) => theme.mq.desktop} {
+    // ${({ theme }) => theme.mq.desktop} {
   //   top: 0;
   //   width: 80%;
   //   height: 75%;

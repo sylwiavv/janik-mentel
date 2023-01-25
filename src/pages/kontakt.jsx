@@ -61,9 +61,9 @@ export const ContactBoxOutside = styled(Box)`
   }
 `;
 
-const IndexPage = () => (
+const kontakt = () => (
   <Fade>
-    <Box isColumn marginBottom="56px">
+    <Box id="kontakt" isColumn marginBottom="56px">
       <StyledTitle>Kontakt</StyledTitle>
       <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
     </Box>
@@ -136,4 +136,4 @@ const IndexPage = () => (
   </Fade>
 );
 
-export default IndexPage;
+export default kontakt;

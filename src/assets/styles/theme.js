@@ -20,9 +20,9 @@ export const theme = {
   },
 
   fontSize: {
-    xxl: '36px',
-    xl: '24px',
-    l: '18px',
+    xxl: '38px',
+    xl: '32px',
+    l: '20px',
     m: '14px',
     s: '12px',
   },

@@ -8,12 +8,12 @@ export const GalleryWrapper = styled.div`
   grid-auto-rows: 400px;
   grid-auto-flow: row dense;
   overflow: hidden;
-      
+
   ${({ theme }) => theme.mq.mobile} {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-auto-rows: 280px;
   }
-      
+
   .single {
     cursor: pointer;
     background-color: #34476c0f;
@@ -39,7 +39,7 @@ export const GalleryWrapper = styled.div`
         grid-column-end: unset;
       }
     }
-        
+
     &:last-child {
       grid-column-end: auto;
       grid-row-end: auto;
@@ -50,9 +50,10 @@ export const GalleryWrapper = styled.div`
       object-fit: cover;
       width: 100%;
       height: 100%;
+      transition: transform, .4s;
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.03);
       }
     }
   }
@@ -100,7 +101,7 @@ export const SliderWrapper = styled.div`
       right: 24px;
     }
   }
-  
+
   svg {
     path {
       fill: white;

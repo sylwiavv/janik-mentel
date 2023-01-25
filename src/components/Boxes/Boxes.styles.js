@@ -38,6 +38,10 @@ export const Box = styled.div`
     margin-top: 0;
     margin-bottom: 40px;
     font-weight: 600;
+
+    ${({ theme }) => theme.mq.mobile} {
+      margin-bottom: 24px;
+    }
   }
 
   span {
@@ -50,7 +54,6 @@ export const Box = styled.div`
   }
 
   a {
-      // color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
   }
 
@@ -58,23 +61,7 @@ export const Box = styled.div`
     flex-direction: ${({ isColumn }) => (isColumn ? 'column' : 'row')};
   }
 
-  .box-with-image {
-    padding: 16px;
-    position: relative;
-    height: 522px;
-
-    &:after {
-      content: '';
-      background-color: rgb(158 158 158 / 15%);
-
-      position: absolute;
-      width: 266px;
-      top: 0;
-      left: 0;
-      height: 100%;
-    }
-  }
-
+  //About section
   .box-image {
     display: flex;
     justify-content: space-between;
@@ -94,12 +81,17 @@ export const Box = styled.div`
     &:after {
       content: '';
       position: absolute;
-      background: #34476c0f;
+      background-image: linear-gradient(to right, #eaecf3, #eaecf3, #eaecf3, #eaecf3, #eaecf3, #ebedf4, #eceef4, #edeff5, #eff1f7, #f1f3f8, #f3f5fa, #f5f7fb);
+
       top: 0;
       left: 0;
       height: 100%;
-      z-index: 1;
+      z-index: -1;
       width: 266px;
+
+      ${({ theme }) => theme.mq.desktop} {
+        background: #34476c0f;
+      }
     }
   }
 
@@ -115,21 +107,13 @@ export const Box = styled.div`
     display: flex;
     grid-gap: 24px;
   }
-
-
-  .no-opacity {
-    opacity: 0;
-  }
 `;
 
 export const BoxWithIcon = styled(Box)`
   display: flex;
-  //align-items: center;
   grid-gap: 24px;
-  //flex-direction: column;
   flex: 1;
   border-radius: 4px;
-  //background-color: #ffffff;
   margin-top: 0;
 
   h3 {
@@ -149,12 +133,10 @@ export const IconBox = styled.div`
   border-radius: 20%;
   padding: 8px;
   width: 40px;
-  //margin-bottom: 40px;
 
   ${({ theme }) => theme.mq.tablet} {
     margin-bottom: 40px;
   }
-
 
   svg {
     height: auto;
