@@ -18,18 +18,19 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.6rem;
     background-color: #f4f7fb;
-    overflow-x: hidden;
 
-    & .not-scroll {
+    &.not-scroll {
       overflow: hidden;
     }
   }
 
   main {
-    padding: 0 24px;
-    margin: 0 auto;
-    max-width: 1240px;
-    margin-bottom: 64px;
+    //margin: 0 auto;
+
+    //max-width: 1240px;
+    //margin-bottom: 64px;
+    //display: flex;
+    //justify-content: center;
 
   }
 

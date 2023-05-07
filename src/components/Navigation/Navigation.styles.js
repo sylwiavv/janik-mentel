@@ -23,19 +23,29 @@ export const OutsideWrapper = styled.div`
   top: 0;
   left: 0;
   padding: 24px;
+
   z-index: 10;
   width: 100%;
 
-  position: ${({ isOpen }) => (isOpen ? 'fixed' : 'absolute')};
+  position: ${({ isOpen }) => ((isOpen) ? 'fixed' : 'absolute')};
+  position: ${({ isNoStandard, isOpen }) => ((isNoStandard && !isOpen) ? 'static' : 'absolute')};
+
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
-  background-color: ${({ isOpen, theme }) => (isOpen ? theme.colors.primaryBgColorDark : 'transparent')};
+
   transition: ${({ isOpen }) => (isOpen ? 'background-color, .4s' : 'none')};
+
+  background-color: ${({
+    isNoStandard,
+    customColor,
+    isOpen,
+    theme,
+  }) => (((isNoStandard && !customColor && !isOpen) || isOpen) ? theme.colors.primaryBgColorDark : 'transparent')};
+
 
   ${({ theme }) => theme.mq.tablet} {
     display: flex;
     flex-direction: row;
     height: auto;
-    background-color: transparent;
   }
 `;
 

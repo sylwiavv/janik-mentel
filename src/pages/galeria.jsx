@@ -8,21 +8,23 @@ import { GalleryContainer } from '../assets/styles/pages/galeria.styles';
 import ArrowRightIcon from '../components/icons/ArrowRightIcon';
 
 const Galeria = ({ data: { posts: { nodes } }, data }) => (
-  <>
-    <Box isColumn marginBottom="64px" id="galeria">
+  <Box isColumn style={{ maxWidth: '990px', margin: '0 auto', padding: '0px 16px' }}>
+    <Box isColumn id="galeria" style={{ width: '100%' }}>
       <StyledTitle>Galeria</StyledTitle>
       <p>Zapraszamy do obejrzenia zdjęć z sesji zdjęciowych wykonanych przez nasze studio.</p>
     </Box>
+
     <GalleryContainer
-      paddingRight="200px"
+      paddingRight="0"
+      style={{ width: '100%' }}
     >
       {nodes.map((n) => (
-        <Link key={n.id} to={getPageSlug(n.galeriaTitle)}>
-          <Box className="page-link" key={n.galeriaTitle} gap="32px" spaceBetween>
+        <Link key={n.id} to={getPageSlug(n.galleryTitle)}>
+          <Box className="page-link" key={n.galleryTitle} gap="32px" spaceBetween>
             {/* <HeroImage className="pattern" imageSource={data.homepage.publicURL} /> */}
             <Logo className="logo" />
             <Box isColumn className="page-link__txt" noMarginBottom>
-              <h3>{n.galeriaTitle}</h3>
+              <h3>{n.galleryTitle}</h3>
               <Box gap="8px" className="page-link__link" isCenter noMarginBottom>
                 <span>
                   Zobacz więcej
@@ -32,22 +34,22 @@ const Galeria = ({ data: { posts: { nodes } }, data }) => (
             </Box>
             <Box className="page-link__img" isGap noMarginBottom>
               <div className="page-link__img-inner">
-                <img src={n.galeriaAsets[0].file.url} alt="" loading="lazy" className="first" />
+                <img src={n.galleryAssets[0].file.url} alt="" loading="lazy" className="first" />
               </div>
             </Box>
           </Box>
         </Link>
       ))}
     </GalleryContainer>
-  </>
+  </Box>
 );
 export const query = graphql`
     query {
-        posts: allContentfulGaleria {
+        posts: allContentfulGallery {
          nodes {
-            galeriaTitle
+            galleryTitle
             id
-            galeriaAsets {
+            galleryAssets {
                file {
                    url
                }

@@ -5,7 +5,7 @@ import { Box } from '../components/Boxes/Boxes.styles';
 import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage.styles';
 
 const oferta = () => (
-  <>
+  <Box isColumn style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
     <Box id="oferta" isColumn marginBottom="48px">
       <StyledTitle>Oferta</StyledTitle>
       <p>
@@ -82,7 +82,7 @@ const oferta = () => (
         </Box>
       </Fade>
     </WrapperGrid>
-  </>
+  </Box>
 );
 
 export default oferta;

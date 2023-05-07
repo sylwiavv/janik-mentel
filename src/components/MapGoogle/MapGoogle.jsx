@@ -12,7 +12,7 @@ export const MapGoogle = () => {
     zoom: 12,
   };
   return (
-    <div style={{ height: '60vh', width: '100%' }}>
+    <div style={{ height: '80vh', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GATSBY_GOOGLE_MAP_KEY }}
         defaultCenter={defaultProps.center}

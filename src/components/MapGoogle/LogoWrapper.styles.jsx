@@ -8,8 +8,8 @@ export const LogoWrapper = styled.div`
   border-radius: 50%;
   position: relative;
   padding: 8px;
-  height: 150px;
-  width: 150px;
+  height: 90px;
+  width: 90px;
 
   svg {
     height: 85%;

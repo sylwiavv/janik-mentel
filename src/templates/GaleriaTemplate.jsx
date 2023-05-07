@@ -8,14 +8,14 @@ import WSPGallery from '../components/WpsGallery/WpsGallery';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { GalleryContainer } from '../assets/styles/pages/galeria.styles';
 
-const GaleriaTemplate = ({ data: { post: { galeriaAsets, galeriaTitle } } }) => {
-  const galleryImageSlides = galeriaAsets.map((slide) => slide.url);
+const GaleriaTemplate = ({ data: { image: { galleryAssets, galleryTitle } } }) => {
+  const galleryImageSlides = galleryAssets.map((slide) => slide.url);
 
   return (
-    <>
+    <Box isColumn style={{ maxWidth: '1220px', margin: '64px auto', padding: '0px 16px' }}>
       <GoBack />
       <Box isColumn marginBottom="64px">
-        <StyledTitle>{galeriaTitle}</StyledTitle>
+        <StyledTitle>{galleryTitle}</StyledTitle>
         <p>Zapraszamy do obejrzenia wybranych zdjęć z tej wyjątkowej sesji zdjęciowej.</p>
       </Box>
       <GalleryContainer>
@@ -23,17 +23,16 @@ const GaleriaTemplate = ({ data: { post: { galeriaAsets, galeriaTitle } } }) => 
           galleryImages={galleryImageSlides}
         />
       </GalleryContainer>
-    </>
+    </Box>
   );
 };
-// TODO CHANGE A KEY VALUE
 
 export const query = graphql`
     query($id: String) {
-      post: contentfulGaleria(id: {eq: $id}) {
+      image: contentfulGallery(id: {eq: $id}) {
         id
-        galeriaTitle
-            galeriaAsets {
+        galleryTitle
+            galleryAssets {
             url
             }
         }

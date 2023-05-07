@@ -1,3 +1,3 @@
 import slugify from 'slugify';
 
-export const getPageSlug = (galeriaTitle) => `/galeria/${slugify(galeriaTitle.toLowerCase())}`;
+export const getPageSlug = (galleryTitle) => `/galeria/${slugify(galleryTitle.toLowerCase())}`;

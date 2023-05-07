@@ -5,23 +5,34 @@ import { GlobalStyle } from '../assets/styles/GlobalStyles';
 import { theme } from '../assets/styles/theme';
 import 'assets/styles/normalize.css';
 import { Footer } from '../components/Footer/Footer';
-import { Header } from '../components/Header/Header';
 import { NavigationContext, NavigationProvider } from '../providers/NavigationProvider';
+import { useLocation } from '@reach/router';
+import { FotokioskHeader } from '../section/FotokioskHeader';
+import { Header } from '../components/Header/Header';
+import { Navigation } from '../components/Navigation/Navigation';
 
-export const MainTemplate = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <NavigationProvider value={NavigationContext}>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </NavigationProvider>
-    </ThemeProvider>
-  </>
-);
+export const MainTemplate = ({ children }) => {
+  const location = useLocation();
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <NavigationProvider value={NavigationContext}>
+          {location.pathname === '/fotokiosk' && (
+            <FotokioskHeader />
+          )}
+          {location.pathname === '/' ? (
+            <Header customColor />)
+            : (location.pathname !== '/fotokiosk' && <Navigation isNoStandard />)}
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </NavigationProvider>
+      </ThemeProvider>
+    </>
+  );
+};
 
 MainTemplate.propTypes = {
   children: PropTypes.node.isRequired,

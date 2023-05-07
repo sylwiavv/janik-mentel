@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useContext } from 'react';
 import { Link } from 'gatsby';
+import { bool } from 'prop-types';
+import { useLocation } from '@reach/router';
 import { LogoWrapper, StyledLogo } from '../Logo/Logo';
 
 import {
@@ -10,11 +12,16 @@ import { Box } from '../Boxes/Boxes.styles';
 import { NavigationContext } from '../../providers/NavigationProvider';
 import { NavigationLinks } from '../NavigationLinks/NavigationLinks';
 
-export const Navigation = () => {
+export const Navigation = ({ isNoStandard, customColor }) => {
   const { isOpen, toggleNavigation } = useContext(NavigationContext);
+  const location = useLocation();
 
   return (
-    <OutsideWrapper isOpen={isOpen}>
+    <OutsideWrapper
+      isOpen={isOpen}
+      isNoStandard={isNoStandard}
+      customColor={customColor}
+    >
       <Wrapper isMobile isOpen={!isOpen}>
         <LogoWrapper isSmall isOpen>
           <Link to="/">
@@ -36,4 +43,9 @@ export const Navigation = () => {
       </StyledNavigation>
     </OutsideWrapper>
   );
+};
+
+Navigation.propTypes = {
+  isNoStandard: bool,
+  customColor: bool,
 };

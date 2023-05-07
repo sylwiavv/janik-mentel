@@ -63,73 +63,76 @@ export const ContactBoxOutside = styled(Box)`
 
 const kontakt = () => (
   <Fade>
-    <Box id="kontakt" isColumn marginBottom="56px">
-      <StyledTitle>Kontakt</StyledTitle>
-      <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
-    </Box>
-    <ContactBoxOutside alignItems="center" marginBottom="64px">
-      <ContactBoxInside gap="64px" alignItems="center">
-        <DarkBox isColumn noMarginBottom>
-          <h2>Skontaktuj się z nami</h2>
-          <BoxWithIcon>
-            <Zoom>
-              <IconBox>
-                <PhoneIcon />
-              </IconBox>
-            </Zoom>
-            <Box isColumn>
-              <h3>Zadzwoń do nas</h3>
-              <Box alignItems="center" className="text-box">
-                <span>tel.</span>
-                <a href="tel:(33) 86 36 100">(33) 86 36 100</a>
+    <Box isColumn style={{ maxWidth: '990px', margin: '0 auto', padding: '0 16px' }}>
+      <Box id="kontakt" isColumn marginBottom="56px">
+        <StyledTitle>Kontakt</StyledTitle>
+        <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
+      </Box>
+      <ContactBoxOutside alignItems="center" marginBottom="72px">
+        <ContactBoxInside gap="64px" alignItems="center">
+          <DarkBox isColumn noMarginBottom>
+            <h2>Skontaktuj się z nami</h2>
+            <BoxWithIcon>
+              <Zoom>
+                <IconBox>
+                  <PhoneIcon />
+                </IconBox>
+              </Zoom>
+              <Box isColumn>
+                <h3>Zadzwoń do nas</h3>
+                <Box alignItems="center" className="text-box">
+                  <span>tel.</span>
+                  <a href="tel:(33) 86 36 100">(33) 86 36 100</a>
+                </Box>
+                <Box alignItems="center" className="text-box">
+                  <span>tel.kom.</span>
+                  <a href="tel:503 022 377">503 022 377</a>
+                </Box>
               </Box>
-              <Box alignItems="center" className="text-box">
-                <span>tel.kom.</span>
-                <a href="tel:503 022 377">503 022 377</a>
+            </BoxWithIcon>
+            <BoxWithIcon>
+              <Zoom>
+                <IconBox>
+                  <MailIcon />
+                </IconBox>
+              </Zoom>
+              <Box isColumn>
+                <h3>Napisz do nas</h3>
+                <Box alignItems="center" className="text-box">
+                  <span>mail: </span>
+                  <a href="mailto:amentel@op.pl">amentel@op.pl</a>
+                </Box>
               </Box>
-            </Box>
-          </BoxWithIcon>
-          <BoxWithIcon>
-            <Zoom>
-              <IconBox>
-                <MailIcon />
-              </IconBox>
-            </Zoom>
-            <Box isColumn>
-              <h3>Napisz do nas</h3>
-              <Box alignItems="center" className="text-box">
-                <span>mail: </span>
-                <a href="mailto:amentel@op.pl">amentel@op.pl</a>
-              </Box>
-            </Box>
-          </BoxWithIcon>
+            </BoxWithIcon>
 
-          <BoxWithIcon>
-            <Zoom>
-              <IconBox><LocalizationIcon /></IconBox>
-            </Zoom>
-            <Box isColumn>
-              <h3>Odwiedź nas</h3>
-              <p>Jeleśnia, ul. Jana Kazimierza&nbsp;213</p>
+            <BoxWithIcon>
+              <Zoom>
+                <IconBox><LocalizationIcon /></IconBox>
+              </Zoom>
+              <Box isColumn>
+                <h3>Odwiedź nas</h3>
+                <p>Jeleśnia, ul. Jana Kazimierza&nbsp;213</p>
+              </Box>
+            </BoxWithIcon>
+            <Box style={{ marginTop: 'auto', paddingTop: '24px' }} noMarginBottom isColumn>
+              <span style={{ display: 'block', marginBottom: '8px' }}>Zakład czynny:</span>
+              <ul>
+                <li>
+                  poniedziałek
+                  <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
+                </li>
+                <li>sobota 9&nbsp;–&nbsp;12</li>
+              </ul>
             </Box>
-          </BoxWithIcon>
-          <Box style={{ marginTop: 'auto', paddingTop: '24px' }} noMarginBottom isColumn>
-            <span style={{ display: 'block', marginBottom: '8px' }}>Zakład czynny:</span>
-            <ul>
-              <li>
-                poniedziałek
-                <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
-              </li>
-              <li>sobota 9&nbsp;–&nbsp;12</li>
-            </ul>
-          </Box>
-        </DarkBox>
-        <FormBox isColumn noMarginBottom>
-          <ContactForm />
-        </FormBox>
-      </ContactBoxInside>
-    </ContactBoxOutside>
-    <Box isColumn>
+          </DarkBox>
+          <FormBox isColumn noMarginBottom>
+            <ContactForm />
+          </FormBox>
+        </ContactBoxInside>
+      </ContactBoxOutside>
+    </Box>
+
+    <Box isColumn style={{ maxWidth: '1990px', margin: '72px auto' }}>
       <h2>Znajdź nas na Google Maps</h2>
       <MapGoogle />
     </Box>

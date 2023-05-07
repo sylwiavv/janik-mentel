@@ -10,11 +10,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const galeriaTemplate = path.resolve('src/templates/GaleriaTemplate.jsx');
   const result = await graphql(`
     query {
-       allContentfulGaleria {
+       allContentfulGallery {
          nodes {
-            galeriaTitle
+            galleryTitle
             id
-            galeriaAsets {
+            galleryAssets {
                file {
                    url
                }
@@ -23,8 +23,8 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     }
   `);
-  result.data.allContentfulGaleria.nodes.forEach((node) => {
-    const slug = `/galeria/${slugify(node.galeriaTitle.toLowerCase())}`;
+  result.data.allContentfulGallery.nodes.forEach((node) => {
+    const slug = `/galeria/${slugify(node.galleryTitle.toLowerCase())}`;
     createPage({
       path: slug,
       component: galeriaTemplate,
@@ -34,3 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});

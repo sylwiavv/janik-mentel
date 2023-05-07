@@ -5,7 +5,7 @@ export const GalleryContainer = styled.div`
   padding: 64px 0;
 
   ${({ theme }) => theme.mq.desktop} {
-    padding: 64px ${(props) => (props.paddingRight ? props.paddingRight : '')} 64px 0;
+    padding: 64px ${(props) => (props.paddingRight ? props.paddingRight : '0px')} 64px 0px;
   }
 
   &:before {

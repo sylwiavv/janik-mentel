@@ -9,7 +9,8 @@ import { ButtonStyled } from '../components/Button/ButtonStyled';
 import { SectionWrapper } from '../components/Conteiner/Conteriner';
 
 const IndexPage = ({ data }) => (
-  <>
+  <Box isColumn style={{ maxWidth: '990px', margin: '0 auto' }}>
+
     <SectionWrapper isFullHeight>
       <Fade>
         <Box className="out">
@@ -47,7 +48,7 @@ const IndexPage = ({ data }) => (
       </Fade>
     </SectionWrapper>
     <Box isColumn>
-      <BoxWIthImageStyles>
+      <BoxWIthImageStyles imageSource={data.offer.publicURL}>
         <Box isColumn className="text-box">
           <StyledTitle>Oferta</StyledTitle>
           <p>Zapraszamy do zapoznania się z naszą ofertą.</p>
@@ -59,12 +60,15 @@ const IndexPage = ({ data }) => (
         </div>
       </BoxWIthImageStyles>
     </Box>
-  </>
+  </Box>
 );
 
 export const query = graphql`
     query {
         homepage: file(relativePath: {regex: "/homepage\/retro-kadr.jpeg/"}) {
+            publicURL
+        },
+        offer: file(relativePath: {regex: "/offer\/photo1.jpg/"}) {
             publicURL
         },
     }`;

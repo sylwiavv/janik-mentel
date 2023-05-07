@@ -5,7 +5,7 @@ export const NavigationContext = React.createContext({
   },
   setIsOpen: () => {
   },
-  isOpen: '',
+  isOpen: false,
 });
 
 export const NavigationProvider = ({ children }) => {
@@ -25,9 +25,7 @@ export const NavigationProvider = ({ children }) => {
   }), [isOpen]);
 
   return (
-    <NavigationContext.Provider
-      value={value}
-    >
+    <NavigationContext.Provider value={value}>
       {children}
     </NavigationContext.Provider>
   );
