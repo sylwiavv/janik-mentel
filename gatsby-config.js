@@ -16,7 +16,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'Janik Mentel Studio',
-    // siteUrl: '',
+    siteUrl: 'https://www.janik-mentel.pl/',
   },
   plugins: [
     {

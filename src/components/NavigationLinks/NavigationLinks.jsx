@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { useLocation } from '@reach/router';
 import { StyledLink } from '../Navigation/Navigation.styles';
 import { NavigationContext } from '../../providers/NavigationProvider';
 
@@ -33,6 +34,7 @@ export const navigation = [
 
 export const NavigationLinks = ({ header }) => {
   const { isOpen, toggleNavigation } = useContext(NavigationContext);
+  const location = useLocation();
 
   const closeMobileNavigation = () => {
     if (isOpen) {

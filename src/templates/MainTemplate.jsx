@@ -10,7 +10,7 @@ import { FotokioskHeader } from '../section/FotokioskHeader';
 import { Header } from '../components/Header/Header';
 import { Navigation } from '../components/Navigation/Navigation';
 // eslint-disable-next-line import/no-named-as-default,import/no-named-as-default-member
-import theme from '../assets/styles/theme';
+import { theme } from '../assets/styles/theme';
 
 export const MainTemplate = ({ children }) => {
   const location = useLocation();

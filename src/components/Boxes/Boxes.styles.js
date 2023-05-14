@@ -135,7 +135,10 @@ export const IconBox = styled.div`
   padding: 8px;
   width: 40px;
 
-  ${({ theme }) => theme.mq.tablet`margin-bottom: 40px;`}
+  ${({ theme }) => theme.mq.mobile} {
+    margin-bottom: 40px;
+  }
+
   svg {
     height: auto;
   }

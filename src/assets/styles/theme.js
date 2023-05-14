@@ -1,4 +1,4 @@
-const theme = {
+export const theme = {
   colors: {
     backgroundColor: '#f4f7fb',
     fontColor: '#222128',
@@ -65,4 +65,3 @@ const theme = {
   },
 };
 // eslint-disable-next-line import/no-default-export
-export default theme;
