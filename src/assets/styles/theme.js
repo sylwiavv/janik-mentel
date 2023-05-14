@@ -1,4 +1,4 @@
-export default const theme = {
+const theme = {
   colors: {
     backgroundColor: '#f4f7fb',
     fontColor: '#222128',
@@ -64,3 +64,5 @@ export default const theme = {
     huge: '@media(min-width: 1440px)',
   },
 };
+// eslint-disable-next-line import/no-default-export
+export default theme;
