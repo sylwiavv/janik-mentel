@@ -1,4 +1,5 @@
 const path = require('path');
+const dotenv = require('dotenv');
 
 const gatsbyRequiredRules = path.join(
   process.cwd(),
@@ -12,6 +13,10 @@ const gatsbyRequiredRules = path.join(
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
+
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config();
+}
 
 module.exports = {
   siteMetadata: {
