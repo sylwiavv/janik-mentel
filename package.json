@@ -38,6 +38,7 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^5.13.0",
     "gatsby-source-contentful": "^7.22.0",
+    "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-sharp": "^4.13.0",
     "google-map-react": "^2.2.0",
     "prop-types": "^15.8.1",

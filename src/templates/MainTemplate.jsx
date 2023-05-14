@@ -14,23 +14,21 @@ import { Navigation } from '../components/Navigation/Navigation';
 export const MainTemplate = ({ children }) => {
   const location = useLocation();
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <NavigationProvider value={NavigationContext}>
-          {location.pathname === '/fotokiosk' && (
-            <FotokioskHeader />
-          )}
-          {location.pathname === '/' ? (
-            <Header customColor />)
-            : (location.pathname !== '/fotokiosk' && <Navigation isNoStandard />)}
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </NavigationProvider>
-      </ThemeProvider>
-    </>
+      <NavigationProvider value={NavigationContext}>
+        {location.pathname === '/fotokiosk' && (
+        <FotokioskHeader />
+        )}
+        {location.pathname === '/' ? (
+          <Header customColor />)
+          : (location.pathname !== '/fotokiosk' && <Navigation isNoStandard />)}
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </NavigationProvider>
+    </ThemeProvider>
   );
 };
 

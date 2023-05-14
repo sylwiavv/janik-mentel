@@ -14,12 +14,14 @@ const regulamin = () => (
     <h1>Regulamin – dokument obowiązujący od 12.01.2023</h1>
     <h2>I. Postanowienia ogólne.</h2>
     <h3>
+      {/* eslint-disable-next-line max-len */}
       1. Niniejszy dokument: "Regulamin", określa podstawowe zasady i warunki świadczenia usług fotograficznych
       oraz
       sprzedaży produktów za pośrednictwem aplikacji mobilnej Mobile Photo Kiosk (dalej „MPK”) opublikowanej
       przez Pixel-Tech Spółka Jawna Pytowski i Kubarek z siedzibą w Dąbrowie Górniczej, adres: 41-303 Dąbrowa
       Górnicza, ul. Laski 6A, zarejestrowaną w rejestrze przedsiębiorców Krajowego Rejestru Sądowego
       prowadzonym przez Sąd Rejonowy Katowice – Wschód, VIII Wydział Gospodarczy KRS, pod numerem
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
       0000358467, posiadająca numer NIP: 644-328-72-39 (dalej "Wydawca”).
     </h3>
     <h3>2. Na potrzeby Regulaminu wprowadza się następujące definicje:</h3>

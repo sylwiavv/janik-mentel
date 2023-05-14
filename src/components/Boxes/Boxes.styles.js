@@ -39,7 +39,7 @@ export const Box = styled.div`
     margin-bottom: 40px;
     font-weight: 600;
 
-    ${({ theme }) => theme.mq.mobile} {
+    @media (max-width: 768px) {
       margin-bottom: 24px;
     }
   }
@@ -57,7 +57,7 @@ export const Box = styled.div`
     text-decoration: none;
   }
 
-  ${({ theme }) => theme.mq.tablet} {
+  @media (min-width: 768px) {
     flex-direction: ${({ isColumn }) => (isColumn ? 'column' : 'row')};
   }
 
@@ -72,6 +72,7 @@ export const Box = styled.div`
   &.out {
     padding: 64px;
     position: relative;
+
 
     ${({ theme }) => theme.mq.mobile} {
       padding: 32px;
@@ -134,10 +135,7 @@ export const IconBox = styled.div`
   padding: 8px;
   width: 40px;
 
-  ${({ theme }) => theme.mq.tablet} {
-    margin-bottom: 40px;
-  }
-
+  ${({ theme }) => theme.mq.tablet`margin-bottom: 40px;`}
   svg {
     height: auto;
   }
