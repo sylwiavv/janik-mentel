@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { SectionWrapper } from '../components/Conteiner/Conteriner';
 import { Box } from '../components/Boxes/Boxes.styles';
@@ -234,7 +234,30 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
           </p>
         </BoxWithPseudoElement>
       </Box>
+      <Box
+        isColumn
+        style={{
+          margin: '32px auto', maxWidth: '800px', padding: '0 24px',
+        }}
+      >
+        <div className="container-with-video" style={{ width: '100%', marginBottom: '24px' }}>
+          <h2>Zobacz jak to działa</h2>
+          <iframe
+            style={{ minHeight: '56px', width: '100%', height: '400px' }}
+            src="https://www.youtube.com/embed/bZAjmQ63GBw"
+          >
+          </iframe>
+        </div>
+        <Link to="/regulamin" style={{ color: '#000' }}>Zapoznaj się z regulaminem Foto Kiosk</Link>
+        <div className="regulation-link">
+          <a href="Regulamin_fotokiosk_janik-mentel.pdf" download="" style={{ color: '#000' }}>
+            Kliknij, aby pobrać regulamin w wersji
+            <b> PDF</b>
+          </a>
+        </div>
+      </Box>
     </SectionWIthBoxes>
+
   </SectionWrapper>
 );
 
