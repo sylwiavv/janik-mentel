@@ -33,24 +33,34 @@ const StyledButton = styled.a`
   div {
     display: flex;
     align-items: center;
+  }
+`;
 
-    .svg-wrapper {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
+export const SvgWrapper = styled.div`
+  animation: fade 1s ease-in 1s;
+  animation-fill-mode: forwards;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: transparent;
+
+  @keyframes fade {
+    0% {
+      background-color: transparent;
+    }
+
+    100% {
       background: #fff;
-      padding: 2px;
     }
   }
 `;
 
 export const ButtonWithIcon = ({ href, children }) => (
   <StyledButton href={href}>
-    <div>
-      <div className="svg-wrapper">
-        <ArrowDownIcon height={28} width={28} />
-      </div>
-      {children}
-    </div>
+    <SvgWrapper>
+      <ArrowDownIcon height={28} width={28} />
+    </SvgWrapper>
+    {children}
   </StyledButton>
 );

@@ -5,13 +5,14 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif, 'Lora', serif;
   }
 
   html {
     font-size: 62.5%;
     height: 100%;
     scroll-behavior: smooth;
+    //font-family: 'Lora', serif;
   }
 
   body {

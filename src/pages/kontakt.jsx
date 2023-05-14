@@ -132,7 +132,7 @@ const kontakt = () => (
       </ContactBoxOutside>
     </Box>
 
-    <Box isColumn style={{ maxWidth: '1990px', margin: '72px auto' }}>
+    <Box isColumn style={{ maxWidth: '1990px', margin: '72px auto', padding: '0 24px' }}>
       <h2>Znajdź nas na Google Maps</h2>
       <MapGoogle />
     </Box>

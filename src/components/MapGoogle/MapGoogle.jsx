@@ -9,7 +9,7 @@ export const MapGoogle = () => {
       lat: 49.63387683625645,
       lng: 19.3322348344566,
     },
-    zoom: 12,
+    zoom: 13.5,
   };
   return (
     <div style={{ height: '80vh', width: '100%' }}>

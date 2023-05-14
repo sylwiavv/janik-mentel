@@ -26,19 +26,18 @@ const oferta = () => (
         </Box>
         <Box isColumn>
           <h2>Zdjęcia do dokumentów</h2>
-          <p>Wykonujemy zdjęcia do:</p>
           <ul>
-            <li>paszportów</li>
-            <li>dowodów osobistych</li>
-            <li>wiz</li>
+            <li>Paszportów</li>
+            <li>Dowodów osobistych</li>
+            <li>Wiz</li>
           </ul>
         </Box>
         <Box isColumn>
           <h2>Sesje dziecięce i rodzinne</h2>
           <ul>
-            <li>zdjęcia świąteczne w studio</li>
-            <li>sesje w plenerze</li>
-            <li>zdjęcia z Mikołajem w przedszkolu</li>
+            <li>Zdjęcia świąteczne w studio</li>
+            <li>Sesje w plenerze</li>
+            <li>Zdjęcia z Mikołajem w przedszkolu</li>
           </ul>
         </Box>
         <Box isColumn>
@@ -62,23 +61,20 @@ const oferta = () => (
           </ul>
         </Box>
         <Box isColumn>
-          <h2>Przegrywanie kaset VHS na pendrive</h2>
-          <ul>
-            <li>lorem ipsum</li>
-          </ul>
-        </Box>
-        <Box isColumn>
           <h2>Spersonalizowane gadżety</h2>
           <ul>
-            <li>kubki</li>
-            <li>kalendarze</li>
+            <li>Kubki</li>
+            <li>Kalendarze</li>
           </ul>
         </Box>
         <Box isColumn>
           <h2>Odnawianie starych, znisczonych fotografii</h2>
           <ul>
-            <li>reprodukcja</li>
+            <li>Reprodukcja</li>
           </ul>
+        </Box>
+        <Box isColumn>
+          <h2>Przegrywanie kaset VHS na pendrive</h2>
         </Box>
       </Fade>
     </WrapperGrid>

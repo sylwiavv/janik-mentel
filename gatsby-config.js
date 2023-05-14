@@ -68,6 +68,7 @@ module.exports = {
         fonts: [
           'montserrat\:300,400,500,700',
           'cormorant garamond\:300,500',
+          'lora\: 400, 500, 500i, 600',
         ],
         display: 'swap',
       },
