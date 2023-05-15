@@ -105,5 +105,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: public
           server-dir: /public_html
+    env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
