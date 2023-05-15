@@ -108,3 +108,4 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           # FTP password
           password: ${{ secrets.FTP_PASSWORD }}
+          remoteDir: test
