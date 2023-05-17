@@ -28,7 +28,7 @@
     "dotenv": "^16.0.3",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "gatsby": "^4.8.0",
+    "gatsby": "^3.0.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.13.0",
