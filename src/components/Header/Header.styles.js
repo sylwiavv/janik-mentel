@@ -9,7 +9,7 @@ export const CarouselContainer = styled.div`
   margin-bottom: 124px;
 
   ${({ theme }) => theme.mq.mobile} {
-    height: ${({ isOpen }) => (isOpen ? '100vh' : '80vh')};
+    height: ${({ isOpen }) => (isOpen ? '100vh' : '100vh')};
     margin-bottom: 72px;
   }
 
