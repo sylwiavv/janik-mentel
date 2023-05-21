@@ -48,10 +48,10 @@ export const Box = styled.div`
     margin-right: 4px;
   }
 
-  img {
-    height: 200px;
-    width: auto;
-  }
+  //img {
+  //  height: 200px;
+  //  width: auto;
+  //}
 
   a {
     text-decoration: none;

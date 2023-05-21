@@ -19,9 +19,7 @@ const GaleriaTemplate = ({ data: { image: { galleryAssets, galleryTitle } } }) =
         <p>Zapraszamy do obejrzenia wybranych zdjęć z tej wyjątkowej sesji zdjęciowej.</p>
       </Box>
       <GalleryContainer>
-        <WSPGallery
-          galleryImages={galleryImageSlides}
-        />
+        <WSPGallery galleryImages={galleryImageSlides} />
       </GalleryContainer>
     </Box>
   );

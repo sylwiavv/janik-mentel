@@ -38,7 +38,7 @@ export const FotokioskHeader = () => (
   <div style={{ background: '#24494e' }} id="fotokiosk">
     <Navigation isNoStandard customColor />
     <Box style={{
-      display: 'flex', margin: 'auto', position: 'relative', maxWidth: '1240px', padding: '0 0',
+      display: 'flex', margin: 'auto', position: 'relative', maxWidth: '1240px', padding: '0 24px',
     }}
     >
       <Box style={{ flex: '1', color: '#d6e6e7' }}>

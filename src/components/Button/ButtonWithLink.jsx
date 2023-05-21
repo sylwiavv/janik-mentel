@@ -51,7 +51,7 @@ export const SvgWrapper = styled.div`
     }
 
     100% {
-      background: #fff;
+      background-color: #fff;
     }
   }
 `;
