@@ -41,7 +41,6 @@ export const OutsideWrapper = styled.div`
     theme,
   }) => (((isNoStandard && !customColor && !isOpen) || isOpen) ? theme.colors.primaryBgColorDark : 'transparent')};
 
-
   ${({ theme }) => theme.mq.tablet} {
     display: flex;
     flex-direction: row;

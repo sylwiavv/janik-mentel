@@ -237,7 +237,7 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
       <Box
         isColumn
         style={{
-          margin: '32px auto', maxWidth: '800px', padding: '0 24px',
+          margin: '32px auto 0 auto', maxWidth: '800px', padding: '0 24px',
         }}
       >
         <div className="container-with-video" style={{ width: '100%', marginBottom: '24px' }}>
@@ -249,8 +249,12 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
           </iframe>
         </div>
         <Link to="/regulamin" style={{ color: '#000' }}>Zapoznaj się z regulaminem Foto Kiosk</Link>
-        <div className="regulation-link">
-          <a href="Regulamin_fotokiosk_janik-mentel.pdf" download="" style={{ color: '#000' }}>
+        <div className="regulation-link" style={{ paddingBottom: '24px' }}>
+          <a
+            href="src/assets/download/Regulamin_fotokiosk_janik-mentel.pdf"
+            download="true"
+            style={{ color: '#000' }}
+          >
             Kliknij, aby pobrać regulamin w wersji
             <b> PDF</b>
           </a>
