@@ -70,52 +70,54 @@ export const ContactForm = () => {
 
   return (
     <>
-      {state.succeeded
-        ? (<ContactFormSuccessComponent />)
-        : (
-          <ContactFormWrapper onSubmit={handleSubmitAction}>
-            <h2>Wyślij do nas widomość</h2>
-            <p>Zapraszamy do wysałania wiadomości poprzez formularz kontaktowy</p>
-            <label htmlFor="name">Imię i nazwisko</label>
-            <input
-              className={errorsState.name && 'error-input'}
-              type="name"
-              name="name"
-              id="name"
-              placeholder="Imię i nazwisko"
-              value={formValues.name}
-              onChange={handleInputOnChange}
-              onBlur={handleInputBlur}
-            />
-            <ErrorMessageWrapper>{errorsState.name}</ErrorMessageWrapper>
+      {state.succeeded ? (<ContactFormSuccessComponent />) : (
+        <ContactFormWrapper onSubmit={handleSubmitAction}>
+          <h2>Wyślij do nas widomość</h2>
+          <p>Zapraszamy do wysałania wiadomości poprzez formularz kontaktowy</p>
+          <label htmlFor="name">Imię i nazwisko</label>
+          <input
+            className={errorsState.name && 'error-input'}
+            type="name"
+            name="name"
+            id="name"
+            placeholder="Imię i nazwisko"
+            value={formValues.name}
+            onChange={handleInputOnChange}
+            onBlur={handleInputBlur}
+          />
+          <ErrorMessageWrapper>{errorsState.name}</ErrorMessageWrapper>
 
-            <label htmlFor="email">Adres e-mail</label>
-            <input
-              className={errorsState.name && 'error-input'}
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Adres e-mail"
-              value={formValues.email}
-              onChange={handleInputOnChange}
-              onBlur={handleInputBlur}
-            />
-            <ErrorMessageWrapper>{errorsState.email}</ErrorMessageWrapper>
+          <label htmlFor="email">Adres e-mail</label>
+          <input
+            className={errorsState.name && 'error-input'}
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Adres e-mail"
+            value={formValues.email}
+            onChange={handleInputOnChange}
+            onBlur={handleInputBlur}
+          />
+          <ErrorMessageWrapper>{errorsState.email}</ErrorMessageWrapper>
 
-            <label htmlFor="message">Treść</label>
-            <textarea
-              className={errorsState.name && 'error-input'}
-              name="message"
-              id="message"
-              placeholder="Wiadomość"
-              value={formValues.message}
-              onChange={handleInputOnChange}
-              onBlur={handleInputBlur}
-            />
-            <ErrorMessageWrapper>{errorsState.message}</ErrorMessageWrapper>
-            <ButtonStyled type="submit" disabled={state.submitting}>Wyślij</ButtonStyled>
-          </ContactFormWrapper>
-        )}
+          <label htmlFor="message">Treść</label>
+          <textarea
+            className={errorsState.name && 'error-input'}
+            name="message"
+            id="message"
+            placeholder="Wiadomość"
+            value={formValues.message}
+            onChange={handleInputOnChange}
+            onBlur={handleInputBlur}
+          />
+          <ErrorMessageWrapper>{errorsState.message}</ErrorMessageWrapper>
+          <ButtonStyled type="submit" disabled={state.submitting}>Wyślij</ButtonStyled>
+        </ContactFormWrapper>
+      )}
+
+      {state.errors.length > 0 && (
+        <ErrorMessageWrapper>Coś poszło nie tak, spróbuj ponownie</ErrorMessageWrapper>
+      )}
     </>
   );
 };

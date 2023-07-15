@@ -40,6 +40,7 @@ export const ContactBoxOutside = styled(Box)`
   background-color: #ffffff;
   padding: 40px 0;
   position: relative;
+  width: 100%;
 
   ${({ theme }) => theme.mq.tablet} {
     height: ${({ isFullHeight }) => (isFullHeight ? '100vh' : 'auto')};
@@ -120,7 +121,7 @@ const kontakt = () => (
                 <ul>
                   <li>
                     poniedziałek
-                    <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
+                                        <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
                   </li>
                   <li>sobota 9&nbsp;–&nbsp;12</li>
                 </ul>
