@@ -15,6 +15,30 @@ const WSPGallery = ({ galleryImages }) => {
     document.body.classList.add('not-scroll');
   };
 
+  // Close Modal
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    document.body.classList.remove('not-scroll');
+  };
+
+  // Previous Image
+  const prevSlide = () => {
+    if (slideNumber === 0) {
+      setSlideNumber(galleryImages.length - 1);
+    } else {
+      setSlideNumber(slideNumber - 1);
+    }
+  };
+
+  // Next Image
+  const nextSlide = () => {
+    if (slideNumber + 1 === galleryImages.length) {
+      setSlideNumber(0);
+    } else {
+      setSlideNumber(slideNumber + 1);
+    }
+  };
+
   const handleKeyDown = useCallback((event) => {
     if (event.key === 'Escape') {
       handleCloseModal();
@@ -35,26 +59,6 @@ const WSPGallery = ({ galleryImages }) => {
       document.removeEventListener('keydown', handleKeyDown, false);
     };
   }, [slideNumber]);
-
-  // Close Modal
-  const handleCloseModal = () => {
-    setOpenModal(false);
-    document.body.classList.remove('not-scroll');
-  };
-
-  // Previous Image
-  const prevSlide = () => {
-    slideNumber === 0
-      ? setSlideNumber(galleryImages.length - 1)
-      : setSlideNumber(slideNumber - 1);
-  };
-
-  // Next Image
-  const nextSlide = () => {
-    slideNumber + 1 === galleryImages.length
-      ? setSlideNumber(0)
-      : setSlideNumber(slideNumber + 1);
-  };
 
   return (
     <>

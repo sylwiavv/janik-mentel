@@ -120,7 +120,7 @@ const kontakt = () => (
                 <ul>
                   <li>
                     poniedziałek
-                                        <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
+                    <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
                   </li>
                   <li>sobota 9&nbsp;–&nbsp;12</li>
                 </ul>

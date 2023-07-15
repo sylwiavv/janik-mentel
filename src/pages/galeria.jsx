@@ -5,9 +5,9 @@ import { getPageSlug } from '../helpers/getPageSlug';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box } from '../components/Boxes/Boxes.styles';
 import { GalleryContainer } from '../assets/styles/pages/galeria.styles';
-import ArrowRightIcon from '../components/icons/ArrowRightIcon';
+import { ArrowRightIcon } from '../components/icons/ArrowRightIcon';
 
-const Galeria = ({ data: { posts: { nodes } }, data }) => (
+const Galeria = ({ data: { posts: { nodes } } }) => (
   <Box isColumn style={{ maxWidth: '990px', margin: '0 auto', padding: '0px 16px' }}>
     <Box isColumn id="galeria" style={{ width: '100%' }}>
       <StyledTitle>Galeria</StyledTitle>

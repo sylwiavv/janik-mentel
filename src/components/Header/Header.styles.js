@@ -56,3 +56,75 @@ export const CarouselContainer = styled.div`
     z-index: 2;
   }
 `;
+
+export const HeaderTextWrapper = styled.div`
+  position: absolute;
+  z-index: 10;
+  color: #e8e8e3;
+  bottom: 104px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fade 1s ease-in 1s;
+  animation-fill-mode: forwards;
+
+  ${({ theme }) => theme.mq.mobile} {
+    bottom: 64px;
+  }
+
+  svg {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIcon 2s ease-in 1s;
+    animation-fill-mode: forwards;
+
+    path {
+      fill: #e8e8e3;
+      opacity: .9;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    line-height: 1.4em;
+    font-family: 'Lora', serif;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 36px;
+    position: relative;
+
+    ${({ theme }) => theme.mq.mobile} {
+      font-size: 24px;
+      max-width: none;
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIcon {
+    0% {
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+`;
