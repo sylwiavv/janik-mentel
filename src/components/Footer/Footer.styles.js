@@ -67,7 +67,6 @@ export const FooterWrapper = styled.footer`
 
     a {
       grid-column: 1;
-
       margin-bottom: 16px;
 
       &:last-child {
