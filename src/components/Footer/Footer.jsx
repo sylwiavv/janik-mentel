@@ -10,7 +10,7 @@ export const Footer = () => (
       <Box isColumn isGap noMarginBottom className="first">
         <StyledLogo className="footer-logo" />
         <Box isColumn noMarginBottom>
-          <h3>Janik - Mentel</h3>
+          <h3>Janik – Mentel</h3>
           <p>Bernadetta Mentel</p>
         </Box>
         <Box isColumn noMarginBottom>
