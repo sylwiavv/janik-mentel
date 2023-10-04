@@ -136,6 +136,10 @@ export const AnimatingHeader = styled('h2')`
   position: relative;
   overflow: hidden;
 
+  ${({ theme }) => theme.mq.mobile} {
+    padding-left: 24px;
+  }
+
   &:before {
     content: '';
     position: absolute;
