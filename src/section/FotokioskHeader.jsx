@@ -4,15 +4,15 @@ import { Navigation } from '../components/Navigation/Navigation';
 import { Box } from '../components/Boxes/Boxes.styles';
 import { ButtonWithIcon } from '../components/Button/ButtonWithLink';
 
-const BoxWithImage = styled(Box)`
-  background-image: url(https://images.pexels.com/photos/1448645/pexels-photo-1448645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-  min-height: 800px;
-  max-height: 500px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 0;
-`;
+// const BoxWithImage = styled(Box)`
+//   background-image: url(https://images.pexels.com/photos/1448645/pexels-photo-1448645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+//   min-height: 800px;
+//   max-height: 500px;
+//   width: 100%;
+//   background-position: center;
+//   background-size: cover;
+//   margin-bottom: 0;
+// `;
 
 export const BigTitle = styled.h1`
   color: #d6e6e7;

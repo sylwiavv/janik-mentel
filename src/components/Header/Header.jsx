@@ -2,13 +2,14 @@ import * as React from 'react';
 import { useContext, useState } from 'react';
 import '../../assets/styles/carousel.css';
 import CookieConsent from 'react-cookie-consent';
-import { CarouselContainer, HeaderTextWrapper } from './Header.styles';
+import { AnimatingHeader, CarouselContainer, HeaderTextWrapper } from './Header.styles';
 import { NavigationContext } from '../../providers/NavigationProvider';
 import { useHeaderStaticQuery } from '../../hooks/useHeaderStaticQuery';
 import { Slider } from '../Slider/Slider';
 import { Navigation } from '../Navigation/Navigation';
 import { ArrowHeartIcon } from '../icons/ArrowHeartIcon';
 import { COOKIES_MESSAGE } from '../../helpers/constans/constans';
+import { Box } from '../Boxes/Boxes.styles';
 
 export const Header = () => {
   const [index, setIndex] = useState(0);
@@ -22,6 +23,48 @@ export const Header = () => {
 
   return (
     <CarouselContainer isOpen={isOpen}>
+      <Box
+        style={{
+          backgroundColor: 'rgba(8,11,23,0.32)',
+          color: 'rgb(255,255,255)',
+          position: 'absolute',
+          right: 0,
+          left: 0,
+          top: '-100px',
+          zIndex: 10,
+          padding: '8px',
+          borderTopLeftRadius: '8px',
+          borderBottomLeftRadius: '8px',
+          width: '100%',
+          height: '110%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        isColumn
+      >
+        <AnimatingHeader style={{ fontSize: '44px' }}>Przerwa urlopowa</AnimatingHeader>
+
+        <p style={{
+          lineHeight: '40px', fontSize: '28px', margin: 0, paddingLeft: '24px',
+        }}
+        >
+          W dniach od
+          {' '}
+          <b>09.10.2023</b>
+          {' '}
+          do
+          {' '}
+          <b>21.10.2023</b>
+          {' '}
+          zakład będzie nieczynny
+          {' '}
+          <br></br>
+          z powodu
+          przerwy urlopowej.
+        </p>
+      </Box>
       <CookieConsent
         location="bottom"
         buttonText="Rozumiem"

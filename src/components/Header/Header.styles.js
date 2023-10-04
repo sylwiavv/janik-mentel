@@ -83,7 +83,8 @@ export const HeaderTextWrapper = styled.div`
     animation-fill-mode: forwards;
 
     path {
-      fill: #e8e8e3;
+      //fill: #e8e8e3;
+      fill: rgba(232, 232, 227, 0.51);
       opacity: .9;
     }
   }
@@ -96,6 +97,8 @@ export const HeaderTextWrapper = styled.div`
     margin: 0 auto;
     font-size: 36px;
     position: relative;
+    color: rgba(232, 232, 227, 0.51);
+
 
     ${({ theme }) => theme.mq.mobile} {
       font-size: 24px;
@@ -125,6 +128,31 @@ export const HeaderTextWrapper = styled.div`
 
     100% {
       opacity: 1;
+    }
+  }
+`;
+
+export const AnimatingHeader = styled('h2')`
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: -100%;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to left, transparent 50%, transparent 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.91) 100%);
+    animation: reveal 2s ease-in-out forwards;
+    z-index: 10;
+    @keyframes reveal {
+      from {
+        right: 0%;
+      }
+      to {
+        left: 100%;
+      }
     }
   }
 `;
