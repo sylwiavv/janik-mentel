@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useContext, useState } from 'react';
 import '../../assets/styles/carousel.css';
 import CookieConsent from 'react-cookie-consent';
-import { AnimatingHeader, CarouselContainer, HeaderTextWrapper } from './Header.styles';
+import { CarouselContainer, HeaderTextWrapper } from './Header.styles';
 import { NavigationContext } from '../../providers/NavigationProvider';
 import { useHeaderStaticQuery } from '../../hooks/useHeaderStaticQuery';
 import { Slider } from '../Slider/Slider';
@@ -44,26 +44,6 @@ export const Header = () => {
         }}
         isColumn
       >
-        <AnimatingHeader style={{ fontSize: '44px' }}>Przerwa urlopowa</AnimatingHeader>
-
-        <p style={{
-          lineHeight: '40px', fontSize: '28px', margin: 0, paddingLeft: '24px',
-        }}
-        >
-          W dniach od
-          {' '}
-          <b>09.10.2023</b>
-          {' '}
-          do
-          {' '}
-          <b>21.10.2023</b>
-          {' '}
-          zakład będzie nieczynny
-          {' '}
-          <br></br>
-          z powodu
-          przerwy urlopowej.
-        </p>
       </Box>
       <CookieConsent
         location="bottom"

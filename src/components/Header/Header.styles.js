@@ -83,8 +83,7 @@ export const HeaderTextWrapper = styled.div`
     animation-fill-mode: forwards;
 
     path {
-      //fill: #e8e8e3;
-      fill: rgba(232, 232, 227, 0.51);
+      fill: #e8e8e3;
       opacity: .9;
     }
   }
@@ -97,7 +96,7 @@ export const HeaderTextWrapper = styled.div`
     margin: 0 auto;
     font-size: 36px;
     position: relative;
-    color: rgba(232, 232, 227, 0.51);
+    //color: rgba(232, 232, 227, 0.51);
 
 
     ${({ theme }) => theme.mq.mobile} {
