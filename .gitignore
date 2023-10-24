@@ -3,5 +3,5 @@ node_modules/
 public
 .idea/
 .DS_Store
-.env.development
+.env.production
 public/.env.production
