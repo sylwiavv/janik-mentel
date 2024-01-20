@@ -1,16 +1,20 @@
-import * as React from 'react';
-import { useContext } from 'react';
-import { Link } from 'gatsby';
-import { bool } from 'prop-types';
-import { useLocation } from '@reach/router';
-import { LogoWrapper, StyledLogo } from '../Logo/Logo';
+import * as React from "react";
+import { useContext } from "react";
+import { Link } from "gatsby";
+import { bool } from "prop-types";
+import { useLocation } from "@reach/router";
+import { LogoWrapper, StyledLogo } from "../Logo/Logo";
 
 import {
-  OutsideWrapper, StyledIconClose, StyledIconHamburger, StyledNavigation, Wrapper,
-} from './Navigation.styles';
-import { Box } from '../Boxes/Boxes.styles';
-import { NavigationContext } from '../../providers/NavigationProvider';
-import { NavigationLinks } from '../NavigationLinks/NavigationLinks';
+  OutsideWrapper,
+  StyledIconClose,
+  StyledIconHamburger,
+  StyledNavigation,
+  Wrapper,
+} from "./Navigation.styles";
+import { Box } from "../Boxes/Boxes.styles";
+import { NavigationContext } from "../../providers/NavigationProvider";
+import { NavigationLinks } from "../NavigationLinks/NavigationLinks";
 
 export const Navigation = ({ isNoStandard, customColor }) => {
   const { isOpen, toggleNavigation } = useContext(NavigationContext);

@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Box } from '../components/Boxes/Boxes.styles';
+import React from "react";
+import styled from "styled-components";
+import { Box } from "../components/Boxes/Boxes.styles";
 
 const STEPS = [
-  { number: '01', title: 'Pobierz aplikacje' },
-  { number: '02', title: 'Wybierz zdjęcia' },
-  { number: '03', title: 'Obierz zamówienie' },
+  { number: "01", title: "Pobierz aplikacje" },
+  { number: "02", title: "Wybierz zdjęcia" },
+  { number: "03", title: "Obierz zamówienie" },
 ];
 
 export const CardsWrapper = styled(Box)`
@@ -34,7 +34,6 @@ export const CardsWrapper = styled(Box)`
     margin-top: 32px;
     top: 0;
   }
-
 `;
 
 export const SingleCard = styled(Box)`
@@ -45,7 +44,6 @@ export const SingleCard = styled(Box)`
   display: flex;
   justify-content: end;
   margin-bottom: 0;
-
 
   ${({ theme }) => theme.mq.mobile} {
     max-width: 144px;

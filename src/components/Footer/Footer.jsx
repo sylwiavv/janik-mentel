@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { FooterWrapper } from './Footer.styles';
-import { StyledLogo } from '../Logo/Logo';
-import { Box } from '../Boxes/Boxes.styles';
-import { NavigationLinks } from '../NavigationLinks/NavigationLinks';
+import * as React from "react";
+import { FooterWrapper } from "./Footer.styles";
+import { StyledLogo } from "../Logo/Logo";
+import { Box } from "../Boxes/Boxes.styles";
+import { NavigationLinks } from "../NavigationLinks/NavigationLinks";
 
 export const Footer = () => (
   <FooterWrapper>

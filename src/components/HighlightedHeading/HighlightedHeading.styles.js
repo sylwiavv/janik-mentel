@@ -14,6 +14,6 @@ export const StyledTitle = styled.h1`
 export const StyledHeading = styled.h5`
   color: ${({ theme }) => theme.colors.fontColorSecondary};
   font-weight: 600;
-  letter-spacing: .4px;
-  text-transform: uppercase;;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 `;

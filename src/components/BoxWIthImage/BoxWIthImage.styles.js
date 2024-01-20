@@ -108,6 +108,4 @@ export const WrapperGrid = styled.div`
     grid-gap: 48px;
     padding: 48px 0;
   }
-
-
 `;

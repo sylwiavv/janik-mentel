@@ -5,14 +5,16 @@ import { Box } from '../components/Boxes/Boxes.styles';
 import { WrapperGrid } from '../components/BoxWIthImage/BoxWIthImage.styles';
 
 const oferta = () => (
-  <Box isColumn style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
+  <Box
+    isColumn
+    style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}
+  >
     <Box id="oferta" isColumn marginBottom="48px">
       <StyledTitle>Oferta</StyledTitle>
       <p>
-        Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia oprawiamy w tradycyjne albumy
-        lub
-        eleganckie fotoksiążki.
-        Oferujemy również usługi wideo.
+        Sesje zdjęciowe wykonujemy we własnym studio lub w plenerze. Zdjęcia
+        oprawiamy w tradycyjne albumy lub eleganckie fotoksiążki. Oferujemy
+        również usługi wideo.
       </p>
     </Box>
     <WrapperGrid>

@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const NavigationContext = React.createContext({
-  toggleNavigation: () => {
-  },
-  setIsOpen: () => {
-  },
+  toggleNavigation: () => {},
+  setIsOpen: () => {},
   isOpen: false,
 });
 
@@ -13,16 +11,21 @@ export const NavigationProvider = ({ children }) => {
 
   const toggleNavigation = () => {
     setIsOpen(!isOpen);
-    document.body.classList.remove('not-scroll');
+    document.body.classList.remove("not-scroll");
 
     if (!isOpen) {
-      document.body.classList.add('not-scroll');
+      document.body.classList.add("not-scroll");
     }
   };
 
-  const value = React.useMemo(() => ({
-    isOpen, setIsOpen, toggleNavigation,
-  }), [isOpen]);
+  const value = React.useMemo(
+    () => ({
+      isOpen,
+      setIsOpen,
+      toggleNavigation,
+    }),
+    [isOpen]
+  );
 
   return (
     <NavigationContext.Provider value={value}>

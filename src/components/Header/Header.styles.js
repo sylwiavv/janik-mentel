@@ -41,12 +41,12 @@ export const CarouselContainer = styled.div`
     &-control-prev,
     &-control-next {
       width: 8%;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -61,43 +61,50 @@ export const HeaderTextWrapper = styled.div`
   position: absolute;
   z-index: 10;
   color: #e8e8e3;
-  bottom: 104px;
-  left: 50%;
+  //bottom: 104px;
+  bottom: 50%;
+  //left: 50%;
+  left: 32px;
   width: 100%;
-  transform: translateX(-50%);
+  //transform: translateX(-50%);
   opacity: 0;
   animation: fade 1s ease-in 1s;
   animation-fill-mode: forwards;
 
   ${({ theme }) => theme.mq.mobile} {
     bottom: 64px;
+    display: none;
   }
 
   svg {
     position: absolute;
     top: -48px;
-    left: 50%;
-    transform: translateX(-50%);
+    //left: 50%;
+    //left: 32px;
+    left: 0;
+    //transform: translateX(-50%);
     opacity: 0;
     animation: fadeIcon 2s ease-in 1s;
     animation-fill-mode: forwards;
 
     path {
       fill: #e8e8e3;
-      opacity: .9;
+      opacity: 0.9;
     }
   }
 
   h1 {
-    text-align: center;
+    //text-align: center;
     line-height: 1.4em;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     max-width: 80%;
-    margin: 0 auto;
-    font-size: 36px;
+    //margin: 0 auto;
+    text-align: left;
+    margin-right: auto;
+    //font-size: 36px;
+    font-size: 28px;
     position: relative;
     //color: rgba(232, 232, 227, 0.51);
-
 
     ${({ theme }) => theme.mq.mobile} {
       font-size: 24px;
@@ -140,13 +147,17 @@ export const AnimatingHeader = styled('h2')`
   }
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -6px;
     left: -100%;
     width: 100%;
     height: 8px;
-    background: linear-gradient(to left, transparent 50%, transparent 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.91) 100%);
+    background: linear-gradient(to left,
+    transparent 50%,
+    transparent 0%,
+    rgb(255, 255, 255) 50%,
+    rgba(255, 255, 255, 0.91) 100%);
     animation: reveal 2s ease-in-out forwards;
     z-index: 10;
     @keyframes reveal {

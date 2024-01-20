@@ -7,10 +7,12 @@ import { ContactForm } from '../components/ContactForm/ContactForm';
 import MailIcon from '../components/icons/MailIcon';
 import LocalizationIcon from '../components/icons/LocalizationIcon';
 import PhoneIcon from '../components/icons/PhoneIcon';
+// eslint-disable-next-line import/no-named-as-default
 import MapGoogle from '../components/MapGoogle/MapGoogle';
 
 export const DarkBox = styled(Box)`
-  box-shadow: 0px 0px 20px rgb(76 85 102 / 4%), 0px 40px 40px -32px rgb(76 85 102 / 32%);
+  box-shadow: 0px 0px 20px rgb(76 85 102 / 4%),
+  0px 40px 40px -32px rgb(76 85 102 / 32%);
   background-color: ${({ theme }) => theme.colors.primaryBgColorDark};
   border-radius: 4px;
   color: #fff;
@@ -33,8 +35,7 @@ export const FormBox = styled(Box)`
   border-radius: 4px;
 `;
 
-export const ContactBoxInside = styled(Box)`
-`;
+export const ContactBoxInside = styled(Box)``;
 
 export const ContactBoxOutside = styled(Box)`
   background-color: #ffffff;
@@ -50,7 +51,7 @@ export const ContactBoxOutside = styled(Box)`
 
   ${({ theme }) => theme.mq.tablet} {
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -65,7 +66,10 @@ export const ContactBoxOutside = styled(Box)`
 const kontakt = () => (
   <>
     <Fade>
-      <Box isColumn style={{ maxWidth: '990px', margin: '0 auto', padding: '0 16px' }}>
+      <Box
+        isColumn
+        style={{ maxWidth: '990px', margin: '0 auto', padding: '0 16px' }}
+      >
         <Box id="kontakt" isColumn marginBottom="56px">
           <StyledTitle>Kontakt</StyledTitle>
           <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
@@ -109,19 +113,27 @@ const kontakt = () => (
 
               <BoxWithIcon>
                 <Zoom>
-                  <IconBox><LocalizationIcon /></IconBox>
+                  <IconBox>
+                    <LocalizationIcon />
+                  </IconBox>
                 </Zoom>
                 <Box isColumn>
                   <h3>Odwiedź nas</h3>
                   <p>Jeleśnia, ul. Jana Kazimierza&nbsp;213</p>
                 </Box>
               </BoxWithIcon>
-              <Box style={{ marginTop: 'auto', paddingTop: '24px' }} noMarginBottom isColumn>
-                <span style={{ display: 'block', marginBottom: '8px' }}>Zakład czynny:</span>
+              <Box
+                style={{ marginTop: 'auto', paddingTop: '24px' }}
+                noMarginBottom
+                isColumn
+              >
+                <span style={{ display: 'block', marginBottom: '8px' }}>
+                  Zakład czynny:
+                </span>
                 <ul>
                   <li>
                     poniedziałek
-                                        <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
+                    <span>– piątek&nbsp;9&nbsp;–&nbsp;16</span>
                   </li>
                   <li>sobota 9&nbsp;–&nbsp;12</li>
                 </ul>
@@ -135,7 +147,10 @@ const kontakt = () => (
       </Box>
     </Fade>
 
-    <Box isColumn style={{ maxWidth: '1990px', margin: '72px auto', padding: '0 24px' }}>
+    <Box
+      isColumn
+      style={{ maxWidth: '1990px', margin: '72px auto', padding: '0 24px' }}
+    >
       <h2>Znajdź nas na Google Maps</h2>
       <MapGoogle />
     </Box>

@@ -19,16 +19,16 @@ export const HeroImage = styled.div`
     position: absolute;
     top: 29%;
     z-index: 0;
-    opacity: .02;
+    opacity: 0.02;
     left: 0;
   }
 
   //
-    // ${({ theme }) => theme.mq.tablet} {
+  // ${({ theme }) => theme.mq.tablet} {
   //   width: 70%;
   // }
   //
-    // ${({ theme }) => theme.mq.desktop} {
+  // ${({ theme }) => theme.mq.desktop} {
   //   top: 0;
   //   width: 80%;
   //   height: 75%;

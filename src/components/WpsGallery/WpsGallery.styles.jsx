@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const GalleryWrapper = styled.div`
   margin: 0 auto;
@@ -17,7 +17,7 @@ export const GalleryWrapper = styled.div`
   .single {
     cursor: pointer;
     background-color: #34476c0f;
-    transition: background-color, .4s;
+    transition: background-color, 0.4s;
 
     &:nth-child(3n) {
       grid-row-end: span 2;
@@ -50,7 +50,7 @@ export const GalleryWrapper = styled.div`
       object-fit: cover;
       width: 100%;
       height: 100%;
-      transition: transform, .4s;
+      transition: transform, 0.4s;
 
       &:hover {
         transform: scale(1.03);
@@ -108,12 +108,14 @@ export const SliderWrapper = styled.div`
     }
   }
 
-  .btnClose, .btnPrev, .btnNext {
+  .btnClose,
+  .btnPrev,
+  .btnNext {
     position: fixed;
     cursor: pointer;
-    opacity: .7;
+    opacity: 0.7;
     z-index: 9999;
-    transition: opacity, .4s;
+    transition: opacity, 0.4s;
 
     &:hover {
       opacity: 1;

@@ -15,8 +15,7 @@ export const Box = styled.div`
 
   flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : 'column')};
   opacity: 1;
-  transition: opacity, .10s;
-
+  transition: opacity, 0.1s;
 
   &:hover {
     cursor: ${(props) => (props.isButton ? props.isButton : '')};
@@ -73,16 +72,27 @@ export const Box = styled.div`
     padding: 64px;
     position: relative;
 
-
     ${({ theme }) => theme.mq.mobile} {
       padding: 32px;
       margin-bottom: 72px;
     }
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
-      background-image: linear-gradient(to right, #eaecf3, #eaecf3, #eaecf3, #eaecf3, #eaecf3, #ebedf4, #eceef4, #edeff5, #eff1f7, #f1f3f8, #f3f5fa, #f5f7fb);
+      background-image: linear-gradient(to right,
+      #eaecf3,
+      #eaecf3,
+      #eaecf3,
+      #eaecf3,
+      #eaecf3,
+      #ebedf4,
+      #eceef4,
+      #edeff5,
+      #eff1f7,
+      #f1f3f8,
+      #f3f5fa,
+      #f5f7fb);
 
       top: 0;
       left: 0;

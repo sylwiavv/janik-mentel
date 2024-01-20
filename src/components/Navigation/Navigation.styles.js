@@ -27,19 +27,18 @@ export const OutsideWrapper = styled.div`
   z-index: 10;
   width: 100%;
 
-  position: ${({ isOpen }) => ((isOpen) ? 'fixed' : 'absolute')};
-  position: ${({ isNoStandard, isOpen }) => ((isNoStandard && !isOpen) ? 'static' : 'absolute')};
+  position: ${({ isOpen }) => (isOpen ? 'fixed' : 'absolute')};
+  position: ${({ isNoStandard, isOpen }) => (isNoStandard && !isOpen ? 'static' : 'absolute')};
 
   height: ${({ isOpen }) => (isOpen ? '100%' : 'auto')};
 
   transition: ${({ isOpen }) => (isOpen ? 'background-color, .4s' : 'none')};
 
   background-color: ${({
-    isNoStandard,
-    customColor,
-    isOpen,
-    theme,
-  }) => (((isNoStandard && !customColor && !isOpen) || isOpen) ? theme.colors.primaryBgColorDark : 'transparent')};
+    isNoStandard, customColor, isOpen, theme,
+  }) => ((isNoStandard && !customColor && !isOpen) || isOpen
+    ? theme.colors.primaryBgColorDark
+    : 'transparent')};
 
   ${({ theme }) => theme.mq.tablet} {
     display: flex;
@@ -137,7 +136,9 @@ export const StyledLink = styled(Link)`
     left: 0;
     bottom: -4px;
     padding: 2px 4px;
-    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, ${({ theme }) => theme.colors.white} 50%) right;
+    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, ${({
+    theme,
+  }) => theme.colors.white} 50%) right;
     background-size: 200%;
     transition: .4s ease-out;
     width: 0%;

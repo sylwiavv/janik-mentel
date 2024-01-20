@@ -7,9 +7,9 @@ import { NavigationContext } from '../../providers/NavigationProvider';
 import { useHeaderStaticQuery } from '../../hooks/useHeaderStaticQuery';
 import { Slider } from '../Slider/Slider';
 import { Navigation } from '../Navigation/Navigation';
-import { ArrowHeartIcon } from '../icons/ArrowHeartIcon';
 import { COOKIES_MESSAGE } from '../../helpers/constans/constans';
 import { Box } from '../Boxes/Boxes.styles';
+import { ArrowHeartIcon } from '../icons/ArrowHeartIcon';
 
 export const Header = () => {
   const [index, setIndex] = useState(0);
@@ -40,6 +40,7 @@ export const Header = () => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
+
           alignItems: 'center',
         }}
         isColumn
@@ -71,17 +72,56 @@ export const Header = () => {
       <HeaderTextWrapper>
         <ArrowHeartIcon height="32px" width="32px" />
         <h1>
-          Fotografia to historia
-          opowiedziana przez
-          obraz
+          Fotografia to historia opowiedziana przez obraz
           <br></br>
-          pozwól
-          nam opowiedzieć
-          Twoją historię.
+          pozwól nam opowiedzieć Twoją historię.
         </h1>
       </HeaderTextWrapper>
+      <div style={{
+        backgroundColor: '#fff',
+        zIndex: 10,
+        position: 'absolute',
+        display: 'flex',
+        flexDirection: 'column',
+        right: 0,
+        bottom: 0,
+        padding: '56px',
+      }}
+      >
+        <h3 style={{
+          margin: 0, marginBottom: '16px', fontWeight: 700, fontSize: '24px',
+        }}
+        >
+          Praca w terenie
+        </h3>
+        <p style={{ color: '#343434', padding: 0, margin: 0 }}>
+          W dniach 22 - 26 stycznia (pn - pt)
+
+          <span style={{ marginTop: '8px', display: 'block' }}>
+            Zakład będzie czynny od godz. 12.00.
+          </span>
+          <span style={{ marginTop: '8px', display: 'block' }}>
+            Kontakt:
+          </span>
+        </p>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+          <a href="tel:510097887">510 097 887</a>
+          <a href="tel:503022377">503 022 377</a>
+        </div>
+        <span style={{ marginTop: '16px', display: 'block' }}>
+          Przepraszamy za utrudnienia.
+        </span>
+
+      </div>
       <Navigation />
-      <Slider fade className="w-100" index={index} slider={slider.slider} handleSelect={handleSelect} />
+      <Slider
+        fade
+        className="w-100"
+        index={index}
+        slider={slider.slider}
+        handleSelect={handleSelect}
+      />
     </CarouselContainer>
   );
 };

@@ -12,13 +12,14 @@ export const FooterWrapper = styled.footer`
     margin-bottom: 24px;
   }
 
-  p, a {
+  p,
+  a {
     filter: brightness(0.85);
   }
 
   a {
     text-transform: capitalize;
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
 
     &:hover {
       color: ${({ theme }) => theme.colors.white};
@@ -41,13 +42,13 @@ export const FooterWrapper = styled.footer`
 
   .footer-logo {
     position: absolute;
-    opacity: .09;
+    opacity: 0.09;
     width: 300px;
     right: 40px;
     bottom: 24px;
 
     ${({ theme }) => theme.mq.mobile} {
-      opacity: .05;
+      opacity: 0.05;
       right: -8px;
       bottom: 8px;
       width: 280px;

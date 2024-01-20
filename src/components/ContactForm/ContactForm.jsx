@@ -1,21 +1,21 @@
-import React from 'react';
-import { ContactFormWrapper, ErrorMessageWrapper } from './ContactForm.styles';
-import { ButtonStyled } from '../Button/ButtonStyled';
-import { EmptyFieldMsg, ValidEmailMsg } from './ContactFormValidationMessages';
-import { useCustomForm } from '../../hooks/useCustomForm';
-import { ContactFormSuccessComponent } from './ContactFormSuccesComponent';
+import React from "react";
+import { ContactFormWrapper, ErrorMessageWrapper } from "./ContactForm.styles";
+import { ButtonStyled } from "../Button/ButtonStyled";
+import { EmptyFieldMsg, ValidEmailMsg } from "./ContactFormValidationMessages";
+import { useCustomForm } from "../../hooks/useCustomForm";
+import { ContactFormSuccessComponent } from "./ContactFormSuccesComponent";
 
 export const initialState = {
-  name: '',
-  email: '',
-  message: '',
+  name: "",
+  email: "",
+  message: "",
 };
 
 export const ContactForm = () => {
   const validate = (value, name, errors) => {
     let newErrors = { ...errors };
     switch (name) {
-      case 'name':
+      case "name":
         if (value.length === 0) {
           newErrors = {
             ...errors,
@@ -26,7 +26,7 @@ export const ContactForm = () => {
           newErrors = withoutName;
         }
         break;
-      case 'email':
+      case "email":
         if (value.length === 0) {
           newErrors = {
             ...newErrors,
@@ -42,7 +42,7 @@ export const ContactForm = () => {
           newErrors = withoutEmail;
         }
         break;
-      case 'message':
+      case "message":
         if (value.length === 0) {
           newErrors = {
             ...errors,
@@ -70,13 +70,15 @@ export const ContactForm = () => {
 
   return (
     <>
-      {state.succeeded ? (<ContactFormSuccessComponent />) : (
+      {state.succeeded ? (
+        <ContactFormSuccessComponent />
+      ) : (
         <ContactFormWrapper onSubmit={handleSubmitAction}>
           <h2>Wyślij do nas widomość</h2>
           <p>Zapraszamy do wysałania wiadomości poprzez formularz kontaktowy</p>
           <label htmlFor="name">Imię i nazwisko</label>
           <input
-            className={errorsState.name && 'error-input'}
+            className={errorsState.name && "error-input"}
             type="name"
             name="name"
             id="name"
@@ -89,7 +91,7 @@ export const ContactForm = () => {
 
           <label htmlFor="email">Adres e-mail</label>
           <input
-            className={errorsState.name && 'error-input'}
+            className={errorsState.name && "error-input"}
             type="text"
             name="email"
             id="email"
@@ -102,7 +104,7 @@ export const ContactForm = () => {
 
           <label htmlFor="message">Treść</label>
           <textarea
-            className={errorsState.name && 'error-input'}
+            className={errorsState.name && "error-input"}
             name="message"
             id="message"
             placeholder="Wiadomość"
@@ -111,12 +113,16 @@ export const ContactForm = () => {
             onBlur={handleInputBlur}
           />
           <ErrorMessageWrapper>{errorsState.message}</ErrorMessageWrapper>
-          <ButtonStyled type="submit" disabled={state.submitting}>Wyślij</ButtonStyled>
+          <ButtonStyled type="submit" disabled={state.submitting}>
+            Wyślij
+          </ButtonStyled>
         </ContactFormWrapper>
       )}
 
       {state.errors.length > 0 && (
-        <ErrorMessageWrapper>Coś poszło nie tak, spróbuj ponownie</ErrorMessageWrapper>
+        <ErrorMessageWrapper>
+          Coś poszło nie tak, spróbuj ponownie
+        </ErrorMessageWrapper>
       )}
     </>
   );

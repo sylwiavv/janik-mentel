@@ -30,10 +30,9 @@ export const BoxWithPseudoElement = styled(Box)`
     max-width: 100%;
 
     &:after {
-      display: none
+      display: none;
     }
   }
-
 
   &:not(:last-child) {
     &:after {
@@ -49,7 +48,7 @@ export const BoxWithPseudoElement = styled(Box)`
 
   &:not(:first-child) {
     &:before {
-      content: '';
+      content: "";
       width: 100%;
       position: absolute;
       right: 0;
@@ -89,7 +88,7 @@ export const FotoKioskContainer = styled.div`
   padding: 0 32px;
 
   ${({ theme }) => theme.mq.mobile} {
-    padding: 0 8px
+    padding: 0 8px;
   }
 `;
 
@@ -116,33 +115,38 @@ export const SectionWIthBoxes = styled.div`
   padding-bottom: 104px;
 
   ${({ theme }) => theme.mq.mobile} {
-    padding: 0
+    padding: 0;
   }
 `;
 
-const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
+const fotokiosk = ({
+  data: {
+    qrCode: { publicURL },
+  },
+}) => (
   <SectionWrapper isColumn>
     <FotoKioskContainer>
       <FotoKioskLead isColumn>
-        <StyledTitle style={{ color: '#ca901e', marginTop: 0 }}>Foto kiosk</StyledTitle>
+        <StyledTitle style={{ color: '#ca901e', marginTop: 0 }}>
+          Foto kiosk
+        </StyledTitle>
         <p>
-          Foto kiosk to nowość w naszej ofercie – możliwość zamówienia ulubionych zdjęć bez wychodzenia z
-          domu.
-          Prosta w obsłudze aplikacja umożliwia szybkie i wygodne wybranie zdjęć z telefonu oraz złożenie
+          Foto kiosk to nowość w naszej ofercie – możliwość zamówienia
+          ulubionych zdjęć bez wychodzenia z domu. Prosta w obsłudze aplikacja
+          umożliwia szybkie i wygodne wybranie zdjęć z telefonu oraz złożenie
           zamówienia.
         </p>
         <br></br>
         <p>
-          Nie musisz się martwić o odbiór zamówienia – możesz je odebrać osobiście w naszym zakładzie lub
-          skorzystać z
-          opcji wysyłki.
-          Wkrótce wprowadzimy także możliwość wysyłki za pomocą paczkomatu InPost, aby jeszcze bardziej
-          ułatwić proces
-          zamawiania.
+          Nie musisz się martwić o odbiór zamówienia – możesz je odebrać
+          osobiście w naszym zakładzie lub skorzystać z opcji wysyłki. Wkrótce
+          wprowadzimy także możliwość wysyłki za pomocą paczkomatu InPost, aby
+          jeszcze bardziej ułatwić proces zamawiania.
         </p>
         <br></br>
         <p>
-          Nie zwlekaj, już teraz możesz złożyć zamówienie na swoje ulubione zdjęcia!
+          Nie zwlekaj, już teraz możesz złożyć zamówienie na swoje ulubione
+          zdjęcia!
         </p>
       </FotoKioskLead>
       <Box
@@ -155,29 +159,32 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
           maxWidth: '1240px',
         }}
       >
-        <StyledTitle style={{ paddingBottom: '40px' }}>Zobacz jakie to proste!</StyledTitle>
+        <StyledTitle style={{ paddingBottom: '40px' }}>
+          Zobacz jakie to proste!
+        </StyledTitle>
 
         <FotokioskCards />
-
       </Box>
     </FotoKioskContainer>
     <SectionWIthBoxes>
-      <Box style={{
-        paddingTop: '84px',
-        paddingLeft: '32px',
-        paddingRight: '32px',
-        flexDirection: 'column',
-        maxWidth: '800px',
-        margin: '0 auto',
-      }}
+      <Box
+        style={{
+          paddingTop: '84px',
+          paddingLeft: '32px',
+          paddingRight: '32px',
+          flexDirection: 'column',
+          maxWidth: '800px',
+          margin: '0 auto',
+        }}
       >
         <BoxWithPseudoElement isColumn>
           <StepSquareHeader>01</StepSquareHeader>
           <h2 style={{ marginBottom: '16px' }}>
-            Pobierz aplikacje na telefon za pomocą której złożysz
-            zamówienie.
+            Pobierz aplikacje na telefon za pomocą której złożysz zamówienie.
           </h2>
-          <p style={{ marginBottom: '24px' }}>Alikacje możesz pobrać z AppStore lub Google Play</p>
+          <p style={{ marginBottom: '24px' }}>
+            Alikacje możesz pobrać z AppStore lub Google Play
+          </p>
           <Box style={{ gridGap: '16px' }}>
             <a
               href="https://apps.apple.com/pl/app/mobile-photo-kiosk/id1212108239?l=pl"
@@ -196,10 +203,11 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
                 <GooglePlayLogo width={200} height={80} />
               </a>
             </Box>
-
           </Box>
           <Box isColumn gap="16px" noMarginBottom>
-            <p style={{ marginBottom: '16px' }}>Aby pobrać aplikacje możesz również użyć kodu QR</p>
+            <p style={{ marginBottom: '16px' }}>
+              Aby pobrać aplikacje możesz również użyć kodu QR
+            </p>
             <img
               style={{ height: '160px' }}
               src={publicURL}
@@ -213,8 +221,8 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
             Wybierz zdjęcia i złóż zamówienie
           </h2>
           <p style={{ marginBottom: '16px' }}>
-            Dzięki prostej w obsłudze aplikacj szybko wybierzesz swoje ulubione zdjęcia i prześlesz je do
-            nas.
+            Dzięki prostej w obsłudze aplikacj szybko wybierzesz swoje ulubione
+            zdjęcia i prześlesz je do nas.
           </p>
           <p style={{ marginBottom: '32px' }}>
             Zapłać za zdjęcia online - obsługujemy płatności za pośrednictwem
@@ -224,31 +232,39 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
         </BoxWithPseudoElement>
         <BoxWithPseudoElement isColumn>
           <StepSquareHeader>03</StepSquareHeader>
-          <h2 style={{ marginBottom: '16px' }}>
-            Odbierz zamówienie
-          </h2>
+          <h2 style={{ marginBottom: '16px' }}>Odbierz zamówienie</h2>
           <p>
-            Zamówienie odbierzesz w naszym zakładzie lub to my wyślemy je do Ciebie.
+            Zamówienie odbierzesz w naszym zakładzie lub to my wyślemy je do
+            Ciebie.
             <br></br>
-            Wkrótce w naszej ofercie pojawi się możliwość wysyłki za pomocą paczkomatu InPost.
+            Wkrótce w naszej ofercie pojawi się możliwość wysyłki za pomocą
+            paczkomatu InPost.
           </p>
         </BoxWithPseudoElement>
       </Box>
       <Box
         isColumn
         style={{
-          margin: '32px auto 0 auto', maxWidth: '800px', padding: '0 24px',
+          margin: '32px auto 0 auto',
+          maxWidth: '800px',
+          padding: '0 24px',
         }}
       >
-        <div className="container-with-video" style={{ width: '100%', marginBottom: '24px' }}>
+        <div
+          className="container-with-video"
+          style={{ width: '100%', marginBottom: '24px' }}
+        >
           <h2>Zobacz jak to działa</h2>
           <iframe
+            title="Zobacz jak działa foto kiosk."
             style={{ minHeight: '56px', width: '100%', height: '400px' }}
             src="https://www.youtube.com/embed/bZAjmQ63GBw"
           >
           </iframe>
         </div>
-        <Link to="/regulamin" style={{ color: '#000' }}>Zapoznaj się z regulaminem Foto Kiosk</Link>
+        <Link to="/regulamin" style={{ color: '#000' }}>
+          Zapoznaj się z regulaminem Foto Kiosk
+        </Link>
         <div className="regulation-link" style={{ paddingBottom: '24px' }}>
           <a
             href="src/assets/download/Regulamin_fotokiosk_janik-mentel.pdf"
@@ -261,15 +277,15 @@ const fotokiosk = ({ data: { qrCode: { publicURL } } }) => (
         </div>
       </Box>
     </SectionWIthBoxes>
-
   </SectionWrapper>
 );
 
 export const query = graphql`
-    query {
-       qrCode: file(relativePath: {regex: "/qrCode\/9174_QRcode.png/"}) {
-            publicURL
-        }
-    }`;
+  query {
+    qrCode: file(relativePath: { regex: "/qrCode/9174_QRcode.png/" }) {
+      publicURL
+    }
+  }
+`;
 
 export default fotokiosk;

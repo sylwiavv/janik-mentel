@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ArrowDownIcon } from '../icons/ArrowDownIcon';
+import React from "react";
+import styled from "styled-components";
+import { ArrowDownIcon } from "../icons/ArrowDownIcon";
 
 const StyledButton = styled.a`
   display: flex;
@@ -11,7 +11,7 @@ const StyledButton = styled.a`
   border-radius: 40px;
   text-decoration: none;
   max-width: max-content;
-  transition: background-color, color, .4s;
+  transition: background-color, color, 0.4s;
   overflow: hidden;
   margin-bottom: 80px;
 

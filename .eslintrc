@@ -3,7 +3,9 @@
   "parserOptions": {
     "requireConfigFile": false,
     "babelOptions": {
-      "presets": ["@babel/preset-react"]
+      "presets": [
+        "@babel/preset-react"
+      ]
     }
   },
   "settings": {
@@ -33,17 +35,29 @@
     "react/destructuring-assignment": "warn",
     "no-debugger": "off",
     "jsx-a11y/label-has-associated-control": "warn",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    // Add the following rule for single quotes
+    "quotes": [
+      "error",
+      "single"
+    ]
   },
   "overrides": [
     {
-      "files": ["./src/pages/*.jsx"],
+      "files": [
+        "./src/pages/*.jsx"
+      ],
       "rules": {
         "no-unused-expressions": "off",
         "import/no-default-export": "off"
       }
-    }, {
-      "files": ["gatsby-browser.js", "gatsby-ssr.js", "*.styles.*"],
+    },
+    {
+      "files": [
+        "gatsby-browser.js",
+        "gatsby-ssr.js",
+        "*.styles.*"
+      ],
       "rules": {
         "react/jsx-filename-extension": "off"
       }

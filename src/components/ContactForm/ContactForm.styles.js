@@ -31,17 +31,18 @@ export const ContactFormWrapper = styled.form`
   label {
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
     margin: 16px 0 0;
   }
 
-  input, textarea {
+  input,
+  textarea {
     border: 1px solid #e9e9e9cf;
     border-radius: 4px;
     margin: 8px 0;
     resize: none;
     padding: 8px;
-    transition: border .4s;
+    transition: border 0.4s;
 
     &:hover,
     &:focus-visible {
@@ -50,7 +51,7 @@ export const ContactFormWrapper = styled.form`
     }
 
     &.error-input {
-      border: 1px solid red
+      border: 1px solid red;
     }
   }
 
