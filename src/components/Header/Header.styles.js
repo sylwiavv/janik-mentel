@@ -61,12 +61,11 @@ export const HeaderTextWrapper = styled.div`
   position: absolute;
   z-index: 10;
   color: #e8e8e3;
-  //bottom: 104px;
-  bottom: 50%;
-  //left: 50%;
-  left: 32px;
+  bottom: 104px;
+  //bottom: 50%;
+  left: 50%;
   width: 100%;
-  //transform: translateX(-50%);
+  transform: translateX(-50%);
   opacity: 0;
   animation: fade 1s ease-in 1s;
   animation-fill-mode: forwards;
@@ -79,10 +78,8 @@ export const HeaderTextWrapper = styled.div`
   svg {
     position: absolute;
     top: -48px;
-    //left: 50%;
-    //left: 32px;
-    left: 0;
-    //transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
     animation: fadeIcon 2s ease-in 1s;
     animation-fill-mode: forwards;
@@ -98,9 +95,9 @@ export const HeaderTextWrapper = styled.div`
     line-height: 1.4em;
     font-family: "Lora", serif;
     max-width: 80%;
-    //margin: 0 auto;
-    text-align: left;
-    margin-right: auto;
+    margin: 0 auto;
+    text-align: center;
+    //margin-right: auto;
     //font-size: 36px;
     font-size: 28px;
     position: relative;

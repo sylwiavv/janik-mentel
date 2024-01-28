@@ -30,13 +30,14 @@ export const Header = () => {
           position: 'absolute',
           right: 0,
           left: 0,
-          top: '-100px',
+          // top: '-100px',
+          top: 0,
           zIndex: 10,
           padding: '8px',
           borderTopLeftRadius: '8px',
           borderBottomLeftRadius: '8px',
           width: '100%',
-          height: '110%',
+          height: '100%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -77,43 +78,42 @@ export const Header = () => {
           pozwól nam opowiedzieć Twoją historię.
         </h1>
       </HeaderTextWrapper>
-      <div style={{
-        backgroundColor: '#fff',
-        zIndex: 10,
-        position: 'absolute',
-        display: 'flex',
-        flexDirection: 'column',
-        right: 0,
-        bottom: 0,
-        padding: '56px',
-      }}
-      >
-        <h3 style={{
-          margin: 0, marginBottom: '16px', fontWeight: 700, fontSize: '24px',
-        }}
-        >
-          Praca w terenie
-        </h3>
-        <p style={{ color: '#343434', padding: 0, margin: 0 }}>
-          W dniach 22 - 26 stycznia (pn - pt)
+      {/* <div style={{ */}
+      {/*  backgroundColor: '#fff', */}
+      {/*  zIndex: 10, */}
+      {/*  position: 'absolute', */}
+      {/*  display: 'flex', */}
+      {/*  flexDirection: 'column', */}
+      {/*  right: 0, */}
+      {/*  bottom: 0, */}
+      {/*  padding: '56px', */}
+      {/* }} */}
+      {/* > */}
+      {/*  <h3 style={{ */}
+      {/*    margin: 0, marginBottom: '16px', fontWeight: 700, fontSize: '24px', */}
+      {/*  }} */}
+      {/*  > */}
+      {/*    Praca w terenie */}
+      {/*  </h3> */}
+      {/*  <p style={{ color: '#343434', padding: 0, margin: 0 }}> */}
+      {/*    W dniach 22 - 26 stycznia (pn - pt) */}
 
-          <span style={{ marginTop: '8px', display: 'block' }}>
-            Zakład będzie czynny od godz. 12.00.
-          </span>
-          <span style={{ marginTop: '8px', display: 'block' }}>
-            Kontakt:
-          </span>
-        </p>
+      {/*    <span style={{ marginTop: '8px', display: 'block' }}> */}
+      {/*      Zakład będzie czynny od godz. 12.00. */}
+      {/*    </span> */}
+      {/*    <span style={{ marginTop: '8px', display: 'block' }}> */}
+      {/*      Kontakt: */}
+      {/*    </span> */}
+      {/*  </p> */}
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-          <a href="tel:510097887">510 097 887</a>
-          <a href="tel:503022377">503 022 377</a>
-        </div>
-        <span style={{ marginTop: '16px', display: 'block' }}>
-          Przepraszamy za utrudnienia.
-        </span>
-
-      </div>
+      {/*  <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}> */}
+      {/*    <a href="tel:510097887">510 097 887</a> */}
+      {/*    <a href="tel:503022377">503 022 377</a> */}
+      {/*  </div> */}
+      {/*  <span style={{ marginTop: '16px', display: 'block' }}> */}
+      {/*    Przepraszamy za utrudnienia. */}
+      {/*  </span> */}
+      {/* </div> */}
       <Navigation />
       <Slider
         fade
