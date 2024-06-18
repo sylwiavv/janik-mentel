@@ -96,7 +96,7 @@ export const Header = () => {
           Urlop wypoczynkowy
         </h3>
         <p style={{ color: '#343434', padding: 0, margin: 0 }}>
-          W dniach od
+          W dniach
           {' '}
           <b>21.06 - 07.07.2024</b>
           {' '}
