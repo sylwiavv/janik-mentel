@@ -98,12 +98,13 @@ export const Header = () => {
         <p style={{ color: '#343434', padding: 0, margin: 0 }}>
           W dniach
           {' '}
-          <b>21.06 - 07.07.2024</b>
+          <b>17.09 – 25.09.2024</b>
           {' '}
           zakład
           <br></br>
           {' '}
           będzie nieczynny.
+          {' '}
           {/* <span style={{ marginTop: '8px', display: 'block' }}> */}
           {/*  Zakład będzie nie czynny. */}
           {/* </span> */}
@@ -114,7 +115,6 @@ export const Header = () => {
           {/*  Kontakt: */}
           {/* </span> */}
         </p>
-
         {/* <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}> */}
         {/*  <a href="tel:510097887">510 097 887</a> */}
         {/*  <a href="tel:503022377">503 022 377</a> */}
