@@ -78,51 +78,9 @@ export const Header = () => {
           pozwól nam opowiedzieć Twoją historię.
         </h1>
       </HeaderTextWrapper>
-      <div style={{
-        backgroundColor: '#fff',
-        zIndex: 10,
-        position: 'absolute',
-        display: 'flex',
-        flexDirection: 'column',
-        right: 0,
-        bottom: 0,
-        padding: '56px',
-      }}
-      >
-        <h3 style={{
-          margin: 0, marginBottom: '16px', fontWeight: 700, fontSize: '24px',
-        }}
-        >
-          Urlop wypoczynkowy
-        </h3>
-        <p style={{ color: '#343434', padding: 0, margin: 0 }}>
-          W dniach
-          {' '}
-          <b>17.09 – 25.09.2024</b>
-          {' '}
-          zakład
-          <br></br>
-          {' '}
-          będzie nieczynny.
-          {' '}
-          {/* <span style={{ marginTop: '8px', display: 'block' }}> */}
-          {/*  Zakład będzie nie czynny. */}
-          {/* </span> */}
-          {/* <span style={{ marginTop: '8px', display: 'block' }}> */}
-          {/*  Zakład będzie czynny od godz. 12.00. */}
-          {/* </span> */}
-          {/* <span style={{ marginTop: '8px', display: 'block' }}> */}
-          {/*  Kontakt: */}
-          {/* </span> */}
-        </p>
-        {/* <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}> */}
-        {/*  <a href="tel:510097887">510 097 887</a> */}
-        {/*  <a href="tel:503022377">503 022 377</a> */}
-        {/* </div> */}
-        {/* <span style={{ marginTop: '16px', display: 'block' }}> */}
-        {/*  Przepraszamy za utrudnienia. */}
-        {/* </span> */}
-      </div>
+
+      {/* <Announcement /> */}
+
       <Navigation />
       <Slider
         fade
