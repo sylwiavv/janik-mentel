@@ -1,12 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
-import CloseIcon from "../icons/CloseIcon";
+import React, { useCallback, useEffect, useState } from 'react';
+import CloseIcon from '../icons/CloseIcon';
 import {
   FullScreenImage,
   GalleryWrapper,
   SliderWrapper,
-} from "./WpsGallery.styles";
-import ArrowShortLeft from "../icons/ArrowShortLeft";
-import ArrowShortRight from "../icons/ArrowShortRight";
+} from './WpsGallery.styles';
+import ArrowShortLeft from '../icons/ArrowShortLeft';
+import ArrowShortRight from '../icons/ArrowShortRight';
 
 const WSPGallery = ({ galleryImages }) => {
   const [slideNumber, setSlideNumber] = useState(0);
@@ -16,13 +16,13 @@ const WSPGallery = ({ galleryImages }) => {
   const handleOpenModal = (index) => {
     setSlideNumber(index);
     setOpenModal(true);
-    document.body.classList.add("not-scroll");
+    document.body.classList.add('not-scroll');
   };
 
   // Close Modal
   const handleCloseModal = () => {
     setOpenModal(false);
-    document.body.classList.remove("not-scroll");
+    document.body.classList.remove('not-scroll');
   };
 
   // Previous Image
@@ -45,25 +45,25 @@ const WSPGallery = ({ galleryImages }) => {
 
   const handleKeyDown = useCallback(
     (event) => {
-      if (event.key === "Escape") {
+      if (event.key === 'Escape') {
         handleCloseModal();
       }
-      if (event.key === "ArrowRight") {
+      if (event.key === 'ArrowRight') {
         nextSlide();
       }
-      if (event.key === "ArrowLeft") {
+      if (event.key === 'ArrowLeft') {
         prevSlide();
       }
     },
-    [slideNumber]
+    [slideNumber],
   );
 
   // Keydown
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown, false);
+    document.addEventListener('keydown', handleKeyDown, false);
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown, false);
+      document.removeEventListener('keydown', handleKeyDown, false);
     };
   }, [slideNumber]);
 
@@ -95,8 +95,8 @@ const WSPGallery = ({ galleryImages }) => {
       {/* <br /><br /> *!/ */}
 
       <GalleryWrapper>
-        {galleryImages &&
-          galleryImages.map((slide, index) => (
+        {galleryImages
+          && galleryImages.map((slide, index) => (
             <div
               className="single"
               key={index}

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Navigation } from "../components/Navigation/Navigation";
-import { Box } from "../components/Boxes/Boxes.styles";
-import { ButtonWithIcon } from "../components/Button/ButtonWithLink";
+import React from 'react';
+import styled from 'styled-components';
+import { Navigation } from '../components/Navigation/Navigation';
+import { Box } from '../components/Boxes/Boxes.styles';
+import { ButtonWithIcon } from '../components/Button/ButtonWithLink';
 
 // const BoxWithImage = styled(Box)`
 //   background-image: url(https://images.pexels.com/photos/1448645/pexels-photo-1448645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
@@ -35,18 +35,18 @@ export const BigTitleWrapper = styled(Box)`
 `;
 
 export const FotokioskHeader = () => (
-  <div style={{ background: "#24494e" }} id="fotokiosk">
+  <div style={{ background: '#24494e' }} id="fotokiosk">
     <Navigation isNoStandard customColor />
     <Box
       style={{
-        display: "flex",
-        margin: "auto",
-        position: "relative",
-        maxWidth: "1240px",
-        padding: "0 24px",
+        display: 'flex',
+        margin: 'auto',
+        position: 'relative',
+        maxWidth: '1240px',
+        padding: '0 24px',
       }}
     >
-      <Box style={{ flex: "1", color: "#d6e6e7" }}>
+      <Box style={{ flex: '1', color: '#d6e6e7' }}>
         <BigTitleWrapper>
           <BigTitle>
             Teraz wystarczy tylko kilka kliknięć, aby zamówić swoje ulubione

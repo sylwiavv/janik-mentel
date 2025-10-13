@@ -1,5 +1,5 @@
-import * as React from "react";
-import { theme } from "../../assets/styles/theme";
+import * as React from 'react';
+import { theme } from '../../assets/styles/theme';
 
 const MailIcon = ({ strokeColor = theme.colors.contactIconStrokeColor }) => (
   <svg

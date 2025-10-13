@@ -1,12 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 // import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
-import { Box } from "../components/Boxes/Boxes.styles";
-import GoBack from "../components/GoBack/GoBack";
-import WSPGallery from "../components/WpsGallery/WpsGallery";
-import { StyledTitle } from "../components/HighlightedHeading/HighlightedHeading.styles";
-import { GalleryContainer } from "../assets/styles/pages/galeria.styles";
+import { Box } from '../components/Boxes/Boxes.styles';
+import GoBack from '../components/GoBack/GoBack';
+import WSPGallery from '../components/WpsGallery/WpsGallery';
+import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
+import { GalleryContainer } from '../assets/styles/pages/galeria.styles';
 
 const GaleriaTemplate = ({
   data: {
@@ -18,7 +18,7 @@ const GaleriaTemplate = ({
   return (
     <Box
       isColumn
-      style={{ maxWidth: "1220px", margin: "64px auto", padding: "0px 16px" }}
+      style={{ maxWidth: '1220px', margin: '64px auto', padding: '0px 16px' }}
     >
       <GoBack />
       <Box isColumn marginBottom="64px">

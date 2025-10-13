@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const GalleryWrapper = styled.div`
   margin: 0 auto;

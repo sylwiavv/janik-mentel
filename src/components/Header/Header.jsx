@@ -10,6 +10,7 @@ import { Navigation } from '../Navigation/Navigation';
 import { COOKIES_MESSAGE } from '../../helpers/constans/constans';
 import { Box } from '../Boxes/Boxes.styles';
 import { ArrowHeartIcon } from '../icons/ArrowHeartIcon';
+import { Announcement } from '../Announcement/Announcement';
 
 export const Header = () => {
   const [index, setIndex] = useState(0);
@@ -79,7 +80,7 @@ export const Header = () => {
         </h1>
       </HeaderTextWrapper>
 
-      {/* <Announcement /> */}
+      <Announcement />
 
       <Navigation />
       <Slider

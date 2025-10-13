@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export const NavigationContext = React.createContext({
   toggleNavigation: () => {},
@@ -11,10 +11,10 @@ export const NavigationProvider = ({ children }) => {
 
   const toggleNavigation = () => {
     setIsOpen(!isOpen);
-    document.body.classList.remove("not-scroll");
+    document.body.classList.remove('not-scroll');
 
     if (!isOpen) {
-      document.body.classList.add("not-scroll");
+      document.body.classList.add('not-scroll');
     }
   };
 
@@ -24,7 +24,7 @@ export const NavigationProvider = ({ children }) => {
       setIsOpen,
       toggleNavigation,
     }),
-    [isOpen]
+    [isOpen],
   );
 
   return (

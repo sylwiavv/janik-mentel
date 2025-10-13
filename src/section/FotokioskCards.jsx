@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Box } from "../components/Boxes/Boxes.styles";
+import React from 'react';
+import styled from 'styled-components';
+import { Box } from '../components/Boxes/Boxes.styles';
 
 const STEPS = [
-  { number: "01", title: "Pobierz aplikacje" },
-  { number: "02", title: "Wybierz zdjęcia" },
-  { number: "03", title: "Obierz zamówienie" },
+  { number: '01', title: 'Pobierz aplikacje' },
+  { number: '02', title: 'Wybierz zdjęcia' },
+  { number: '03', title: 'Obierz zamówienie' },
 ];
 
 export const CardsWrapper = styled(Box)`

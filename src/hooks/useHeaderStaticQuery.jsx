@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const useHeaderStaticQuery = () => {
   const data = useStaticQuery(
@@ -13,7 +13,7 @@ export const useHeaderStaticQuery = () => {
           }
         }
       }
-    `
+    `,
   );
   return data.allContentfulSlider.nodes;
 };
