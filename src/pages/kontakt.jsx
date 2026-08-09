@@ -88,11 +88,11 @@ const kontakt = () => (
                   <h3>Zadzwoń do nas</h3>
                   <Box alignItems="center" className="text-box">
                     <span>tel.</span>
-                    <a href="tel:(33) 86 36 100">(33) 86 36 100</a>
+                    <a href="tel:+48338636100">(33) 86 36 100</a>
                   </Box>
                   <Box alignItems="center" className="text-box">
                     <span>tel.kom.</span>
-                    <a href="tel:503 022 377">503 022 377</a>
+                    <a href="tel:+48503022377">503 022 377</a>
                   </Box>
                 </Box>
               </BoxWithIcon>

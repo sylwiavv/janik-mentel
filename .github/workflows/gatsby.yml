@@ -82,6 +82,7 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           GATSBY_FORMSPREE_FORM_ID: ${{ secrets.GATSBY_FORMSPREE_FORM_ID }}
           GATSBY_GOOGLE_MAP_KEY: ${{ secrets.GATSBY_GOOGLE_MAP_KEY }}
+          GATSBY_GOOGLE_RECAPTCHA_SITE_KEY: ${{ secrets.GATSBY_GOOGLE_RECAPTCHA_SITE_KEY }}
 
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact

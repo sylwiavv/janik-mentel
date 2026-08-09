@@ -61,6 +61,6 @@ export const NavigationLinks = ({ header }) => {
   ));
 };
 
-NavigationLinks.propTyopes = {
+NavigationLinks.propTypes = {
   header: PropTypes.bool,
 };

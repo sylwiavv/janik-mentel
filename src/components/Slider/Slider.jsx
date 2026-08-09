@@ -12,7 +12,7 @@ export const Slider = ({ index, handleSelect, slider }) => (
   </Carousel>
 );
 
-Slider.propTyopes = {
+Slider.propTypes = {
   index: PropTypes.number,
   handleSelect: PropTypes.func,
   slider: PropTypes.node,

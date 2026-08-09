@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import { useForm } from '@formspree/react';
 
-export const useCustomForm = (initialState, validate) => {
+export const useCustomForm = (initialState, validate, getRecaptchaToken) => {
   const [formValues, setFormValues] = useState(initialState);
   const [errorsState, setErrorState] = useState({});
 
-  const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_FORM_ID, {
-    data: formValues,
-  });
+  const formOptions = getRecaptchaToken
+    ? {
+        data: {
+          'g-recaptcha-response': () => getRecaptchaToken(),
+        },
+      }
+    : {};
 
-  const handleSubmitAction = (e) => {
+  const [state, handleSubmit] = useForm(
+    process.env.GATSBY_FORMSPREE_FORM_ID,
+    formOptions,
+  );
+
+  const handleSubmitAction = async (e) => {
     if (e) {
       e.preventDefault();
     }
@@ -20,8 +29,7 @@ export const useCustomForm = (initialState, validate) => {
     }
 
     if (Object.keys(newErrors).length === 0) {
-      handleSubmit(formValues);
-      setFormValues(initialState);
+      await handleSubmit(formValues);
     } else {
       setErrorState(newErrors);
     }
