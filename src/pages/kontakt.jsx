@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Fade, Zoom } from 'react-awesome-reveal';
 import { StyledTitle } from '../components/HighlightedHeading/HighlightedHeading.styles';
 import { Box, BoxWithIcon, IconBox } from '../components/Boxes/Boxes.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';
+import ClientOnly from '../components/ClientOnly/ClientOnly';
 import MailIcon from '../components/icons/MailIcon';
 import LocalizationIcon from '../components/icons/LocalizationIcon';
 import PhoneIcon from '../components/icons/PhoneIcon';
@@ -65,25 +65,22 @@ export const ContactBoxOutside = styled(Box)`
 
 const kontakt = () => (
   <>
-    <Fade>
-      <Box
-        isColumn
-        style={{ maxWidth: '990px', margin: '0 auto', padding: '0 16px' }}
-      >
-        <Box id="kontakt" isColumn marginBottom="56px">
-          <StyledTitle>Kontakt</StyledTitle>
-          <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
-        </Box>
-        <ContactBoxOutside alignItems="center" marginBottom="72px">
-          <ContactBoxInside gap="64px" alignItems="center">
-            <DarkBox isColumn noMarginBottom>
-              <h2>Skontaktuj się z nami</h2>
-              <BoxWithIcon>
-                <Zoom>
-                  <IconBox>
-                    <PhoneIcon />
-                  </IconBox>
-                </Zoom>
+    <Box
+      isColumn
+      style={{ maxWidth: '990px', margin: '0 auto', padding: '0 16px' }}
+    >
+      <Box id="kontakt" isColumn marginBottom="56px">
+        <StyledTitle>Kontakt</StyledTitle>
+        <p>Zapraszmy do kontaktu jeśli masz jakieś dodatkowe pytania.</p>
+      </Box>
+      <ContactBoxOutside alignItems="center" marginBottom="72px">
+        <ContactBoxInside gap="64px" alignItems="center">
+          <DarkBox isColumn noMarginBottom>
+            <h2>Skontaktuj się z nami</h2>
+            <BoxWithIcon>
+              <IconBox>
+                <PhoneIcon />
+              </IconBox>
                 <Box isColumn>
                   <h3>Zadzwoń do nas</h3>
                   <Box alignItems="center" className="text-box">
@@ -96,12 +93,10 @@ const kontakt = () => (
                   </Box>
                 </Box>
               </BoxWithIcon>
-              <BoxWithIcon>
-                <Zoom>
-                  <IconBox>
-                    <MailIcon />
-                  </IconBox>
-                </Zoom>
+            <BoxWithIcon>
+              <IconBox>
+                <MailIcon />
+              </IconBox>
                 <Box isColumn>
                   <h3>Napisz do nas</h3>
                   <Box alignItems="center" className="text-box">
@@ -111,12 +106,10 @@ const kontakt = () => (
                 </Box>
               </BoxWithIcon>
 
-              <BoxWithIcon>
-                <Zoom>
-                  <IconBox>
-                    <LocalizationIcon />
-                  </IconBox>
-                </Zoom>
+            <BoxWithIcon>
+              <IconBox>
+                <LocalizationIcon />
+              </IconBox>
                 <Box isColumn>
                   <h3>Odwiedź nas</h3>
                   <p>Jeleśnia, ul. Jana Kazimierza&nbsp;213</p>
@@ -140,12 +133,13 @@ const kontakt = () => (
               </Box>
             </DarkBox>
             <FormBox isColumn noMarginBottom>
-              <ContactForm />
+              <ClientOnly fallback={<div style={{ minHeight: '400px' }} aria-hidden="true" />}>
+                <ContactForm />
+              </ClientOnly>
             </FormBox>
           </ContactBoxInside>
         </ContactBoxOutside>
       </Box>
-    </Fade>
 
     <Box
       isColumn

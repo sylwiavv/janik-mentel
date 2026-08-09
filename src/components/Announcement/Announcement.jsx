@@ -1,7 +1,8 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { useVacationAnnouncement } from "../../hooks/useVacationAnnouncement";
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   padding: 56px;
   align-items: center;
   z-index: 10;
@@ -20,19 +21,24 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Text = styled.p`
+const Text = styled.p`
   color: #343434;
   margin: 0;
   line-height: 1.4;
-  fontSize: ${({ isMobile }) => (isMobile ? '18px' : '24px')};
+  font-size: 24px;
 `;
 
-export const Announcement = () => (
-  <Wrapper >
-    <Text >
-      W dniach <b>16.10 – 31.10.2025</b> zakład
-      <br />
-      będzie nieczynny z powodu urlopu.
-    </Text>
-  </Wrapper>
-);
+export const Announcement = () => {
+  const vacation = useVacationAnnouncement();
+
+  // Jeśli brak danych lub nieaktywne — nie pokazuj
+  if (!vacation || !vacation.isActive) return null;
+
+  return (
+    <Wrapper>
+      <Text>
+        W dniach <b>{vacation.dateRange}</b> {vacation.message}
+      </Text>
+    </Wrapper>
+  );
+};

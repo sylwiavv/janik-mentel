@@ -5,18 +5,7 @@ export const useCustomForm = (initialState, validate, getRecaptchaToken) => {
   const [formValues, setFormValues] = useState(initialState);
   const [errorsState, setErrorState] = useState({});
 
-  const formOptions = getRecaptchaToken
-    ? {
-        data: {
-          'g-recaptcha-response': () => getRecaptchaToken(),
-        },
-      }
-    : {};
-
-  const [state, handleSubmit] = useForm(
-    process.env.GATSBY_FORMSPREE_FORM_ID,
-    formOptions,
-  );
+  const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_FORM_ID);
 
   const handleSubmitAction = async (e) => {
     if (e) {
@@ -28,11 +17,38 @@ export const useCustomForm = (initialState, validate, getRecaptchaToken) => {
       newErrors = validate(formValues[fieldName], fieldName, newErrors);
     }
 
-    if (Object.keys(newErrors).length === 0) {
-      await handleSubmit(formValues);
-    } else {
+    if (Object.keys(newErrors).length > 0) {
       setErrorState(newErrors);
+      return;
     }
+
+    let payload = { ...formValues };
+
+    if (getRecaptchaToken) {
+      try {
+        const token = await getRecaptchaToken();
+
+        if (!token) {
+          setErrorState({
+            form: 'Nie udało się zweryfikować reCAPTCHA. Odśwież stronę i spróbuj ponownie.',
+          });
+          return;
+        }
+
+        payload = {
+          ...payload,
+          'g-recaptcha-response': token,
+        };
+      } catch {
+        setErrorState({
+          form: 'Nie udało się zweryfikować reCAPTCHA. Odśwież stronę i spróbuj ponownie.',
+        });
+        return;
+      }
+    }
+
+    setErrorState({});
+    await handleSubmit(payload);
   };
 
   const handleInputOnChange = (e) => {

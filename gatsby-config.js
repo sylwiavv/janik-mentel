@@ -15,6 +15,9 @@ require('dotenv').config({
 });
 
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
     title: 'Janik Mentel Studio',
     siteUrl: 'https://www.janik-mentel.pl/',

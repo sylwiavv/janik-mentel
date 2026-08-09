@@ -113,6 +113,14 @@ export const ContactFormFields = ({ getRecaptchaToken }) => {
             onBlur={handleInputBlur}
           />
           <ErrorMessageWrapper>{errorsState.message}</ErrorMessageWrapper>
+          {errorsState.form && (
+            <ErrorMessageWrapper>{errorsState.form}</ErrorMessageWrapper>
+          )}
+          {state.errors?.length > 0 && (
+            <ErrorMessageWrapper>
+              {state.errors[0]?.message || 'Coś poszło nie tak, spróbuj ponownie'}
+            </ErrorMessageWrapper>
+          )}
           <ButtonStyled type="submit" disabled={state.submitting}>
             {state.submitting ? 'Wysyłanie...' : 'Wyślij'}
           </ButtonStyled>
@@ -134,12 +142,6 @@ export const ContactFormFields = ({ getRecaptchaToken }) => {
             </p>
           )}
         </ContactFormWrapper>
-      )}
-
-      {state.errors?.length > 0 && (
-        <ErrorMessageWrapper>
-          Coś poszło nie tak, spróbuj ponownie
-        </ErrorMessageWrapper>
       )}
     </>
   );
