@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useForm } from '@formspree/react';
 
+const FORMSPREE_FORM_ID = process.env.GATSBY_FORMSPREE_FORM_ID || 'xyyvnkln';
+
 export const useCustomForm = (initialState, validate, getRecaptchaToken) => {
   const [formValues, setFormValues] = useState(initialState);
   const [errorsState, setErrorState] = useState({});
 
-  const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_FORM_ID);
+  const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
 
   const handleSubmitAction = async (e) => {
     if (e) {
